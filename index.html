@@ -573,6 +573,37 @@
   })(window,document,'script','dataLayer','GTM-KZLCPBR3');</script>
   <!-- End Google Tag Manager -->
 
+  <style>
+    /* AI ACT COMPLIANCE NOTICE */
+    .ai-act-notice {
+      padding: 40px 0;
+      background: linear-gradient(180deg, rgba(199, 167, 90, 0.08), rgba(199, 167, 90, 0.04));
+      border-top: 1px solid rgba(199, 167, 90, 0.2);
+      border-bottom: 1px solid rgba(199, 167, 90, 0.2);
+    }
+    .ai-act-box {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(199, 167, 90, 0.3);
+      border-radius: var(--r);
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(199, 167, 90, 0.1);
+    }
+    .ai-act-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .ai-act-icon { font-size: 24px; flex: 0 0 auto; }
+    .ai-act-title { font-family: var(--font-display); font-size: 20px; margin: 0; color: var(--text); font-weight: 600; }
+    .ai-act-text { font-size: 15px; line-height: 1.6; color: var(--muted); margin: 0 0 16px; }
+    .ai-act-details { margin-bottom: 16px; }
+    .ai-act-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .ai-act-list li { font-size: 14px; line-height: 1.5; color: var(--muted); }
+    .ai-act-list strong { color: var(--accent); }
+    .ai-act-link { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: rgba(199, 167, 90, 0.12); border: 1px solid rgba(199, 167, 90, 0.3); border-radius: 10px; color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 600; transition: background 0.2s, border-color 0.2s; }
+    .ai-act-link:hover { background: rgba(199, 167, 90, 0.18); border-color: rgba(199, 167, 90, 0.5); }
+    @media (max-width: 640px) {
+      .ai-act-box { padding: 18px; }
+      .ai-act-title { font-size: 18px; }
+    }
+  </style>
+
   </head>
 <body>
 
@@ -712,6 +743,41 @@
   </div>
 
   <div class="elegant-divider" aria-hidden="true"><div class="line"></div><div class="diamond"></div><div class="line"></div></div>
+
+  <!-- AI ACT COMPLIANCE NOTICE -->
+  <section class="ai-act-notice">
+    <div class="wrap">
+      <div class="ai-act-box">
+        <div class="ai-act-header">
+          <span class="ai-act-icon">⚠️</span>
+          <h3 class="ai-act-title">
+            <span class="lang-de">EU AI Act – Offenlegungspflicht für KI-Content</span>
+            <span class="lang-en">EU AI Act – AI-Generated Content Disclosure</span>
+          </h3>
+        </div>
+        <p class="ai-act-text">
+          <span class="lang-de">Ab 2. August 2026 müssen KI-generierte Inhalte transparent gekennzeichnet sein. Falls Sie den KI-Content-Agent nutzen, sind Sie verantwortlich für die Kennzeichnung gegenüber Ihren Followern.</span>
+          <span class="lang-en">From August 2, 2026, AI-generated content must be transparently labeled. If you use the AI Content Agent, you are responsible for disclosing this to your followers.</span>
+        </p>
+        <div class="ai-act-details">
+          <ul class="ai-act-list">
+            <li>
+              <span class="lang-de"><strong>Was Sie tun müssen:</strong> Alle Inhalte mit KI-Unterstützung kennzeichnen (z.B. #AIGenerated oder Hinweis im Caption)</span>
+              <span class="lang-en"><strong>What you need to do:</strong> Label all AI-assisted content (e.g., #AIGenerated or caption notice)</span>
+            </li>
+            <li>
+              <span class="lang-de"><strong>Wir stellen bereit:</strong> Fertige Vorlagen, Guide und laufende Unterstützung</span>
+              <span class="lang-en"><strong>We provide:</strong> Ready-to-use templates, guides, and ongoing support</span>
+            </li>
+          </ul>
+        </div>
+        <a href="ai-compliance-guide.html" class="ai-act-link">
+          <span class="lang-de">📖 Detaillierter Guide: So kennzeichnen Sie richtig</span>
+          <span class="lang-en">📖 Detailed Guide: How to Label Correctly</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- SERVICES -->
   <section class="services-section" id="services">

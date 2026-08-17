@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<style>
+  @font-face {
+    font-family: 'Inter';
+    src: url('../../../../../assets/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1080px;height:1350px}
+  body{font-family:'Inter',sans-serif}
+  .slide{width:1080px;height:1350px;position:relative;overflow:hidden;color:#F5F7FA;background:#080B14}
+  .bg-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 65%;filter:brightness(1.65) saturate(1.6) contrast(1.15)}
+  .blue-tint{position:absolute;inset:0;background:#2E5C99;mix-blend-mode:color;opacity:.55}
+  .bg-overlay{position:absolute;inset:0;background-image:linear-gradient(180deg, rgba(8,11,20,.88) 0%, rgba(8,11,20,.5) 25%, rgba(8,11,20,.4) 50%, rgba(8,11,20,.03) 68%, rgba(8,11,20,.03) 84%, rgba(8,11,20,.55) 100%), linear-gradient(90deg, rgba(8,11,20,.25) 0%, rgba(8,11,20,0) 45%)}
+  .brand-mark{position:absolute;top:60px;left:64px;display:flex;align-items:center;gap:14px;font-size:26px;font-weight:800;letter-spacing:.02em}
+  .brand-mark .dot{width:13px;height:13px;border-radius:50%;background:#C7A75A}
+  .badge{position:absolute;top:150px;left:64px;display:inline-flex;align-items:center;border:1.5px solid #C7A75A;border-radius:999px;padding:12px 26px;font-size:22px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#E7D19B}
+  .content{position:absolute;top:230px;bottom:190px;left:64px;right:64px;display:flex;flex-direction:column;justify-content:center}
+  h1{font-weight:900;font-size:70px;line-height:1.16;letter-spacing:-.02em;margin-bottom:36px;max-width:920px;text-shadow:0 4px 24px rgba(0,0,0,.4)}
+  p.sub{font-size:32px;line-height:1.55;color:rgba(245,247,250,.92);margin-bottom:0;max-width:840px;text-shadow:0 2px 6px rgba(0,0,0,.85),0 8px 24px rgba(0,0,0,.6)}
+  .swipe{position:absolute;bottom:64px;right:64px;font-size:26px;color:rgba(245,247,250,.75);text-shadow:0 2px 8px rgba(0,0,0,.6)}
+  .footer-handle{position:absolute;bottom:64px;left:64px;font-size:26px;color:rgba(245,247,250,.6)}
+</style>
+</head>
+<body>
+  <div class="slide">
+    <img class="bg-photo" src="../../../Hintergrund-Varianten/skyline-nacht-chicago.jpg">
+    <div class="blue-tint"></div>
+    <div class="bg-overlay"></div>
+    <div class="brand-mark"><span class="dot"></span> LUNAVISION</div>
+    <div class="badge">Service-Deep-Dive</div>
+    <div class="content">
+      <h1>Was steckt wirklich im KI-Content-Agenten?</h1>
+      <p class="sub">4 Dinge, die du wissen solltest, bevor du buchst.</p>
+    </div>
+    <div class="footer-handle">@lunavision.ai</div>
+    <div class="swipe">Swipe für mehr →</div>
+  </div>
+</body>
+</html>

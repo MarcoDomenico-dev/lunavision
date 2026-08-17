@@ -1,0 +1,492 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "lunavision_services_portfolio",
+        "label": "LunaVision Service Portfolio",
+        "nodes": [
+          "index",
+          "ki_content_agent_service",
+          "rechnungsautomatisierung_service",
+          "googleterminpage"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.9
+      },
+      {
+        "id": "geo_marketing_campaign",
+        "label": "GEO Marketing Campaign",
+        "nodes": [
+          "assets_final_posts_linkedin_post_geo",
+          "assets_final_posts_linkedin_post_geo_v2",
+          "assets_final_posts_linkedin_post_geo_v3",
+          "geo_concept"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.9,
+        "source_file": "assets/Final Posts/linkedin_post_geo.png"
+      },
+      {
+        "id": "lunavision_quality_control_flow",
+        "label": "LunaVision Quality Control Process",
+        "nodes": [
+          "assets_final_posts_ki_bild_kontrolle_caption",
+          "assets_final_posts_ki_bild_kontrolle_ki_bild_kontrolle",
+          "lunavision_concept"
+        ],
+        "relation": "form",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.95,
+        "source_file": "assets/Final Posts/ki_bild_kontrolle/caption.txt"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "Google Termin Anfrage Seite",
+      "file_type": "code",
+      "source_file": "GoogleTerminPage.html",
+      "community": 1,
+      "norm_label": "google termin anfrage seite",
+      "community_name": "LunaVision Brand Assets",
+      "id": "googleterminpage"
+    },
+    {
+      "label": "LunaVision Landingpage",
+      "file_type": "code",
+      "source_file": "index.html",
+      "community": 1,
+      "norm_label": "lunavision landingpage",
+      "community_name": "LunaVision Brand Assets",
+      "id": "index"
+    },
+    {
+      "label": "KI-Content-Agent Caption",
+      "file_type": "document",
+      "source_file": "02 Projekte/LunaVision-Instagram-Content-Preview/2026-08 August/Karussells/02-karussell-ki-content-agent-deep-dive/caption.txt",
+      "community": 2,
+      "norm_label": "ki-content-agent caption",
+      "community_name": "KI-Content-Agent Slide 1",
+      "id": "02_projekte_lunavision_instagram_content_preview_2026_08_august_karussells_02_karussell_ki_content_agent_deep_dive_caption"
+    },
+    {
+      "label": "KI-Content-Agent Slide 1",
+      "file_type": "code",
+      "source_file": "02 Projekte/LunaVision-Instagram-Content-Preview/2026-08 August/Karussells/02-karussell-ki-content-agent-deep-dive/slide-1-cover.html",
+      "community": 2,
+      "norm_label": "ki-content-agent slide 1",
+      "community_name": "KI-Content-Agent Slide 1",
+      "id": "02_projekte_lunavision_instagram_content_preview_2026_08_august_karussells_02_karussell_ki_content_agent_deep_dive_slide_1_cover"
+    },
+    {
+      "label": "Rechnungsautomatisierung Caption",
+      "file_type": "document",
+      "source_file": "02 Projekte/LunaVision-Instagram-Content-Preview/2026-09 September/Einzelbilder/01-einzelpost-rechnungsautomatisierung-chaos-ordner/caption.txt",
+      "community": 0,
+      "norm_label": "rechnungsautomatisierung caption",
+      "community_name": "Invoice Automation Service",
+      "id": "02_projekte_lunavision_instagram_content_preview_2026_09_september_einzelbilder_01_einzelpost_rechnungsautomatisierung_chaos_ordner_caption"
+    },
+    {
+      "label": "Rechnungsautomatisierung Slide 1",
+      "file_type": "code",
+      "source_file": "02 Projekte/LunaVision-Instagram-Content-Preview/2026-09 September/Einzelbilder/01-einzelpost-rechnungsautomatisierung-chaos-ordner/slide-1-post.html",
+      "community": 0,
+      "norm_label": "rechnungsautomatisierung slide 1",
+      "community_name": "Invoice Automation Service",
+      "id": "02_projekte_lunavision_instagram_content_preview_2026_09_september_einzelbilder_01_einzelpost_rechnungsautomatisierung_chaos_ordner_slide_1_post"
+    },
+    {
+      "label": "Rechnungsautomatisierung Konzept A",
+      "file_type": "code",
+      "source_file": "02 Projekte/LunaVision-Instagram-Content-Preview/2026-09 September/Einzelbilder/01-einzelpost-rechnungsautomatisierung-chaos-ordner/konzept-vergleich/concept-a-split-panel.html",
+      "verification": "unverified",
+      "community": 0,
+      "norm_label": "rechnungsautomatisierung konzept a",
+      "community_name": "Invoice Automation Service",
+      "id": "02_projekte_lunavision_instagram_content_preview_2026_09_september_einzelbilder_01_einzelpost_rechnungsautomatisierung_chaos_ordner_konzept_vergleich_concept_a_split_panel"
+    },
+    {
+      "label": "Rechnungsautomatisierung Konzept B",
+      "file_type": "code",
+      "source_file": "02 Projekte/LunaVision-Instagram-Content-Preview/2026-09 September/Einzelbilder/01-einzelpost-rechnungsautomatisierung-chaos-ordner/konzept-vergleich/concept-b-diagramm.html",
+      "verification": "unverified",
+      "community": 0,
+      "norm_label": "rechnungsautomatisierung konzept b",
+      "community_name": "Invoice Automation Service",
+      "id": "02_projekte_lunavision_instagram_content_preview_2026_09_september_einzelbilder_01_einzelpost_rechnungsautomatisierung_chaos_ordner_konzept_vergleich_concept_b_diagramm"
+    },
+    {
+      "label": "LunaVision Brand",
+      "file_type": "concept",
+      "source_file": "index.html",
+      "community": 1,
+      "norm_label": "lunavision brand",
+      "community_name": "LunaVision Brand Assets",
+      "id": "lunavision_brand"
+    },
+    {
+      "label": "KI-Content-Agent Service",
+      "file_type": "concept",
+      "source_file": "02 Projekte/LunaVision-Instagram-Content-Preview/2026-08 August/Karussells/02-karussell-ki-content-agent-deep-dive/caption.txt",
+      "community": 2,
+      "norm_label": "ki-content-agent service",
+      "community_name": "KI-Content-Agent Slide 1",
+      "id": "ki_content_agent_service"
+    },
+    {
+      "label": "Rechnungsautomatisierung Service",
+      "file_type": "concept",
+      "source_file": "02 Projekte/LunaVision-Instagram-Content-Preview/2026-09 September/Einzelbilder/01-einzelpost-rechnungsautomatisierung-chaos-ordner/caption.txt",
+      "community": 0,
+      "norm_label": "rechnungsautomatisierung service",
+      "community_name": "Invoice Automation Service",
+      "id": "rechnungsautomatisierung_service"
+    },
+    {
+      "label": "LunaVision Logo",
+      "file_type": "image",
+      "source_file": "assets/logo.png",
+      "community": 1,
+      "norm_label": "lunavision logo",
+      "community_name": "LunaVision Brand Assets",
+      "id": "assets_logo"
+    },
+    {
+      "label": "Landingpage Mockup",
+      "file_type": "image",
+      "source_file": "assets/hero-mockup-final.png",
+      "community": 1,
+      "norm_label": "landingpage mockup",
+      "community_name": "LunaVision Brand Assets",
+      "id": "assets_hero_mockup_final"
+    },
+    {
+      "label": "Chicago Skyline Night Photo",
+      "file_type": "image",
+      "source_file": "02 Projekte/LunaVision-Instagram-Content-Preview/2026-08 August/Karussells/02-karussell-ki-content-agent-deep-dive/slide-1-cover.png",
+      "community": 2,
+      "norm_label": "chicago skyline night photo",
+      "community_name": "KI-Content-Agent Slide 1",
+      "id": "02_projekte_lunavision_instagram_content_preview_2026_08_august_karussells_02_karussell_ki_content_agent_deep_dive_slide_1_cover_img"
+    },
+    {
+      "label": "Circuit Grid Background",
+      "file_type": "image",
+      "source_file": "02 Projekte/LunaVision-Instagram-Content-Preview/2026-09 September/Einzelbilder/01-einzelpost-rechnungsautomatisierung-chaos-ordner/slide-1-post.png",
+      "community": 0,
+      "norm_label": "circuit grid background",
+      "community_name": "Invoice Automation Service",
+      "id": "02_projekte_lunavision_instagram_content_preview_2026_09_september_einzelbilder_01_einzelpost_rechnungsautomatisierung_chaos_ordner_slide_1_post_img"
+    },
+    {
+      "label": "LinkedIn Post Caption: KI Bild Kontrolle",
+      "file_type": "document",
+      "source_file": "assets/Final Posts/ki_bild_kontrolle/caption.txt",
+      "community": 3,
+      "norm_label": "linkedin post caption: ki bild kontrolle",
+      "community_name": "LinkedIn Post Caption: KI Bild Kontrolle",
+      "id": "assets_final_posts_ki_bild_kontrolle_caption"
+    },
+    {
+      "label": "Termin-Chat Template",
+      "file_type": "code",
+      "source_file": "shops/1TEMPLATE/index.html",
+      "community": 5,
+      "norm_label": "termin-chat template",
+      "community_name": "Termin-Chat Template",
+      "id": "shops_1template_index"
+    },
+    {
+      "label": "LinkedIn Post: GEO Google Reicht Nicht Mehr",
+      "file_type": "image",
+      "source_file": "assets/Final Posts/linkedin_post_geo.png",
+      "community": 4,
+      "norm_label": "linkedin post: geo google reicht nicht mehr",
+      "community_name": "Generative Engine Optimization (GEO)",
+      "id": "assets_final_posts_linkedin_post_geo"
+    },
+    {
+      "label": "LinkedIn Post: GEO KI-Antwort Existenz",
+      "file_type": "image",
+      "source_file": "assets/Final Posts/linkedin_post_geo_v2.png",
+      "community": 4,
+      "norm_label": "linkedin post: geo ki-antwort existenz",
+      "community_name": "Generative Engine Optimization (GEO)",
+      "id": "assets_final_posts_linkedin_post_geo_v2"
+    },
+    {
+      "label": "LinkedIn Post: GEO Kunden fragen KI",
+      "file_type": "image",
+      "source_file": "assets/Final Posts/linkedin_post_geo_v3.png",
+      "community": 4,
+      "norm_label": "linkedin post: geo kunden fragen ki",
+      "community_name": "Generative Engine Optimization (GEO)",
+      "id": "assets_final_posts_linkedin_post_geo_v3"
+    },
+    {
+      "label": "LinkedIn Post: Haltung vs Corporate",
+      "file_type": "image",
+      "source_file": "assets/Final Posts/linkedin_post_haltung_vs_corporate.png",
+      "community": 6,
+      "norm_label": "linkedin post: haltung vs corporate",
+      "community_name": "LinkedIn Post: Haltung vs Corporate",
+      "id": "assets_final_posts_linkedin_post_haltung_vs_corporate"
+    },
+    {
+      "label": "LinkedIn Post: KI-Content-Agent",
+      "file_type": "image",
+      "source_file": "assets/Final Posts/linkedin_post_ki_agent.png",
+      "community": 3,
+      "norm_label": "linkedin post: ki-content-agent",
+      "community_name": "LinkedIn Post Caption: KI Bild Kontrolle",
+      "id": "assets_final_posts_linkedin_post_ki_agent"
+    },
+    {
+      "label": "LinkedIn Post: KI-Erkennung 94 Prozent",
+      "file_type": "image",
+      "source_file": "assets/Final Posts/linkedin_post_ki_erkennung.png",
+      "community": 7,
+      "norm_label": "linkedin post: ki-erkennung 94 prozent",
+      "community_name": "LinkedIn Post: KI-Erkennung 94 Prozent",
+      "id": "assets_final_posts_linkedin_post_ki_erkennung"
+    },
+    {
+      "label": "LinkedIn Post: Lorem Ipsum Bildkontrolle",
+      "file_type": "image",
+      "source_file": "assets/Final Posts/ki_bild_kontrolle/ki_bild_kontrolle.png",
+      "community": 3,
+      "norm_label": "linkedin post: lorem ipsum bildkontrolle",
+      "community_name": "LinkedIn Post Caption: KI Bild Kontrolle",
+      "id": "assets_final_posts_ki_bild_kontrolle_ki_bild_kontrolle"
+    },
+    {
+      "label": "Barbershop Aso 3 Logo",
+      "file_type": "image",
+      "source_file": "shops/kunden/barbershop-aso3-ludwigshafen/assets/logo.png",
+      "community": 5,
+      "norm_label": "barbershop aso 3 logo",
+      "community_name": "Termin-Chat Template",
+      "id": "shops_kunden_barbershop_aso3_ludwigshafen_assets_logo"
+    },
+    {
+      "label": "LunaVision",
+      "file_type": "concept",
+      "source_file": "assets/Final Posts/ki_bild_kontrolle/caption.txt",
+      "community": 3,
+      "norm_label": "lunavision",
+      "community_name": "LinkedIn Post Caption: KI Bild Kontrolle",
+      "id": "lunavision_concept"
+    },
+    {
+      "label": "Generative Engine Optimization (GEO)",
+      "file_type": "concept",
+      "source_file": "assets/Final Posts/linkedin_post_geo.png",
+      "community": 4,
+      "norm_label": "generative engine optimization (geo)",
+      "community_name": "Generative Engine Optimization (GEO)",
+      "id": "geo_concept"
+    }
+  ],
+  "links": [
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "GoogleTerminPage.html",
+      "source": "googleterminpage",
+      "target": "lunavision_brand"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "source": "index",
+      "target": "assets_hero_mockup_final"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "source": "index",
+      "target": "assets_logo"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "source": "index",
+      "target": "lunavision_brand"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "02 Projekte/LunaVision-Instagram-Content-Preview/2026-08 August/Karussells/02-karussell-ki-content-agent-deep-dive/caption.txt",
+      "source": "02_projekte_lunavision_instagram_content_preview_2026_08_august_karussells_02_karussell_ki_content_agent_deep_dive_caption",
+      "target": "ki_content_agent_service"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "02 Projekte/LunaVision-Instagram-Content-Preview/2026-08 August/Karussells/02-karussell-ki-content-agent-deep-dive/slide-1-cover.html",
+      "source": "02_projekte_lunavision_instagram_content_preview_2026_08_august_karussells_02_karussell_ki_content_agent_deep_dive_slide_1_cover",
+      "target": "02_projekte_lunavision_instagram_content_preview_2026_08_august_karussells_02_karussell_ki_content_agent_deep_dive_slide_1_cover_img"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "02 Projekte/LunaVision-Instagram-Content-Preview/2026-08 August/Karussells/02-karussell-ki-content-agent-deep-dive/slide-1-cover.html",
+      "source": "02_projekte_lunavision_instagram_content_preview_2026_08_august_karussells_02_karussell_ki_content_agent_deep_dive_slide_1_cover",
+      "target": "ki_content_agent_service"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "02 Projekte/LunaVision-Instagram-Content-Preview/2026-09 September/Einzelbilder/01-einzelpost-rechnungsautomatisierung-chaos-ordner/caption.txt",
+      "source": "02_projekte_lunavision_instagram_content_preview_2026_09_september_einzelbilder_01_einzelpost_rechnungsautomatisierung_chaos_ordner_caption",
+      "target": "rechnungsautomatisierung_service"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "02 Projekte/LunaVision-Instagram-Content-Preview/2026-09 September/Einzelbilder/01-einzelpost-rechnungsautomatisierung-chaos-ordner/slide-1-post.html",
+      "source": "02_projekte_lunavision_instagram_content_preview_2026_09_september_einzelbilder_01_einzelpost_rechnungsautomatisierung_chaos_ordner_slide_1_post",
+      "target": "02_projekte_lunavision_instagram_content_preview_2026_09_september_einzelbilder_01_einzelpost_rechnungsautomatisierung_chaos_ordner_slide_1_post_img"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "02 Projekte/LunaVision-Instagram-Content-Preview/2026-09 September/Einzelbilder/01-einzelpost-rechnungsautomatisierung-chaos-ordner/slide-1-post.html",
+      "source": "02_projekte_lunavision_instagram_content_preview_2026_09_september_einzelbilder_01_einzelpost_rechnungsautomatisierung_chaos_ordner_slide_1_post",
+      "target": "rechnungsautomatisierung_service"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "02 Projekte/LunaVision-Instagram-Content-Preview/2026-09 September/Einzelbilder/01-einzelpost-rechnungsautomatisierung-chaos-ordner/konzept-vergleich/concept-a-split-panel.html",
+      "source": "02_projekte_lunavision_instagram_content_preview_2026_09_september_einzelbilder_01_einzelpost_rechnungsautomatisierung_chaos_ordner_konzept_vergleich_concept_a_split_panel",
+      "target": "rechnungsautomatisierung_service"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "02 Projekte/LunaVision-Instagram-Content-Preview/2026-09 September/Einzelbilder/01-einzelpost-rechnungsautomatisierung-chaos-ordner/konzept-vergleich/concept-b-diagramm.html",
+      "source": "02_projekte_lunavision_instagram_content_preview_2026_09_september_einzelbilder_01_einzelpost_rechnungsautomatisierung_chaos_ordner_konzept_vergleich_concept_b_diagramm",
+      "target": "rechnungsautomatisierung_service"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/Final Posts/ki_bild_kontrolle/caption.txt",
+      "source": "assets_final_posts_ki_bild_kontrolle_caption",
+      "target": "assets_final_posts_ki_bild_kontrolle_ki_bild_kontrolle"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/Final Posts/ki_bild_kontrolle/caption.txt",
+      "source": "assets_final_posts_ki_bild_kontrolle_caption",
+      "target": "lunavision_concept"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "shops/1TEMPLATE/index.html",
+      "source": "shops_1template_index",
+      "target": "shops_kunden_barbershop_aso3_ludwigshafen_assets_logo"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/Final Posts/linkedin_post_geo.png",
+      "source": "assets_final_posts_linkedin_post_geo",
+      "target": "geo_concept"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/Final Posts/linkedin_post_geo_v2.png",
+      "source": "assets_final_posts_linkedin_post_geo_v2",
+      "target": "geo_concept"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/Final Posts/linkedin_post_geo_v3.png",
+      "source": "assets_final_posts_linkedin_post_geo_v3",
+      "target": "geo_concept"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/Final Posts/linkedin_post_ki_agent.png",
+      "source": "assets_final_posts_linkedin_post_ki_agent",
+      "target": "lunavision_concept"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "lunavision_services_portfolio",
+      "label": "LunaVision Service Portfolio",
+      "nodes": [
+        "index",
+        "ki_content_agent_service",
+        "rechnungsautomatisierung_service",
+        "googleterminpage"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "geo_marketing_campaign",
+      "label": "GEO Marketing Campaign",
+      "nodes": [
+        "assets_final_posts_linkedin_post_geo",
+        "assets_final_posts_linkedin_post_geo_v2",
+        "assets_final_posts_linkedin_post_geo_v3",
+        "geo_concept"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "assets/Final Posts/linkedin_post_geo.png"
+    },
+    {
+      "id": "lunavision_quality_control_flow",
+      "label": "LunaVision Quality Control Process",
+      "nodes": [
+        "assets_final_posts_ki_bild_kontrolle_caption",
+        "assets_final_posts_ki_bild_kontrolle_ki_bild_kontrolle",
+        "lunavision_concept"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "assets/Final Posts/ki_bild_kontrolle/caption.txt"
+    }
+  ],
+  "built_at_commit": "99c05814001bf3cf503628f608ba92a1bc195ef4"
+}

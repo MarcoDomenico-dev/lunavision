@@ -1,44 +1,148 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
+  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>LunaVision – Moderne Landingpages für lokale Businesses</title>
-  <meta name="description" content="LunaVision erstellt moderne Landingpages für lokale Businesses – mobil optimiert, professionell gestaltet und schnell live. Für Handwerker, Friseure, Studios und lokale Dienstleister." />
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <title>LunaVision | KI-Content-Agent, GEO, SEO und Websites</title>
+  <meta name="description" content="LunaVision – KI-Content-Agent, KI-Automatisierung, GEO und moderne Websites für Selbstständige und KMU im DACH-Raum. Schnell umgesetzt, bezahlbar." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lunavision.org/" />
 
-  <!-- Meta Pixel Code -->
-  <script>
-    function loadMetaPixel() {
-      !function(f,b,e,v,n,t,s) {
-        if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
-        t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
-      }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1064676212710682');
-      fbq('track', 'PageView');
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lunavision.org/" />
+  <meta property="og:title" content="LunaVision | KI-Content-Agent, GEO, SEO und Websites" />
+  <meta property="og:description" content="KI-Content-Agent, KI-Automatisierung, GEO und moderne Websites für Selbstständige und KMU im DACH-Raum." />
+  <meta property="og:image" content="https://lunavision.org/assets/og-image.jpg" />
+  <meta property="og:locale" content="de_DE" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LunaVision | KI-Content-Agent, GEO, SEO und Websites" />
+  <meta name="twitter:description" content="KI-Content-Agent, KI-Automatisierung, GEO und moderne Websites für KMU." />
+  <meta name="twitter:image" content="https://lunavision.org/assets/og-image.jpg" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "LunaVision",
+    "url": "https://lunavision.org",
+    "email": "info@lunavision.org",
+    "description": "LunaVision ist eine digitale Agentur aus Ludwigshafen, die einen KI-Content-Agent, KI-Automatisierung, moderne Websites und digitales Marketing für Selbstständige und KMU im DACH-Raum anbietet.",
+    "slogan": "KI-Automatisierung & digitales Marketing für dein Business. Smarter. Nicht komplizierter.",
+    "foundingDate": "2024",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kranichstr. 11",
+      "addressLocality": "Ludwigshafen am Rhein",
+      "postalCode": "67069",
+      "addressCountry": "DE"
+    },
+    "areaServed": [
+      {"@type": "Country", "name": "Deutschland"},
+      {"@type": "Country", "name": "Österreich"},
+      {"@type": "Country", "name": "Schweiz"}
+    ],
+    "knowsLanguage": ["de", "en"],
+    "sameAs": [
+      "https://instagram.com/lunavision.ai",
+      "https://facebook.com/lunavision.org"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "LunaVision Leistungen",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "KI-Content-Agent", "serviceType": "Digitales Marketing"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "KI-Rechnungsautomatisierung", "serviceType": "KI-Automatisierung"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Landingpage", "serviceType": "Webdesign"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Generative Engine Optimization (GEO)", "serviceType": "GEO"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bewertungsbooster WhatsApp", "serviceType": "Automatisierung"}}
+      ]
     }
-
-    // Laden nur wenn Marketing Cookies akzeptiert sind
-    if(localStorage.getItem('cookie_marketing') === 'true') {
-      loadMetaPixel();
-    }
-
-    // Listener für Cookie-Änderungen
-    document.addEventListener('cookie-consent-updated', function(e) {
-      if(e.detail && e.detail.marketing && !window.fbq) {
-        loadMetaPixel();
-      }
-    });
+  }
   </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1064676212710682&ev=PageView&noscript=1" /></noscript>
-  <!-- End Meta Pixel Code -->
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Was ist im Landingpage-Paket enthalten?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eine moderne Onepage-Landingpage, mobile Optimierung, Kontaktbutton, SEO-Basics, Liveschaltung auf deine Domain sowie eine Korrekturrunde — alles inklusive."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Muss ich technisches Know-how haben?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nein. Wir richten alles für dich ein. Du brauchst nur ein Google-Konto für die Automatisierungen und eine Domain für die Landingpage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was ist GEO und warum brauche ich das?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Generative Engine Optimization sorgt dafür dass dein Business in KI-Antworten von ChatGPT, Claude und Perplexity auftaucht. Immer mehr Menschen suchen direkt über KI-Assistenten statt über Google — GEO ist die Investition in die Sichtbarkeit von morgen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann ich mehrere Services kombinieren?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Viele unserer Kunden starten mit einer Landingpage und fügen danach Automatisierungen oder GEO dazu. Sprich uns einfach an — wir schnüren gerne ein individuelles Paket."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was passiert wenn ich einen Monatsdienst kündigen will?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Alle monatlichen Services sind monatlich kündbar. Keine Mindestlaufzeit, kein Kleingedrucktes. Deine Daten bleiben in deinen Accounts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Für wen sind die Services geeignet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Für Selbstständige, Handwerker, Friseure, Barbershops, Agenturen, Restaurants und alle kleinen Unternehmen im DACH-Raum die digital professioneller auftreten und Prozesse automatisieren wollen."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      src: url('assets/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Source Serif 4';
+      src: url('assets/SourceSerif4-VariableFont.ttf') format('truetype');
+      font-weight: 200 900;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
 
   <style>
     :root{
       --bg:#0B0F1C;
       --bg2:#0f1730;
-      --card:rgba(255,255,255,.04);
       --border:rgba(255,255,255,.10);
       --text:#F5F7FA;
       --muted:rgba(245,247,250,.75);
@@ -47,7 +151,8 @@
       --shadow2:0 10px 26px rgba(0,0,0,.28);
       --r:18px;
       --max:1100px;
-      --font:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      --font:'Inter', ui-sans-serif, system-ui, -apple-system, Helvetica, Arial;
+      --font-display:'Source Serif 4', Georgia, serif;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -63,7 +168,7 @@
     }
     a{color:inherit}
     .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
-    .section{padding:74px 0}
+    .section{padding:56px 0}
     .card{
       border:1px solid var(--border);
       background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
@@ -72,1022 +177,1481 @@
       padding:18px;
     }
     .muted{color:var(--muted)}
-    .pill{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      width:fit-content;
-      margin:0 auto 12px auto;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.03);
-      padding:8px 14px;
-      border-radius:999px;
-      font-size:13px;
-      color:var(--muted);
-      text-align:center;
-    }
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
       gap:10px;
-      padding:12px 16px;
+      padding:12px 20px;
       border-radius:14px;
       border:1px solid var(--border);
       text-decoration:none;
       cursor:pointer;
-      user-select:none;
-      transition:transform .12s ease, background .12s ease, border-color .12s ease, opacity .12s ease;
-      font-weight:800;
-      letter-spacing:.2px;
+      font-weight:700;
       white-space:nowrap;
       background:rgba(255,255,255,.03);
+      transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
     }
-    .btn:hover{transform:translateY(-1px); border-color:rgba(199,167,90,.55)}
+    .btn:hover{
+      transform:translateY(-2px);
+      border-color:rgba(199,167,90,.55);
+      box-shadow:0 10px 24px rgba(199,167,90,.16);
+    }
     .btn.primary{
       background:linear-gradient(135deg, rgba(199,167,90,.95), rgba(231,209,155,.90));
       color:#0B0F1C;
       border-color:transparent;
       box-shadow:0 12px 26px rgba(199,167,90,.16);
     }
-    .btn.primary:hover{opacity:.95}
-    .h1{font-size:46px; line-height:1.05; margin:14px 0 10px; letter-spacing:-.6px}
-    .h2{font-size:30px; margin:0 0 12px}
-    .h3{font-size:18px; margin:0 0 8px}
-    .lead{font-size:18px; color:var(--muted); line-height:1.55; max-width:62ch}
-    .seoText{
-      margin-top:18px;
-      max-width:720px;
-      color:rgba(245,247,250,.72);
-      line-height:1.6;
-      font-size:15px;
+    .btn.primary:hover{
+      opacity:.96;
+      box-shadow:0 16px 34px rgba(199,167,90,.32);
     }
+    .h2{font-family:var(--font-display); font-size:32px; margin:0 0 12px; font-weight:600; letter-spacing:0}
+    .lead{font-size:17px; color:var(--muted); line-height:1.6; max-width:62ch}
 
+    /* NAV */
     .topbar{
-      position:sticky;
-      top:0;
-      z-index:50;
+      position:sticky; top:0; z-index:50;
       backdrop-filter:blur(10px);
       background:rgba(11,15,28,.60);
       border-bottom:1px solid rgba(255,255,255,.06);
     }
     .topbar .inner{
-      display:flex;
-      align-items:center;
+      display:flex; align-items:center;
       justify-content:space-between;
-      padding:14px 0;
-      gap:14px;
+      padding:14px 0; gap:14px;
     }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      text-decoration:none;
-      min-width:0;
-    }
-    .brandText{
-      display:flex;
-      flex-direction:column;
-      line-height:1.05;
-      min-width:0;
-    }
-    .brandName{
-      font-size:15px;
-      font-weight:900;
-      letter-spacing:.3px;
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
-    }
-    .brandTag{
-      font-size:12px;
-      color:var(--muted);
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
-    }
-    .logo{
-      width:30px;
-      height:30px;
-      border-radius:12px;
-      object-fit:contain;
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.10);
-      padding:4px;
-      flex:0 0 auto;
-    }
-    nav{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-    nav a.link{
-      text-decoration:none;
-      font-size:14px;
-      color:var(--muted);
-      padding:8px 10px;
-      border-radius:10px;
-      transition:background .12s ease, color .12s ease;
-    }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brandText{display:flex; flex-direction:column; line-height:1.05}
+    .brandName{font-family:var(--font-display); font-size:16px; font-weight:600; letter-spacing:0}
+    .brandTag{font-size:11px; color:var(--muted)}
+    .logo{width:30px; height:30px; border-radius:12px; object-fit:contain; background:rgba(255,255,255,.06); border:1px solid var(--border); padding:4px; flex:0 0 auto}
+    nav{display:flex; align-items:center; gap:8px; flex-wrap:wrap; justify-content:flex-end}
+    nav a.link{text-decoration:none; font-size:13px; color:var(--muted); padding:8px 10px; border-radius:10px; transition:background .12s, color .12s}
     nav a.link:hover{background:rgba(255,255,255,.04); color:var(--text)}
-    .lang{
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(255,255,255,.03);
-      color:var(--text);
-      border-radius:12px;
-      padding:10px 12px;
-      font-weight:900;
-      cursor:pointer;
-    }
+    .lang{border:1px solid var(--border); background:rgba(255,255,255,.03); color:var(--text); border-radius:12px; padding:9px 12px; font-weight:900; cursor:pointer; font-family:inherit; font-size:13px}
     .lang:hover{border-color:rgba(199,167,90,.55)}
+    @media(max-width:820px){nav a.link{display:none}}
 
-    @media (max-width:820px){
-      .h1{font-size:38px}
-      nav a.link{display:none}
+    /* NAV DROPDOWN (Services) */
+    .nav-dropdown{position:relative; display:flex; align-items:center}
+    .dropdown-toggle{
+      background:none; border:none; color:var(--muted); cursor:pointer;
+      padding:8px 6px; font-size:11px; font-family:inherit; line-height:1;
     }
-
-    .hero{
-      padding:12px 0 20px;
-      position:relative;
-      overflow:hidden;
+    .dropdown-toggle:hover{color:var(--text)}
+    .dropdown-menu{
+      display:none; position:absolute; top:100%; left:0;
+      padding-top:10px; z-index:60;
     }
+    .dropdown-menu-inner{
+      background:#10162b; border:1px solid var(--border); border-radius:12px;
+      padding:8px; min-width:260px; box-shadow:0 12px 26px rgba(0,0,0,.35);
+    }
+    .dropdown-menu a{display:block; padding:8px 10px; border-radius:8px; font-size:13px; color:var(--muted); text-decoration:none; white-space:normal}
+    .dropdown-menu a:hover{background:rgba(255,255,255,.05); color:var(--text)}
+    .nav-dropdown.open .dropdown-menu, .nav-dropdown:hover .dropdown-menu{display:block}
+    @media(max-width:820px){.nav-dropdown{display:none}}
 
+    /* HERO */
+    .hero{padding:32px 0 24px; position:relative; overflow:hidden}
     .heroGrid{
-      position:relative;
       display:grid;
-      grid-template-columns:minmax(0, 1fr);
-      gap:24px;
+      grid-template-columns:1fr 1fr;
+      gap:48px;
       align-items:center;
-      min-height:640px;
     }
-
-    .hero-copy{
-      position:relative;
-      z-index:3;
-      max-width:620px;
-      min-width:0;
+    @media(max-width:900px){
+      .heroGrid{grid-template-columns:1fr}
+      .hero-visual{order:-1}
     }
-
-    .ctaRow{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:18px;
+    .hero-copy{max-width:540px}
+    .hero-pill{
+      display:inline-flex; align-items:center; gap:8px;
+      border:1px solid rgba(199,167,90,.3);
+      background:rgba(199,167,90,.08);
+      color:var(--accent2);
+      padding:6px 14px; border-radius:999px;
+      font-size:12px; font-weight:600;
+      margin-bottom:20px;
+      letter-spacing:.02em;
     }
-
-    .hero-visual{
-      position:absolute;
-      right:-70px;
-      top:56%;
-      transform:translateY(-50%);
-      z-index:1;
-      width:min(1200px, 85vw);
-      pointer-events:none;
-      overflow:hidden;
+    .hero h1{
+      font-family:var(--font-display);
+      font-size:clamp(2rem, 3.6vw, 3rem);
+      font-weight:600;
+      letter-spacing:0;
+      line-height:1.2;
+      margin:0 0 18px;
+      color:var(--text);
     }
-
-    .hero-visual::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(
-        to right,
-        rgba(11,15,28,0.95) 0%,
-        rgba(11,15,28,0.85) 35%,
-        rgba(11,15,28,0.4) 60%,
-        rgba(11,15,28,0) 80%
-      );
-      z-index:2;
-      pointer-events:none;
+    .hero h1 em{font-style:normal; color:var(--accent)}
+    .hero-sub{
+      font-size:1.05rem;
+      color:var(--muted);
+      line-height:1.65;
+      margin-bottom:32px;
+      font-weight:300;
     }
-
-    .hero-mockup{
+    .hero-actions{display:flex; gap:14px; flex-wrap:wrap}
+    .hero-visual img{
       width:100%;
       height:auto;
+      border-radius:20px;
       display:block;
-      border-radius:28px;
-      filter:drop-shadow(0 40px 120px rgba(0,0,0,.55));
-      opacity:1;
+      filter:drop-shadow(0 30px 80px rgba(0,0,0,.5));
     }
 
-    @media (max-width:1100px){
-      .hero{
-        padding:12px 0 20px;
-      }
-
-      .heroGrid{
-        min-height:auto;
-        display:flex;
-        flex-direction:column;
-        gap:18px;
-      }
-
-      .hero-visual{
-        position:relative;
-        order:-1;
-        right:auto;
-        top:auto;
-        transform:none;
-        width:100%;
-        margin-top:8px;
-        pointer-events:auto;
-      }
-
-      .hero-copy{
-        max-width:100%;
-      }
-
-      .hero-mockup{
-        width:100%;
-        max-width:100%;
-        border-radius:22px;
-      }
+    /* STATS BAR */
+    .stats-bar{
+      border-top:1px solid rgba(255,255,255,.06);
+      border-bottom:1px solid rgba(255,255,255,.06);
+      padding:32px 0;
+      margin:0;
     }
-
-    .grid{display:grid; gap:18px}
-    .features{grid-template-columns:repeat(3,1fr)}
-    @media (max-width:900px){
-      .features{grid-template-columns:1fr}
+    .stats-inner{
+      max-width:var(--max); margin:0 auto; padding:0 20px;
+      display:flex; justify-content:space-around;
+      gap:24px; flex-wrap:wrap;
     }
+    .stat-item{text-align:center}
+    .stat-num{font-size:1.9rem; font-weight:800; letter-spacing:-.04em; color:var(--accent)}
+    .stat-label{font-size:0.78rem; color:var(--muted); margin-top:4px; font-weight:300}
 
-    .pricing{
-      grid-template-columns:repeat(2, minmax(0, 1fr));
-      align-items:stretch;
+    /* SERVICES */
+    .services-section{padding:56px 0}
+    .section-eyebrow{
+      font-size:0.72rem; font-weight:600;
+      letter-spacing:.1em; text-transform:uppercase;
+      color:var(--accent); margin-bottom:12px;
     }
-    @media (max-width:760px){
-      .pricing{grid-template-columns:1fr}
-    }
-
-    ul.clean{
-      margin:10px 0 0;
-      padding:0;
-      list-style:none;
+    .services-hero-card{
       display:grid;
-      gap:8px;
+      grid-template-columns:1fr 1fr;
+      border:1px solid var(--border);
+      background:linear-gradient(135deg, rgba(199,167,90,.06), rgba(255,255,255,.03));
+      border-radius:var(--r);
+      overflow:hidden;
+      margin-bottom:20px;
+      border-color:rgba(199,167,90,.25);
+      text-decoration:none; color:inherit;
+      transition:border-color .25s ease, transform .25s ease, box-shadow .25s ease;
     }
-    li.item{
-      display:flex;
-      gap:10px;
-      color:var(--muted);
-      line-height:1.45;
+    .services-hero-card:hover{
+      border-color:rgba(199,167,90,.5);
+      transform:translateY(-4px);
+      box-shadow:0 20px 40px rgba(199,167,90,.14), 0 10px 24px rgba(0,0,0,.28);
     }
-    .check{
-      width:18px;
-      height:18px;
-      border-radius:6px;
-      background:rgba(16,185,129,.16);
-      border:1px solid rgba(16,185,129,.32);
-      display:grid;
-      place-items:center;
-      flex:0 0 auto;
-      color:#a7f3d0;
-      font-size:12px;
-      margin-top:2px;
+    @media(max-width:760px){.services-hero-card{grid-template-columns:1fr}}
+    .services-hero-media{
+      position:relative; width:100%; height:100%; min-height:280px; background:#0d1224;
     }
-
-    .price{
-      padding:20px;
-      position:relative;
+    .services-hero-card img{
+      position:absolute; inset:0; width:100%; height:100%;
+      object-fit:contain; display:block;
     }
-    .price.featured{
-      border-color:rgba(199,167,90,.34);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)),
-        radial-gradient(700px 260px at 10% 0%, rgba(199,167,90,.12), transparent 60%);
-    }
-    .amount{
-      font-size:34px;
-      font-weight:1000;
-      letter-spacing:-.4px;
-      margin:10px 0 6px;
-    }
-    .sub{
-      color:var(--muted);
-      margin:0 0 10px;
-    }
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      border:1px solid rgba(199,167,90,.32);
-      background:rgba(199,167,90,.14);
-      color:var(--accent2);
-      padding:6px 10px;
-      border-radius:999px;
-      font-size:12px;
-      font-weight:1000;
-      width:fit-content;
-    }
-    .priceRow{
-      display:flex;
-      align-items:flex-end;
-      gap:12px;
-      flex-wrap:wrap;
-      margin:10px 0 4px;
-    }
-    .launchTag{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      margin-top:8px;
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid rgba(199,167,90,.26);
+    .services-hero-body{padding:40px 36px; display:flex; flex-direction:column; justify-content:center}
+    .service-tag{
+      display:inline-flex; align-items:center;
+      border:1px solid rgba(199,167,90,.3);
       background:rgba(199,167,90,.10);
       color:var(--accent2);
-      font-size:12px;
-      font-weight:900;
-      width:fit-content;
+      padding:4px 12px; border-radius:999px;
+      font-size:11px; font-weight:700;
+      letter-spacing:.06em; text-transform:uppercase;
+      margin-bottom:14px; width:fit-content;
     }
-    .smallNote{
-      margin-top:10px;
-      color:rgba(245,247,250,.68);
-      font-size:13px;
-      line-height:1.55;
+    .service-title{font-family:var(--font-display); font-size:1.55rem; font-weight:600; letter-spacing:0; margin:0 0 8px}
+    .service-tagline{font-size:0.88rem; color:var(--accent2); font-weight:600; margin-bottom:14px}
+    .service-desc{font-size:0.875rem; color:var(--muted); line-height:1.65; margin-bottom:18px}
+    .service-bullets{list-style:none; padding:0; margin:0 0 22px; display:grid; gap:8px}
+    .service-bullets li{display:flex; gap:8px; font-size:0.825rem; color:var(--muted); line-height:1.4; align-items:flex-start}
+    .service-bullets li::before{content:"✓"; color:#a7f3d0; font-size:11px; margin-top:2px; flex-shrink:0; font-weight:700}
+    .service-price-row{display:flex; align-items:baseline; gap:8px; margin-bottom:20px; flex-wrap:wrap}
+    .service-amount{font-size:1.7rem; font-weight:800; letter-spacing:-.04em; color:var(--text)}
+    .service-period{font-size:0.8rem; color:var(--muted)}
+    .service-cta{
+      display:inline-flex; align-items:center; gap:8px;
+      background:linear-gradient(135deg, rgba(199,167,90,.95), rgba(231,209,155,.90));
+      color:#0B0F1C; font-size:0.875rem; font-weight:800;
+      padding:11px 22px; border-radius:10px;
+      text-decoration:none; width:fit-content;
+      transition:box-shadow .25s ease;
+    }
+    .services-hero-card:hover .service-cta,
+    .service-small-card:hover .service-cta{
+      box-shadow:0 8px 20px rgba(199,167,90,.35);
     }
 
-    details{
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:16px;
-      background:rgba(255,255,255,.03);
-      padding:14px;
+    .services-small-grid{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:20px;
     }
-    details summary{
-      cursor:pointer;
-      font-weight:900;
-      list-style:none;
+    @media(max-width:640px){.services-small-grid{grid-template-columns:1fr}}
+
+    .service-small-card{
+      display:block;
+      border:1px solid var(--border);
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border-radius:var(--r);
+      overflow:hidden;
+      text-decoration:none; color:inherit;
+      transition:border-color .25s ease, transform .25s ease, box-shadow .25s ease;
     }
+    .service-small-card:hover{
+      border-color:rgba(199,167,90,.4);
+      transform:translateY(-4px);
+      box-shadow:0 16px 32px rgba(199,167,90,.12), 0 8px 20px rgba(0,0,0,.25);
+    }
+    .service-small-card img{
+      width:100%; height:180px;
+      object-fit:cover; display:block;
+    }
+    .service-small-body{padding:22px}
+
+    /* FAQ */
+    .faq-list{display:flex; flex-direction:column; gap:2px; margin-top:40px}
+    details{border:1px solid rgba(255,255,255,.08); border-radius:14px; background:rgba(255,255,255,.03); padding:16px 20px; margin-bottom:8px}
+    details summary{cursor:pointer; font-weight:600; font-size:0.925rem; list-style:none; display:flex; justify-content:space-between; align-items:center}
     details summary::-webkit-details-marker{display:none}
-    details p{
-      margin:10px 0 0;
-      color:var(--muted);
-      line-height:1.55;
-    }
+    details summary::after{content:"+"; color:var(--accent); font-size:1.3rem; font-weight:300; flex-shrink:0; transition:transform .2s}
+    details[open] summary::after{transform:rotate(45deg)}
+    details p{margin:12px 0 0; color:var(--muted); line-height:1.65; font-size:0.875rem}
 
-    .legal{
-      font-size:13px;
-      color:rgba(245,247,250,.78);
-      line-height:1.55;
-    }
+    /* LEGAL */
+    .legal{font-size:13px; color:rgba(245,247,250,.78); line-height:1.6}
     .legal h3{margin:0 0 10px; font-size:16px}
     .legal h4{margin:18px 0 8px; font-size:14px}
 
-    footer{
-      padding:46px 0 64px;
-      border-top:1px solid rgba(255,255,255,.06);
-    }
-    .tiny{
-      font-size:12px;
-      color:rgba(245,247,250,.62);
-      line-height:1.45;
-    }
+    /* FOOTER */
+    footer{padding:40px 0 60px; border-top:1px solid rgba(255,255,255,.06)}
+    .tiny{font-size:12px; color:rgba(245,247,250,.55); line-height:1.5}
+    .footer-row{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px}
+    .footer-social{display:flex; gap:16px}
+    .footer-social a{color:rgba(245,247,250,.55); transition:color .15s; line-height:0}
+    .footer-social a:hover{color:var(--accent)}
+    .footer-social svg{width:18px; height:18px; display:block}
     .langBlock{display:none}
     .langBlock.active{display:block}
+
+    /* i18n: page-wide DE/EN content pairs, driven by <html lang="..">.
+       German is the default (visible without any attribute match).
+       English counterparts carry .lang-en and only show up when
+       <html lang="en"> is set by the language toggle button. */
+    .lang-en{display:none}
+    html[lang="en"] .lang-en{display:revert}
+    html[lang="en"] .lang-de{display:none}
+
+    /* TOOLS (GEO-Check / ROI-Rechner) */
+    .tools-card{padding:0; overflow:hidden}
+    .tool-tabs{display:flex; border-bottom:1px solid var(--border)}
+    .tool-tab{
+      flex:1; padding:16px 20px; background:none; border:none; cursor:pointer;
+      font-family:inherit; font-size:0.9rem; font-weight:700; color:var(--muted);
+      border-bottom:2px solid transparent; transition:color .2s ease, border-color .2s ease;
+    }
+    .tool-tab:hover{color:var(--text)}
+    .tool-tab.active{color:var(--accent); border-bottom-color:var(--accent)}
+    .tool-panel{display:none; padding:32px}
+    .tool-panel.active{display:block}
+    .tool-intro{font-size:0.9rem; color:var(--muted); line-height:1.6; margin-bottom:20px}
+    .tool-field{margin-bottom:16px}
+    .tool-field label{display:block; font-size:0.8rem; font-weight:700; color:var(--muted); margin-bottom:6px}
+    .tool-field input{
+      width:100%; padding:12px 14px; border-radius:10px; border:1px solid var(--border);
+      background:rgba(255,255,255,.03); color:var(--text); font-family:inherit; font-size:0.9rem;
+    }
+    .tool-field input:focus{outline:none; border-color:rgba(199,167,90,.55)}
+    .tool-row{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+    @media(max-width:560px){.tool-row{grid-template-columns:1fr}}
+    .tool-consent{display:flex; align-items:flex-start; gap:10px; font-size:0.8rem; color:var(--muted); margin:16px 0; line-height:1.5}
+    .tool-consent input{margin-top:3px; flex-shrink:0}
+    .tool-consent a{color:var(--accent2); text-decoration:underline}
+    /* Standardmäßig ausgeblendet: Turnstile hängt aktuell reproduzierbar mit
+       Error 400020 (siehe Dokumentation/Cloudflare-Support-Turnstile-400020.md)
+       und zeigt dabei einen blauen "Troubleshooting"-Link, den wir wegen des
+       Cross-Origin-iFrames nicht umstylen können. Der Block wird nur sichtbar,
+       wenn das Widget wirklich erfolgreich lädt (siehe onTurnstileReady/
+       onTurnstileProblem weiter unten). Bis Cloudflare das Problem behebt,
+       trägt allein der Honeypot den Spam-Schutz. */
+    .tool-turnstile-wrap{display:none; margin:20px 0; padding-top:16px; border-top:1px solid rgba(255,255,255,.06)}
+    .tool-turnstile-wrap.tool-turnstile-ready{display:block}
+    .tool-turnstile-label{font-size:0.72rem; color:var(--muted); margin-bottom:10px; text-transform:uppercase; letter-spacing:.06em}
+    .tool-submit{width:100%; justify-content:center}
+    .tool-result{
+      display:none; margin-top:20px; padding:20px; border-radius:14px;
+      border:1px solid rgba(199,167,90,.3); background:rgba(199,167,90,.06);
+    }
+    .tool-result.show{display:block}
+    .tool-result-row{display:flex; justify-content:space-between; align-items:baseline; padding:8px 0; border-bottom:1px solid rgba(255,255,255,.06)}
+    .tool-result-row:last-child{border-bottom:none}
+    .tool-result-label{font-size:0.82rem; color:var(--muted)}
+    .tool-result-value{font-size:1.1rem; font-weight:800; color:var(--accent)}
+    .tool-result-value.big{font-size:1.5rem; color:#a7f3d0}
+    .tool-status{font-size:0.85rem; margin-top:14px; display:none}
+    .tool-status.show{display:block}
+    .tool-status.error{color:#fca5a5}
+    .tool-status.success{color:#a7f3d0}
+    .tool-optin{margin-top:20px; padding-top:20px; border-top:1px solid rgba(255,255,255,.08)}
+
+    /* AMBIENT BACKGROUND: schwebende Licht-Orbs + feines Noise, rein dekorativ,
+       markenkonform in Gold-/Navy-Tönen (kein Fremdfarben-Mix). Negativer
+       z-index statt einer body-weiten position/z-index-Regel auf allen
+       Kindelementen - letzteres hätte auch dynamisch von Drittanbieter-
+       Skripten (z.B. Turnstile-Challenge-Popup) in <body> eingefügte
+       Elemente erfasst und deren eigene Positionierung durcheinandergebracht. */
+    .ambient-bg{position:fixed; inset:0; pointer-events:none; z-index:-2; overflow:hidden}
+    .ambient-orb{position:absolute; border-radius:50%; filter:blur(120px); opacity:.14; animation:orbFloat 24s ease-in-out infinite}
+    .ambient-orb.o1{width:560px; height:560px; background:radial-gradient(circle, var(--accent) 0%, transparent 70%); top:-180px; left:15%}
+    .ambient-orb.o2{width:420px; height:420px; background:radial-gradient(circle, var(--accent2) 0%, transparent 70%); top:35%; right:-120px; animation-delay:-8s; animation-duration:28s}
+    .ambient-orb.o3{width:480px; height:480px; background:radial-gradient(circle, var(--accent) 0%, transparent 70%); bottom:-160px; left:45%; animation-delay:-15s; animation-duration:26s}
+    @keyframes orbFloat{
+      0%,100%{transform:translate(0,0) scale(1)}
+      25%{transform:translate(26px,-18px) scale(1.04)}
+      50%{transform:translate(-18px,26px) scale(.96)}
+      75%{transform:translate(18px,18px) scale(1.02)}
+    }
+    @media(prefers-reduced-motion:reduce){.ambient-orb{animation:none}}
+    .noise-overlay{
+      position:fixed; inset:0; pointer-events:none; z-index:-1; opacity:.025;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-repeat:repeat; background-size:256px 256px;
+    }
+
+    /* SHIMMER HOVER: wiederkehrendes Markenzeichen auf Buttons + Service-Cards.
+       Ergänzt die bestehenden Hover-Effekte (Anheben/Border), ersetzt sie nicht.
+       .tools-card bewusst NICHT hier rein (kein Shimmer nötig, und das
+       zusätzliche overflow:hidden/position:relative kann dem Turnstile-Widget
+       beim Rendern einer echten Sicherheits-Challenge in die Quere kommen). */
+    .btn, .services-hero-card, .service-small-card{position:relative; overflow:hidden}
+    .btn::after, .services-hero-card::after, .service-small-card::after{
+      content:''; position:absolute; top:0; left:-120%; width:60%; height:100%;
+      background:linear-gradient(90deg, transparent, rgba(199,167,90,.18), transparent);
+      transition:left .6s ease; pointer-events:none;
+    }
+    .btn:hover::after, .services-hero-card:hover::after, .service-small-card:hover::after{left:120%}
+
+    /* SCROLL-REVEAL: dezentes Einblenden von Sections/Cards beim Scrollen */
+    .reveal{opacity:0; transform:translateY(28px); transition:opacity .7s cubic-bezier(.4,0,.2,1), transform .7s cubic-bezier(.4,0,.2,1)}
+    .reveal.visible{opacity:1; transform:translateY(0)}
+    @media(prefers-reduced-motion:reduce){.reveal{opacity:1; transform:none; transition:none}}
+
+    /* DIAMOND DIVIDER zwischen Sektionen */
+    .elegant-divider{display:flex; align-items:center; justify-content:center; gap:14px; padding:8px 0; opacity:.35}
+    .elegant-divider .line{width:56px; height:1px; background:linear-gradient(90deg, transparent, var(--accent), transparent)}
+    .elegant-divider .diamond{width:6px; height:6px; background:var(--accent); transform:rotate(45deg); flex-shrink:0}
+
+    /* SCROLL-BOUNCE Pfeil im Hero */
+    /* Liegt im HTML jetzt als Geschwister nach .heroGrid (volle Breite von
+       .wrap), nicht mehr in .hero-copy. Vorher zentrierte align-items den Text
+       nur innerhalb der linken Textspalte (506px) - das ist auf Desktop nicht
+       die Mitte der Seite, sondern die Mitte der halben Spalte, wirkte also
+       nach links verschoben. Jetzt zentriert über beide Spalten hinweg. */
+    .scroll-indicator{display:flex; flex-direction:column; align-items:center; gap:6px; margin-top:32px; opacity:.45; animation:scrollBounce 2.2s ease-in-out infinite}
+    .scroll-indicator span{font-size:11px; text-transform:uppercase; letter-spacing:3px; color:var(--muted)}
+    .scroll-indicator .scroll-line{width:1px; height:34px; background:linear-gradient(to bottom, var(--accent), transparent)}
+    @keyframes scrollBounce{0%,100%{transform:translateY(0)} 50%{transform:translateY(7px)}}
+    @media(prefers-reduced-motion:reduce){.scroll-indicator{animation:none}}
+
+    /* NAV: dezent kompakter/opaker beim Scrollen */
+    .topbar.scrolled{background:rgba(11,15,28,.88)}
+    .topbar.scrolled .inner{padding:10px 0}
   </style>
-</head>
+
+  <!-- Cookie Consent (selbst gehostet, orestbida/cookieconsent v3.1.0, MIT-Lizenz) -->
+  <link rel="stylesheet" href="assets/cookieconsent.css" />
+
+  <!-- Google Tag Manager: blockiert (type="text/plain") bis Cookie-Consent-Kategorie
+       "analytics" aktiv zugestimmt wurde. Wird von cookieconsent.umd.js automatisch
+       ausgeführt sobald Zustimmung erteilt wird. -->
+  <script type="text/plain" data-category="analytics">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KZLCPBR3');</script>
+  <!-- End Google Tag Manager -->
+
+  <style>
+    /* AI ACT COMPLIANCE NOTICE */
+    .ai-act-notice {
+      padding: 40px 0;
+      background: linear-gradient(180deg, rgba(199, 167, 90, 0.08), rgba(199, 167, 90, 0.04));
+      border-top: 1px solid rgba(199, 167, 90, 0.2);
+      border-bottom: 1px solid rgba(199, 167, 90, 0.2);
+    }
+    .ai-act-box {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(199, 167, 90, 0.3);
+      border-radius: var(--r);
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(199, 167, 90, 0.1);
+    }
+    .ai-act-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .ai-act-icon { font-size: 24px; flex: 0 0 auto; }
+    .ai-act-title { font-family: var(--font-display); font-size: 20px; margin: 0; color: var(--text); font-weight: 600; }
+    .ai-act-text { font-size: 15px; line-height: 1.6; color: var(--muted); margin: 0 0 16px; }
+    .ai-act-details { margin-bottom: 16px; }
+    .ai-act-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .ai-act-list li { font-size: 14px; line-height: 1.5; color: var(--muted); }
+    .ai-act-list strong { color: var(--accent); }
+    .ai-act-link { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: rgba(199, 167, 90, 0.12); border: 1px solid rgba(199, 167, 90, 0.3); border-radius: 10px; color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 600; transition: background 0.2s, border-color 0.2s; }
+    .ai-act-link:hover { background: rgba(199, 167, 90, 0.18); border-color: rgba(199, 167, 90, 0.5); }
+    @media (max-width: 640px) {
+      .ai-act-box { padding: 18px; }
+      .ai-act-title { font-size: 18px; }
+    }
+  </style>
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/149027122.js"></script>
+    <!-- End of HubSpot Embed Code -->
+  </head>
 <body>
-  <header class="topbar">
+
+<div class="ambient-bg" aria-hidden="true">
+  <div class="ambient-orb o1"></div>
+  <div class="ambient-orb o2"></div>
+  <div class="ambient-orb o3"></div>
+</div>
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<header class="topbar" id="topbar">
+  <div class="wrap">
+    <div class="inner">
+      <a class="brand" href="/" aria-label="LunaVision Home">
+        <img class="logo" src="assets/logo.png" alt="LunaVision Logo" width="30" height="30" />
+        <div class="brandText">
+          <div class="brandName">LunaVision</div>
+          <div class="brandTag">
+            <span class="lang-de">KI-Automatisierung & digitales Marketing</span>
+            <span class="lang-en">AI Automation & Digital Marketing</span>
+          </div>
+        </div>
+      </a>
+      <nav aria-label="Navigation">
+        <div class="nav-dropdown">
+          <a class="link" href="#services">Services</a>
+          <button class="dropdown-toggle" aria-label="Service-Liste anzeigen" aria-expanded="false">▾</button>
+          <div class="dropdown-menu">
+            <div class="dropdown-menu-inner">
+              <a href="/ki-automatisierung"><span class="lang-de">Rechnungs- & E-Mail-Automatisierung</span><span class="lang-en">Invoice & Email Automation</span></a>
+              <a href="/landingpage-erstellen"><span class="lang-de">Landingpage</span><span class="lang-en">Landing Page</span></a>
+              <a href="/geo-optimierung">Generative Engine Optimization</a>
+              <a href="/ki-content-agent"><span class="lang-de">KI-Content-Agent</span><span class="lang-en">AI Content Agent</span></a>
+              <a href="/bewertungsbooster"><span class="lang-de">Bewertungsbooster WhatsApp</span><span class="lang-en">WhatsApp Review Booster</span></a>
+            </div>
+          </div>
+        </div>
+        <a class="link" href="#faq">FAQ</a>
+        <a class="link" href="#legal">
+          <span class="lang-de">AGB & Impressum</span>
+          <span class="lang-en">Terms & Imprint</span>
+        </a>
+        <a class="link" href="datenschutz.html">
+          <span class="lang-de">Datenschutz</span>
+          <span class="lang-en">Privacy Policy</span>
+        </a>
+        <button class="lang" id="langBtn">EN</button>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
     <div class="wrap">
-      <div class="inner">
-        <a class="brand" href="/" aria-label="LunaVision Home">
-          <img class="logo" src="assets/logo.png" alt="LunaVision Logo" />
-          <div class="brandText">
-            <div class="brandName">LunaVision</div>
-            <div class="brandTag" data-i18n="tagline">Moderne Landingpages für lokale Businesses</div>
+      <div class="heroGrid">
+        <div class="hero-copy">
+          <div class="hero-pill">
+            <span class="lang-de">🌙 LunaVision · DACH-Raum</span>
+            <span class="lang-en">🌙 LunaVision · DACH Region</span>
+          </div>
+          <h1>
+            <span class="lang-de">KI-Automatisierung & digitales Marketing für dein Business.</span>
+            <span class="lang-en">AI Automation & Digital Marketing for your business.</span>
+            <br>
+            <em>
+              <span class="lang-de">Smarter. Nicht komplizierter.</span>
+              <span class="lang-en">Smarter. Not more complicated.</span>
+            </em>
+          </h1>
+          <p class="hero-sub">
+            <span class="lang-de">KI-Automatisierung, moderne Websites und digitales Marketing für Selbstständige und KMU — alles aus einer Hand, schnell umgesetzt und bezahlbar.</span>
+            <span class="lang-en">AI automation, modern websites and digital marketing for freelancers and SMEs — all from a single source, fast to implement and affordable.</span>
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" target="_blank" rel="noopener"
+               href="https://wa.me/491742555178?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20LunaVision."
+               data-href-de="https://wa.me/491742555178?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20LunaVision."
+               data-href-en="https://wa.me/491742555178?text=Hello%2C%20I%27m%20interested%20in%20LunaVision.">
+              <span class="lang-de">Projekt anfragen</span>
+              <span class="lang-en">Request Project</span>
+            </a>
+            <a class="btn" href="#services">
+              <span class="lang-de">Alle Services</span>
+              <span class="lang-en">All Services</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="assets/hero-mockup-final.webp" alt="LunaVision – KI-Automatisierung und digitales Marketing" width="700" height="500" />
+        </div>
+      </div>
+      <!-- Bewusst außerhalb von .hero-copy: soll über die gesamte Breite (beide
+           Spalten) zentriert sein, nicht nur innerhalb der linken Textspalte -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <span class="lang-de">Scroll</span>
+        <span class="lang-en">Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-num">5</div>
+        <div class="stat-label">
+          <span class="lang-de">Services aus einer Hand</span>
+          <span class="lang-en">Services from one source</span>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">48h</div>
+        <div class="stat-label">
+          <span class="lang-de">bis zur ersten Automatisierung</span>
+          <span class="lang-en">until your first automation</span>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">–80%</div>
+        <div class="stat-label">
+          <span class="lang-de">weniger manueller Aufwand</span>
+          <span class="lang-en">less manual effort</span>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">DACH</div>
+        <div class="stat-label">
+          <span class="lang-de">Zielmarkt DE · AT · CH</span>
+          <span class="lang-en">Target market DE · AT · CH</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="elegant-divider" aria-hidden="true"><div class="line"></div><div class="diamond"></div><div class="line"></div></div>
+
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <div class="wrap">
+      <div class="section-eyebrow">
+        <span class="lang-de">Unsere Services</span>
+        <span class="lang-en">Our Services</span>
+      </div>
+      <h2 class="h2">
+        <span class="lang-de">Alles was dein Business<br>nach vorne bringt.</span>
+        <span class="lang-en">Everything that moves<br>your business forward.</span>
+      </h2>
+      <p class="lead" style="margin-bottom:40px">
+        <span class="lang-de">Fünf klare Produkte. Kein Schnickschnack. Direkt einsetzbar.</span>
+        <span class="lang-en">Five clear products. No fluff. Ready to use.</span>
+      </p>
+
+      <!-- Service 1: FEATURED -->
+      <a class="services-hero-card" href="/ki-content-agent">
+        <div class="services-hero-media">
+          <img src="assets/service-toolset.webp" alt="KI-Content-Agent" />
+        </div>
+        <div class="services-hero-body">
+          <div class="service-tag">Marketing</div>
+          <div class="service-title">
+            <span class="lang-de">KI-Content-Agent</span>
+            <span class="lang-en">AI Content Agent</span>
+          </div>
+          <div class="service-tagline">
+            <span class="lang-de">Dein KI-Marketing-Team. Ohne Agenturkosten.</span>
+            <span class="lang-en">Your AI marketing team. Without agency costs.</span>
+          </div>
+          <p class="service-desc">
+            <span class="lang-de">Wir übernehmen Ad-Copy, Personas und Social-Kalender für dich — laufend, nicht nur einmalig. Du bekommst fertigen Content zum Hochladen.</span>
+            <span class="lang-en">We take care of ad copy, personas and social calendar for you — continuously, not just once. You get ready-made content to upload.</span>
+          </p>
+          <ul class="service-bullets">
+            <li>
+              <span class="lang-de">Ad-Copy, Persona & Briefing-Bot</span>
+              <span class="lang-en">Ad copy, persona & briefing bot</span>
+            </li>
+            <li>
+              <span class="lang-de">Social-Kalender für konsistenten Content</span>
+              <span class="lang-en">Social calendar for consistent content</span>
+            </li>
+          </ul>
+          <div class="service-price-row">
+            <span class="service-amount">399 €</span>
+            <span class="service-period">
+              <span class="lang-de">einmalig · danach 199 €/Monat</span>
+              <span class="lang-en">one-time · then €199/month</span>
+            </span>
+          </div>
+          <span class="service-cta">
+            <span class="lang-de">Mehr erfahren</span>
+            <span class="lang-en">Learn more</span>
+            &nbsp;→
+          </span>
+        </div>
+      </a>
+
+      <!-- Services 2–5: SMALL GRID -->
+      <div class="services-small-grid">
+
+        <a class="service-small-card" href="/landingpage-erstellen">
+          <img src="assets/service-landingpage.webp" alt="Landingpage" />
+          <div class="service-small-body">
+            <div class="service-tag">
+              <span class="lang-de">Webdesign</span>
+              <span class="lang-en">Web Design</span>
+            </div>
+            <div class="service-title" style="font-size:1.15rem">
+              <span class="lang-de">Landingpage</span>
+              <span class="lang-en">Landing Page</span>
+            </div>
+            <div class="service-tagline">
+              <span class="lang-de">Online sichtbar. In 48 Stunden.</span>
+              <span class="lang-en">Online and visible. In 48 hours.</span>
+            </div>
+            <p class="service-desc">
+              <span class="lang-de">Moderne, mobil optimierte Onepage-Lösung mit Kontaktmöglichkeit, SEO-Basics und professioneller Darstellung.</span>
+              <span class="lang-en">Modern, mobile-optimized one-page site with contact options, SEO basics and a professional look.</span>
+            </p>
+            <ul class="service-bullets">
+              <li>
+                <span class="lang-de">Professionelles Design für alle Geräte</span>
+                <span class="lang-en">Professional design for all devices</span>
+              </li>
+              <li>
+                <span class="lang-de">WhatsApp, Telefon oder Kontaktformular</span>
+                <span class="lang-en">WhatsApp, phone or contact form</span>
+              </li>
+              <li>
+                <span class="lang-de">SEO-Basics inklusive</span>
+                <span class="lang-en">SEO basics included</span>
+              </li>
+            </ul>
+            <div class="service-price-row">
+              <span class="service-amount">599 €</span>
+              <span class="service-period">
+                <span class="lang-de">Projektpreis</span>
+                <span class="lang-en">one-time project price</span>
+              </span>
+            </div>
+            <span class="service-cta">
+              <span class="lang-de">Mehr erfahren</span>
+              <span class="lang-en">Learn more</span>
+              &nbsp;→
+            </span>
           </div>
         </a>
-        <nav aria-label="Navigation">
-          <a class="link" href="#features" data-i18n="nav_features">Vorteile</a>
-          <a class="link" href="#offers" data-i18n="nav_pricing">Angebot</a>
-          <a class="link" href="#faq" data-i18n="nav_faq">FAQ</a>
-          <a class="link" href="#legal" data-i18n="nav_legal">AGB & Impressum</a>
-          <button class="lang" id="langBtn" aria-label="Sprache wechseln">EN</button>
-        </nav>
+
+        <a class="service-small-card" href="/geo-optimierung">
+          <img src="assets/service-geo.webp" alt="Generative Engine Optimization" />
+          <div class="service-small-body">
+            <div class="service-tag">GEO</div>
+            <div class="service-title" style="font-size:1.15rem">Generative Engine Optimization</div>
+            <div class="service-tagline">
+              <span class="lang-de">Sichtbar wenn KI gefragt wird.</span>
+              <span class="lang-en">Visible when AI is asked.</span>
+            </div>
+            <p class="service-desc">
+              <span class="lang-de">ChatGPT, Claude und Perplexity sind die neue Suchmaschine. GEO sorgt dafür dass dein Business dort auftaucht wo Kunden heute suchen.</span>
+              <span class="lang-en">ChatGPT, Claude and Perplexity are the new search engines. GEO makes sure your business shows up where customers search today.</span>
+            </p>
+            <ul class="service-bullets">
+              <li>
+                <span class="lang-de">Schema Markup & strukturierte Daten</span>
+                <span class="lang-en">Schema markup & structured data</span>
+              </li>
+              <li>
+                <span class="lang-de">Inhalte die KI-Modelle zitieren</span>
+                <span class="lang-en">Content that AI models cite</span>
+              </li>
+              <li>
+                <span class="lang-de">Monatliches KI-Sichtbarkeits-Monitoring</span>
+                <span class="lang-en">Monthly AI visibility monitoring</span>
+              </li>
+            </ul>
+            <div class="service-price-row">
+              <span class="service-amount">799 €</span>
+              <span class="service-period">
+                <span class="lang-de">Setup · danach 149 €/Monat</span>
+                <span class="lang-en">setup · then €149/month</span>
+              </span>
+            </div>
+            <span class="service-cta">
+              <span class="lang-de">Mehr erfahren</span>
+              <span class="lang-en">Learn more</span>
+              &nbsp;→
+            </span>
+          </div>
+        </a>
+
+        <a class="service-small-card" href="/ki-automatisierung">
+          <img src="assets/service-automatisierung.webp" alt="KI-Rechnungsautomatisierung" />
+          <div class="service-small-body">
+            <div class="service-tag">
+              <span class="lang-de">KI-Automatisierung</span>
+              <span class="lang-en">AI Automation</span>
+            </div>
+            <div class="service-title" style="font-size:1.15rem">
+              <span class="lang-de">Rechnungs- & E-Mail-Automatisierung</span>
+              <span class="lang-en">Invoice & Email Automation</span>
+            </div>
+            <div class="service-tagline">
+              <span class="lang-de">Deine Rechnungen. Automatisch sortiert. Du machst nichts.</span>
+              <span class="lang-en">Your invoices. Automatically sorted. You do nothing.</span>
+            </div>
+            <p class="service-desc">
+              <span class="lang-de">Jede eingehende Rechnung landet automatisch in Google Drive — richtig benannt, richtig einsortiert, sofort auffindbar. Einmal einrichten, für immer laufen lassen.</span>
+              <span class="lang-en">Every incoming invoice lands automatically in Google Drive — correctly named, correctly filed, instantly findable. Set it up once, let it run forever.</span>
+            </p>
+            <ul class="service-bullets">
+              <li>
+                <span class="lang-de">KI erkennt Absender, Betrag, Datum und Kategorie automatisch</span>
+                <span class="lang-en">AI detects sender, amount, date and category automatically</span>
+              </li>
+              <li>
+                <span class="lang-de">Eindeutige Dateibenennung z.B. 2025-06-Telekom-89,99€.pdf</span>
+                <span class="lang-en">Clear file naming, e.g. 2025-06-Telekom-89.99€.pdf</span>
+              </li>
+              <li>
+                <span class="lang-de">24/7 aktiv — auch wenn du schläfst oder im Urlaub bist</span>
+                <span class="lang-en">Active 24/7 — even while you sleep or are on vacation</span>
+              </li>
+            </ul>
+            <div class="service-price-row">
+              <span class="service-amount">
+                <span class="lang-de">ab 499 €</span>
+                <span class="lang-en">from €499</span>
+              </span>
+              <span class="service-period">
+                <span class="lang-de">Setup · danach ab 39 €/Monat</span>
+                <span class="lang-en">setup · then from €39/month</span>
+              </span>
+            </div>
+            <span class="service-cta">
+              <span class="lang-de">Mehr erfahren</span>
+              <span class="lang-en">Learn more</span>
+              &nbsp;→
+            </span>
+          </div>
+        </a>
+
+        <a class="service-small-card" href="/bewertungsbooster">
+          <img src="assets/service-bewertungsbooster.webp" alt="Bewertungsbooster WhatsApp" />
+          <div class="service-small-body">
+            <div class="service-tag">
+              <span class="lang-de">Automatisierung</span>
+              <span class="lang-en">Automation</span>
+            </div>
+            <div class="service-title" style="font-size:1.15rem">
+              <span class="lang-de">Bewertungsbooster WhatsApp</span>
+              <span class="lang-en">WhatsApp Review Booster</span>
+            </div>
+            <div class="service-tagline">
+              <span class="lang-de">Mehr Google-Bewertungen. Vollautomatisch.</span>
+              <span class="lang-en">More Google reviews. Fully automatic.</span>
+            </div>
+            <p class="service-desc">
+              <span class="lang-de">Nach jedem Kauf oder Termin bekommt dein Kunde automatisch eine freundliche WhatsApp-Nachricht mit Bitte um eine Google-Bewertung.</span>
+              <span class="lang-en">After every purchase or appointment, your customer automatically receives a friendly WhatsApp message asking for a Google review.</span>
+            </p>
+            <ul class="service-bullets">
+              <li>
+                <span class="lang-de">Automatischer Versand nach Kaufabschluss</span>
+                <span class="lang-en">Automatic sending after purchase</span>
+              </li>
+              <li>
+                <span class="lang-de">Anpassbare Nachricht in deinem Ton</span>
+                <span class="lang-en">Customizable message in your tone</span>
+              </li>
+              <li>
+                <span class="lang-de">Direkt-Link zur Google-Bewertungsseite</span>
+                <span class="lang-en">Direct link to your Google review page</span>
+              </li>
+            </ul>
+            <div class="service-price-row">
+              <span class="service-amount">29 €</span>
+              <span class="service-period">
+                <span class="lang-de">pro Monat</span>
+                <span class="lang-en">per month</span>
+              </span>
+            </div>
+            <span class="service-cta">
+              <span class="lang-de">Mehr erfahren</span>
+              <span class="lang-en">Learn more</span>
+              &nbsp;→
+            </span>
+          </div>
+        </a>
+
       </div>
     </div>
-  </header>
+  </section>
 
-  <main id="top">
-    <section class="hero">
-      <div class="wrap">
-        <span class="pill" data-i18n="pill">🌙 Für Handwerker, Friseure, Studios und lokale Dienstleister • Modern • Mobil optimiert • Schnell live</span>
+  <div class="elegant-divider" aria-hidden="true"><div class="line"></div><div class="diamond"></div><div class="line"></div></div>
 
-        <div class="heroGrid">
-          <div class="hero-copy">
-            <h1 class="h1" data-i18n="hero_title">Moderne Landingpages<br>für lokale Businesses.</h1>
-
-            <p class="lead" data-i18n="hero_lead">
-              LunaVision erstellt moderne, mobil optimierte Landingpages für lokale Unternehmen, die online professioneller auftreten und einfacher erreichbar sein wollen.
-            </p>
-
-            <p class="seoText" data-i18n="hero_seo">
-              Ideal für Betriebe mit veralteter Website oder gar keinem klaren Online-Auftritt: Friseure, Barbershops, Handwerker, Studios, Reinigungsfirmen und andere lokale Dienstleister. Du bekommst eine saubere Onepage-Lösung mit Kontaktmöglichkeit, professioneller Darstellung und SEO-Basics – schnell und unkompliziert umgesetzt.
-            </p>
-
-            <div class="ctaRow">
-              <a class="btn primary" href="https://wa.me/491742555178?text=Hallo%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Landingpage%20f%C3%BCr%20mein%20Business." target="_blank" rel="noopener" data-i18n="cta_demo">Projekt anfragen</a>
-              <a class="btn" href="#offers" data-i18n="cta_pricing">Angebot ansehen</a>
-            </div>
-          </div>
-
-          <div class="hero-visual">
-            <img
-              src="assets/hero-mockup-final.png"
-              alt="LunaVision Landingpage Vorschau"
-              class="hero-mockup"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="features">
-      <div class="wrap">
-        <h2 class="h2" data-i18n="features_title">Was LunaVision für dein Business besser macht</h2>
-        <p class="lead" data-i18n="features_lead">Ein moderner Online-Auftritt schafft mehr Vertrauen, bessere Erreichbarkeit und einen professionelleren ersten Eindruck.</p>
-
-        <div class="grid features" style="margin-top:18px">
-          <div class="card">
-            <div class="h3" data-i18n="f1t">Professioneller erster Eindruck</div>
-            <ul class="clean">
-              <li class="item"><span class="check">✓</span><span data-i18n="f1a">Moderne Darstellung statt veralteter Website oder unklarem Auftritt</span></li>
-              <li class="item"><span class="check">✓</span><span data-i18n="f1b">Kundinnen und Kunden sehen sofort, wer ihr seid und was ihr anbietet</span></li>
-              <li class="item"><span class="check">✓</span><span data-i18n="f1c">Mehr Vertrauen durch klares Design, mobile Optimierung und saubere Struktur</span></li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <div class="h3" data-i18n="f2t">Einfacher erreichbar</div>
-            <ul class="clean">
-              <li class="item"><span class="check">✓</span><span data-i18n="f2a">Kontaktbutton für WhatsApp, Telefon oder Anfrage direkt eingebunden</span></li>
-              <li class="item"><span class="check">✓</span><span data-i18n="f2b">Wichtige Infos wie Leistungen, Öffnungszeiten, Adresse und Kontakt auf einen Blick</span></li>
-              <li class="item"><span class="check">✓</span><span data-i18n="f2c">Sauber nutzbar auf Smartphone, wo die meisten Kunden zuerst schauen</span></li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <div class="h3" data-i18n="f3t">Schnell und unkompliziert live</div>
-            <ul class="clean">
-              <li class="item"><span class="check">✓</span><span data-i18n="f3a">Klare Onepage-Lösung statt unnötig komplizierter Website-Projekte</span></li>
-              <li class="item"><span class="check">✓</span><span data-i18n="f3b">SEO-Basics für bessere Sichtbarkeit und einen soliden Start</span></li>
-              <li class="item"><span class="check">✓</span><span data-i18n="f3c">Optional später erweiterbar – z. B. mit Booking, Extras oder Pflege</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="offers">
-      <div class="wrap">
-        <h2 class="h2" data-i18n="pricing_title">Angebot</h2>
-        <p class="lead" data-i18n="pricing_lead">Ein klares Einstiegspaket für lokale Businesses, die schnell modern und professionell online sichtbar sein wollen.</p>
-
-        <div class="grid pricing" style="margin-top:18px">
-          <div class="card price featured">
-            <div class="badge" data-i18n="p1name">Basic Landingpage</div>
-
-            <div class="priceRow">
-              <div class="amount">349 €</div>
-            </div>
-
-            <p class="sub" data-i18n="p1sub">einmalig</p>
-            <div class="launchTag" data-i18n="p1launch">Klarer Einstieg ohne Abo</div>
-
-            <ul class="clean">
-              <li class="item"><span class="check">✓</span><span data-i18n="p1a">1 moderne Landingpage für dein Business</span></li>
-              <li class="item"><span class="check">✓</span><span data-i18n="p1b">Mobile Optimierung für Smartphone und Tablet</span></li>
-              <li class="item"><span class="check">✓</span><span data-i18n="p1c">Kontaktbutton für WhatsApp, Telefon oder Anfrage</span></li>
-              <li class="item"><span class="check">✓</span><span data-i18n="p1d">SEO-Basics für einen sauberen Start</span></li>
-              <li class="item"><span class="check">✓</span><span data-i18n="p1e">Liveschaltung auf deine Domain</span></li>
-              <li class="item"><span class="check">✓</span><span data-i18n="p1f">1 Korrekturrunde inklusive</span></li>
-            </ul>
-
-            <p class="smallNote" data-i18n="p1note">Ideal für lokale Betriebe mit veralteter Website oder ohne professionellen Online-Auftritt. Schnell, klar und bezahlbar umgesetzt.</p>
-
-            <div style="margin-top:12px">
-              <a class="btn primary" href="https://wa.me/491742555178?text=Hallo%20ich%20interessiere%20mich%20f%C3%BCr%20das%20Basic%20Landingpage%20Paket%20von%20LunaVision." target="_blank" rel="noopener" data-i18n="cta_demo">Projekt anfragen</a>
-            </div>
-          </div>
-
-          <div class="card price">
-            <div class="badge" data-i18n="p2name">Optional: Extras & Booking</div>
-            <div class="amount" data-i18n="p2price">auf Anfrage</div>
-            <p class="sub" data-i18n="p2sub">nur wenn wirklich benötigt</p>
-
-            <ul class="clean">
-              <li class="item"><span class="check">✓</span><span data-i18n="p2a">Online-Terminbuchung für Friseure, Barbershops und Studios</span></li>
-              <li class="item"><span class="check">✓</span><span data-i18n="p2b">Zusätzliche Abschnitte oder Unterseiten</span></li>
-              <li class="item"><span class="check">✓</span><span data-i18n="p2c">Erweiterte Texte oder Anpassungen</span></li>
-              <li class="item"><span class="check">✓</span><span data-i18n="p2d">Spätere Pflege und kleine Änderungen</span></li>
-              <li class="item"><span class="check">✓</span><span data-i18n="p2e">Individuelle Lösungen für besondere Anforderungen</span></li>
-            </ul>
-
-            <p class="smallNote" data-i18n="p2note">Wenn mehr als eine einfache Landingpage gebraucht wird, kann das Projekt jederzeit individuell erweitert werden. Du startest aber erstmal mit einem klaren, einfachen Paket.</p>
-
-            <div style="margin-top:12px">
-              <a class="btn primary" href="https://wa.me/491742555178?text=Hallo%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Landingpage%20und%20m%C3%B6chte%20mehr%20zu%20m%C3%B6glichen%20Extras%20wissen." target="_blank" rel="noopener" data-i18n="cta_demo">Projekt anfragen</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="faq">
-      <div class="wrap">
-        <h2 class="h2" data-i18n="faq_title">FAQ</h2>
-
-        <div class="grid" style="margin-top:18px; gap:12px">
-          <details>
-            <summary data-i18n="q1">Was ist im Basic Paket enthalten?</summary>
-            <p data-i18n="a1">Das Basic Paket umfasst eine moderne Landingpage, mobile Optimierung, einen Kontaktbutton, SEO-Basics, die Liveschaltung auf deine Domain sowie eine Korrekturrunde.</p>
-          </details>
-
-          <details>
-            <summary data-i18n="q2">Für wen ist das Angebot gedacht?</summary>
-            <p data-i18n="a2">Das Angebot richtet sich an lokale Businesses wie Handwerker, Friseure, Barbershops, Studios, Reinigungsfirmen und andere Dienstleister, die einen professionelleren Online-Auftritt brauchen.</p>
-          </details>
-
-          <details>
-            <summary data-i18n="q3">Brauche ich dafür schon eine Domain?</summary>
-            <p data-i18n="a3">Nein, aber wenn bereits eine Domain vorhanden ist, kann die Landingpage darauf live geschaltet werden. Falls noch keine Domain besteht, kann auch dazu eine einfache Lösung gefunden werden.</p>
-          </details>
-
-          <details>
-            <summary data-i18n="q4">Sind später Erweiterungen möglich?</summary>
-            <p data-i18n="a4">Ja. Zusätzliche Inhalte, weitere Abschnitte, Online-Terminbuchung oder spätere Pflege können jederzeit separat ergänzt werden.</p>
-          </details>
-
-          <details>
-            <summary data-i18n="q5">Wie läuft die Umsetzung ab?</summary>
-            <p data-i18n="a5">Nach Abstimmung der Inhalte werden Texte, Bilder, Kontaktinfos und Struktur umgesetzt. Danach gibt es eine Vorschau und nach Freigabe die Liveschaltung auf deine Domain.</p>
-          </details>
-
-          <details>
-            <summary data-i18n="q6">Ist die Seite für Smartphone und Google geeignet?</summary>
-            <p data-i18n="a6">Ja. Die Landingpage wird mobil optimiert umgesetzt und mit SEO-Basics vorbereitet, damit sie professionell aussieht und sauber genutzt werden kann.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="legal">
-      <div class="wrap">
-        <h2 class="h2" data-i18n="legal_title">AGB & Impressum</h2>
-
-        <div class="grid" style="margin-top:18px; grid-template-columns:1fr; gap:12px">
-          <div class="card legal langBlock" id="agb_de">
-            <h3>Allgemeine Geschäftsbedingungen (AGB)</h3>
-
-            <h4>1. Geltungsbereich</h4>
-            <p>Diese AGB gelten für Verträge zwischen <strong>LunaVision</strong> und dem Kunden über die angebotenen Leistungen (<strong>Basic Landingpage</strong> sowie optionale Zusatzleistungen). Sofern nicht anders vereinbart, richten sich die Leistungen primär an Unternehmer (§ 14 BGB).</p>
-
-            <h4>2. Leistungsbeschreibung</h4>
-            <p>Der Anbieter erbringt je nach Vereinbarung insbesondere folgende Leistungen:
-              <br>• <strong>Basic Landingpage</strong>: Erstellung und Einrichtung einer modernen Onepage-Landingpage inklusive mobiler Optimierung, Kontaktbutton, SEO-Basics und Liveschaltung.
-              <br>• <strong>Optionale Zusatzleistungen</strong>: z. B. Online-Terminbuchung, zusätzliche Abschnitte, weitere Unterseiten, spätere Pflege oder individuelle Erweiterungen.
-              <br>Größere Änderungen, neue Funktionen oder umfangreiche Erweiterungen sind nicht Bestandteil des Basic Pakets und werden separat vereinbart.
-            </p>
-
-            <h4>3. Mitwirkungspflichten des Kunden</h4>
-            <p>Der Kunde stellt rechtzeitig alle erforderlichen Inhalte und Informationen bereit, insbesondere Logo, Texte, Bilder, Standortdaten, Kontaktangaben sowie erforderliche Zugänge. Verzögerungen durch fehlende Mitwirkung verlängern Lieferfristen entsprechend.</p>
-
-            <h4>4. Abnahme</h4>
-            <p>Nach Bereitstellung der Leistung hat der Kunde diese innerhalb von 7 Tagen zu prüfen. Erfolgt keine Rüge wesentlicher Mängel, gilt die Leistung als abgenommen. Unwesentliche Abweichungen berechtigen nicht zur Verweigerung der Abnahme.</p>
-
-            <h4>5. Preise & Zahlung</h4>
-            <p>Es gelten die im Angebot vereinbarten Preise. Einmalige Leistungen sind nach Rechnungsstellung oder gemäß individueller Vereinbarung fällig. Zusatzleistungen werden separat berechnet.</p>
-
-            <h4>6. Nutzungsrechte</h4>
-            <p>Der Kunde erhält ein einfaches Nutzungsrecht an den gelieferten Ergebnissen für den eigenen Geschäftsbetrieb. Weiterverkauf oder Weitergabe an Dritte ist ohne schriftliche Zustimmung nicht gestattet, sofern nicht ausdrücklich anders vereinbart.</p>
-
-            <h4>7. Drittanbieter & Plattformen</h4>
-            <p>Soweit Leistungen die Nutzung von Drittanbietern wie Hosting, Domainanbieter, Google-Dienste oder andere Plattformen beinhalten, gelten zusätzlich deren Bedingungen. Der Anbieter schuldet nicht die dauerhafte Verfügbarkeit dieser Plattformen.</p>
-
-            <h4>8. Gewährleistung</h4>
-            <p>Der Anbieter behebt berechtigte Mängel innerhalb angemessener Frist. Kein Mangel liegt vor, wenn eine Einschränkung auf Umständen außerhalb des Einflussbereichs des Anbieters beruht, insbesondere bei Störungen externer Dienste oder Plattformen.</p>
-
-            <h4>9. Haftung</h4>
-            <p>Der Anbieter haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit sowie bei Verletzung von Leben, Körper, Gesundheit. Bei einfacher Fahrlässigkeit haftet der Anbieter nur bei Verletzung wesentlicher Vertragspflichten und begrenzt auf den vertragstypischen, vorhersehbaren Schaden.</p>
-
-            <h4>10. Datenschutz</h4>
-            <p>Jede Partei beachtet die anwendbaren Datenschutzvorschriften. Die konkrete datenschutzrechtliche Ausgestaltung hängt vom eingesetzten Setup und den verwendeten Diensten ab. Bei Bedarf kann eine Vereinbarung zur Auftragsverarbeitung (AVV) vereinbart werden.</p>
-
-            <h4>11. Schlussbestimmungen</h4>
-            <p>Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts. Gerichtsstand ist – soweit gesetzlich zulässig – Ludwigshafen am Rhein. Sollten einzelne Bestimmungen unwirksam sein, bleibt der Vertrag im Übrigen wirksam.</p>
-          </div>
-
-          <div class="card legal langBlock" id="agb_en">
-            <h3>General Terms and Conditions (GTC)</h3>
-
-            <h4>1. Scope</h4>
-            <p>These GTC apply to contracts between <strong>LunaVision</strong> and the customer regarding the offered services (<strong>Basic Landingpage</strong> and optional additional services). Unless otherwise agreed, the services are primarily intended for entrepreneurs.</p>
-
-            <h4>2. Description of Services</h4>
-            <p>Depending on the agreement, the Provider shall in particular deliver the following services:
-              <br>• <strong>Basic Landingpage</strong>: creation and setup of a modern one-page landing page including mobile optimization, contact button, SEO basics and live launch.
-              <br>• <strong>Optional additional services</strong>: for example online booking, additional sections, extra subpages, later maintenance or custom expansions.
-              <br>Larger changes, new functions or extensive expansions are not part of the Basic package and shall be agreed separately.
-            </p>
-
-            <h4>3. Customer’s Obligations to Cooperate</h4>
-            <p>The customer shall provide all required content and information in a timely manner, including logo, texts, images, location details, contact information and any necessary access credentials. Delays caused by missing cooperation shall extend delivery deadlines accordingly.</p>
-
-            <h4>4. Acceptance</h4>
-            <p>After delivery, the customer must review the service within 7 days. If no notice of material defects is given within this period, the service shall be deemed accepted. Minor deviations do not entitle the customer to refuse acceptance.</p>
-
-            <h4>5. Prices & Payment</h4>
-            <p>The agreed prices apply. One-time services are due upon invoicing or as otherwise agreed. Additional services are charged separately.</p>
-
-            <h4>6. Rights of Use</h4>
-            <p>The customer receives a non-exclusive right to use the delivered results for their own business operations. Resale or transfer to third parties is not permitted without written consent unless explicitly agreed otherwise.</p>
-
-            <h4>7. Third-Party Providers & Platforms</h4>
-            <p>If services involve the use of third-party providers such as hosting, domain providers, Google services or other platforms, their respective terms and conditions shall also apply. The Provider does not guarantee the permanent availability of these platforms.</p>
-
-            <h4>8. Warranty</h4>
-            <p>The Provider shall remedy justified defects within a reasonable period of time. No defect shall be deemed to exist if a limitation is caused by circumstances beyond the Provider’s control, especially disruptions involving external services or platforms.</p>
-
-            <h4>9. Liability</h4>
-            <p>The Provider shall be liable without limitation in cases of intent and gross negligence as well as for injury to life, body or health. In cases of ordinary negligence, the Provider shall only be liable for breaches of essential contractual obligations and limited to the typical, foreseeable damage.</p>
-
-            <h4>10. Data Protection</h4>
-            <p>Each party shall comply with applicable data protection laws. The exact data protection setup depends on the chosen implementation and the services used. If required, a data processing agreement may be concluded.</p>
-
-            <h4>11. Final Provisions</h4>
-            <p>German law shall apply, excluding the UN Convention on Contracts for the International Sale of Goods. The place of jurisdiction – where legally permissible – is Ludwigshafen am Rhein. Should individual provisions be invalid, the remainder of the contract shall remain unaffected.</p>
-          </div>
-
-          <div class="card legal langBlock" id="impressum_de">
-            <h3 data-i18n="imp_title">Impressum</h3>
-            <p>
-              <strong>Verantwortlicher i.S.d. § 5 TMG / § 18 MStV:</strong><br>
-              M. Giglio<br>
-              Kranichstr. 11<br>
-              67069 Ludwigshafen am Rhein<br>
-              E-Mail: <a href="mailto:info@lunavision.org">info@lunavision.org</a>
-            </p>
-            <p>
-              <strong>EU-Streitschlichtung:</strong><br>
-              Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
-              <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>
-            </p>
-            <p class="tiny">Als Kleingewerbe wird keine USt-IdNr. angegeben, sofern keine vorhanden oder erforderlich ist.</p>
-          </div>
-
-          <div class="card legal langBlock" id="impressum_en">
-            <h3>Imprint</h3>
-            <p>
-              <strong>Responsible according to Section 5 TMG / Section 18 MStV:</strong><br>
-              M. Giglio<br>
-              Kranichstr. 11<br>
-              67069 Ludwigshafen am Rhein<br>
-              Germany<br>
-              Email: <a href="mailto:info@lunavision.org">info@lunavision.org</a>
-            </p>
-            <p>
-              <strong>EU Dispute Resolution</strong><br>
-              The European Commission provides a platform for online dispute resolution (ODR):<br>
-              <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>
-            </p>
-            <p class="tiny">As a small business, no VAT ID is provided if not available or required.</p>
-          </div>
-
-          <!-- Datenschutzerklärung DE -->
-          <div class="card legal langBlock" id="datenschutz_de">
-            <h3>Datenschutzerklärung</h3>
-
-            <h4>1. Verantwortlicher und Kontakt</h4>
-            <p>Verantwortlich für die Datenverarbeitung ist:<br>
-            M. Giglio, Kranichstr. 11, 67069 Ludwigshafen am Rhein<br>
-            E-Mail: <a href="mailto:info@lunavision.org">info@lunavision.org</a></p>
-
-            <h4>2. Rechtsgrundlagen und Zwecke der Verarbeitung</h4>
-            <p>Wir verarbeiten personenbezogene Daten auf Grundlage von Art. 6 DSGVO mit folgenden Rechtsgrundlagen:</p>
-            <ul>
-              <li><strong>Berechtigte Interessen (Art. 6 Abs. 1 f DSGVO)</strong>: Websiteoptimierung, Sicherheit, Missbrauchsprävention</li>
-              <li><strong>Ihre Einwilligung (Art. 6 Abs. 1 a DSGVO)</strong>: Tracking (Google Analytics, Meta Pixel) – nur mit Cookie-Zustimmung</li>
-              <li><strong>Kontaktaufnahme</strong>: Bearbeitung Ihrer Anfrage auf Grundlage Ihrer Einwilligung</li>
-            </ul>
-
-            <h4>3. Google Analytics</h4>
-            <p>Diese Website nutzt Google Analytics (Universal Analytics) zur Analyse der Websitenutzung. Google Analytics setzt Cookies, um Ihre Nutzung nachzuverfolgenn (z.B. Seitenabrufe, Verweildauer, Klicks). Die gesammelten Daten werden auf Google-Servern gespeichert und nach 14 Monaten automatisch gelöscht. Google Analytics wird nur aktiviert, wenn Sie der Kategorie "Analyse" zugestimmt haben.</p>
-            <p><strong>Datenschutzhinweis:</strong> Google ist unter der US Privacy Shield zertifiziert, die ein angemessenes Datenschutzniveau garantiert.</p>
-
-            <h4>4. Meta Pixel (Facebook Tracking)</h4>
-            <p>Diese Website nutzt das Meta Pixel zur Verfolgung von Conversions und Besucherverhalten. Das Meta Pixel wird nur aktiviert, wenn Sie der Kategorie "Marketing" zugestimmt haben. Das Meta Pixel speichert Cookies und sendet Informationen an Meta Platforms Inc., um:</p>
-            <ul>
-              <li>Kampagnenleistung zu messen</li>
-              <li>Zielgruppen für Retargeting zu erstellen</li>
-              <li>Ihre Interessen zu verstehen</li>
-            </ul>
-            <p><strong>Datenschutzhinweis:</strong> Ihre Daten können in die USA übermittelt werden. Meta hat sich zur Einhaltung der DSGVO verpflichtet.</p>
-
-            <h4>5. Cookies</h4>
-            <p>Diese Website nutzt Cookies, um Ihre Einwilligungen zu speichern und zu respektieren. Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden:</p>
-            <ul>
-              <li><strong>Notwendig:</strong> Für den Betrieb der Website (z.B. Cookie-Einwilligung)</li>
-              <li><strong>Analyse:</strong> Google Analytics – nur mit Ihrer Zustimmung</li>
-              <li><strong>Marketing:</strong> Meta Pixel – nur mit Ihrer Zustimmung</li>
-            </ul>
-            <p>Sie können Cookies in Ihrem Browser ablehnen. Dies kann jedoch die Funktionalität einschränken.</p>
-
-            <h4>6. Ihre Rechte</h4>
-            <p>Unter der DSGVO haben Sie folgende Rechte:</p>
-            <ul>
-              <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
-              <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
-              <li>Recht auf Löschung (Art. 17 DSGVO)</li>
-              <li>Recht auf Einschränkung (Art. 18 DSGVO)</li>
-              <li>Recht auf Widerspruch (Art. 21 DSGVO)</li>
-              <li>Recht auf Datenportabilität (Art. 20 DSGVO)</li>
-            </ul>
-            <p>Um diese Rechte auszuüben, kontaktieren Sie uns unter: <a href="mailto:info@lunavision.org">info@lunavision.org</a></p>
-
-            <h4>7. Beschwerderecht</h4>
-            <p>Sie haben das Recht, eine Beschwerde bei einer Aufsichtsbehörde einzureichen, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen die DSGVO verstößt.</p>
-
-            <h4>8. Externe Links</h4>
-            <p>Diese Website enthält Links zu externen Websites. Wir sind nicht verantwortlich für deren Datenschutzpraktiken. Bitte lesen Sie deren Datenschutzerklärungen.</p>
-          </div>
-
-          <!-- Privacy Policy EN -->
-          <div class="card legal langBlock" id="datenschutz_en">
-            <h3>Privacy Policy</h3>
-
-            <h4>1. Responsible Party and Contact</h4>
-            <p>Responsible for data processing is:<br>
-            M. Giglio, Kranichstr. 11, 67069 Ludwigshafen am Rhein<br>
-            Email: <a href="mailto:info@lunavision.org">info@lunavision.org</a></p>
-
-            <h4>2. Legal Basis and Processing Purposes</h4>
-            <p>We process personal data based on Art. 6 GDPR with the following legal bases:</p>
-            <ul>
-              <li><strong>Legitimate Interests (Art. 6 Para. 1 f GDPR)</strong>: Website optimization, security, abuse prevention</li>
-              <li><strong>Your Consent (Art. 6 Para. 1 a GDPR)</strong>: Tracking (Google Analytics, Meta Pixel) – only with cookie consent</li>
-              <li><strong>Contact Request</strong>: Processing your inquiry based on your consent</li>
-            </ul>
-
-            <h4>3. Google Analytics</h4>
-            <p>This website uses Google Analytics (Universal Analytics) to analyze website usage. Google Analytics sets cookies to track your usage (e.g. page views, time on site, clicks). The collected data is stored on Google servers and automatically deleted after 14 months. Google Analytics is only activated when you have consented to the "Analytics" category.</p>
-            <p><strong>Privacy Notice:</strong> Google is certified under the US Privacy Shield, which guarantees an adequate level of data protection.</p>
-
-            <h4>4. Meta Pixel (Facebook Tracking)</h4>
-            <p>This website uses Meta Pixel to track conversions and visitor behavior. Meta Pixel is only activated when you have consented to the "Marketing" category. Meta Pixel stores cookies and sends information to Meta Platforms Inc. to:</p>
-            <ul>
-              <li>Measure campaign performance</li>
-              <li>Create audiences for retargeting</li>
-              <li>Understand your interests</li>
-            </ul>
-            <p><strong>Privacy Notice:</strong> Your data may be transferred to the USA. Meta has committed to comply with the GDPR.</p>
-
-            <h4>5. Cookies</h4>
-            <p>This website uses cookies to store and respect your consents. Cookies are small text files stored on your device:</p>
-            <ul>
-              <li><strong>Necessary:</strong> For website operation (e.g. cookie consent)</li>
-              <li><strong>Analytics:</strong> Google Analytics – only with your consent</li>
-              <li><strong>Marketing:</strong> Meta Pixel – only with your consent</li>
-            </ul>
-            <p>You can reject cookies in your browser. However, this may restrict functionality.</p>
-
-            <h4>6. Your Rights</h4>
-            <p>Under the GDPR, you have the following rights:</p>
-            <ul>
-              <li>Right of access (Art. 15 GDPR)</li>
-              <li>Right to rectification (Art. 16 GDPR)</li>
-              <li>Right to erasure (Art. 17 GDPR)</li>
-              <li>Right to restrict processing (Art. 18 GDPR)</li>
-              <li>Right to object (Art. 21 GDPR)</li>
-              <li>Right to data portability (Art. 20 GDPR)</li>
-            </ul>
-            <p>To exercise these rights, please contact us at: <a href="mailto:info@lunavision.org">info@lunavision.org</a></p>
-
-            <h4>7. Right to Lodge a Complaint</h4>
-            <p>You have the right to lodge a complaint with a supervisory authority if you believe that the processing of your data violates the GDPR.</p>
-
-            <h4>8. External Links</h4>
-            <p>This website contains links to external websites. We are not responsible for their privacy practices. Please read their privacy policies.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
+  <!-- TOOLS -->
+  <section class="section" id="tools">
     <div class="wrap">
-      <div class="tiny">
-        © <span id="year"></span> LunaVision — <span class="muted" data-i18n="tagline">Moderne Landingpages für lokale Businesses</span>
+      <div class="section-eyebrow">
+        <span class="lang-de">Kostenlose Tools</span>
+        <span class="lang-en">Free Tools</span>
+      </div>
+      <h2 class="h2">
+        <span class="lang-de">Teste unsere Tools</span>
+        <span class="lang-en">Try our tools</span>
+      </h2>
+      <p class="lead" style="margin-bottom:28px">
+        <span class="lang-de">Zwei kleine Werkzeuge, die dir sofort etwas bringen — kein Konto, keine Verpflichtung.</span>
+        <span class="lang-en">Two small tools that give you immediate value — no account, no obligation.</span>
+      </p>
+
+      <div class="card tools-card">
+        <div class="tool-tabs">
+          <button class="tool-tab active" data-tool-tab="geo-check" type="button">
+            <span class="lang-de">GEO-Check</span>
+            <span class="lang-en">GEO Check</span>
+          </button>
+          <button class="tool-tab" data-tool-tab="roi-rechner" type="button">
+            <span class="lang-de">ROI-Rechner</span>
+            <span class="lang-en">ROI Calculator</span>
+          </button>
+        </div>
+
+        <!-- GEO-CHECK PANEL -->
+        <div class="tool-panel active" data-tool-panel="geo-check">
+          <p class="tool-intro">
+            <span class="lang-de">Trag deinen Firmennamen und deine Branche ein. Wir schauen uns dein Business kurz an und schicken dir eine kostenlose Ersteinschätzung, wie sichtbar du aktuell in KI-Antworten (ChatGPT, Claude, Perplexity) bist.</span>
+            <span class="lang-en">Enter your company name and industry. We'll take a quick look at your business and send you a free initial assessment of how visible you currently are in AI answers (ChatGPT, Claude, Perplexity).</span>
+          </p>
+
+          <form id="geoCheckForm" novalidate>
+            <div style="position:absolute; left:-9999px; top:-9999px;" aria-hidden="true">
+              <label for="geoWebsite">Website</label>
+              <input type="text" id="geoWebsite" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="tool-row">
+              <div class="tool-field">
+                <label for="geoFirmenname">
+                  <span class="lang-de">Firmenname *</span>
+                  <span class="lang-en">Company name *</span>
+                </label>
+                <input type="text" id="geoFirmenname" name="firmenname" required autocomplete="organization" />
+              </div>
+              <div class="tool-field">
+                <label for="geoBranche">
+                  <span class="lang-de">Branche</span>
+                  <span class="lang-en">Industry</span>
+                </label>
+                <input type="text" id="geoBranche" name="branche" placeholder="z. B. Handwerk, Beratung, Kanzlei" />
+              </div>
+            </div>
+            <div class="tool-field">
+              <label for="geoEmail">
+                <span class="lang-de">E-Mail *</span>
+                <span class="lang-en">Email *</span>
+              </label>
+              <input type="email" id="geoEmail" name="email" required autocomplete="email" />
+            </div>
+
+            <label class="tool-consent">
+              <input type="checkbox" id="geoConsent" name="consent" required />
+              <span>
+                <span class="lang-de">Ich bin einverstanden, dass LunaVision mich bezüglich meiner GEO-Ersteinschätzung per E-Mail kontaktiert. Details in der <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a>.</span>
+                <span class="lang-en">I agree that LunaVision may contact me by email regarding my GEO assessment. Details in the <a href="datenschutz.html" target="_blank" rel="noopener">privacy policy</a>.</span>
+              </span>
+            </label>
+
+            <button type="submit" class="btn primary tool-submit">
+              <span class="lang-de">Kostenlose Ersteinschätzung anfordern</span>
+              <span class="lang-en">Request free assessment</span>
+            </button>
+
+            <div class="tool-status" id="geoStatus"></div>
+          </form>
+        </div>
+
+        <!-- ROI-RECHNER PANEL -->
+        <div class="tool-panel" data-tool-panel="roi-rechner">
+          <p class="tool-intro">
+            <span class="lang-de">Wie viel Zeit und Geld sparst du mit KI-Automatisierung? Trag deine Zahlen ein und sieh den Effekt sofort.</span>
+            <span class="lang-en">How much time and money do you save with AI automation? Enter your numbers and see the effect immediately.</span>
+          </p>
+
+          <form id="roiForm" novalidate>
+            <div class="tool-row">
+              <div class="tool-field">
+                <label for="roiHours">
+                  <span class="lang-de">Stunden/Woche mit manuellen Aufgaben *</span>
+                  <span class="lang-en">Hours/week on manual tasks *</span>
+                </label>
+                <input type="number" id="roiHours" name="hours" min="0" step="0.5" required />
+              </div>
+              <div class="tool-field">
+                <label for="roiRate">
+                  <span class="lang-de">Dein Stundensatz (€) *</span>
+                  <span class="lang-en">Your hourly rate (€) *</span>
+                </label>
+                <input type="number" id="roiRate" name="rate" min="0" step="1" required />
+              </div>
+            </div>
+
+            <button type="submit" class="btn primary tool-submit" id="roiCalcBtn">
+              <span class="lang-de">ROI berechnen</span>
+              <span class="lang-en">Calculate ROI</span>
+            </button>
+          </form>
+
+          <div class="tool-result" id="roiResult">
+            <div class="tool-result-row">
+              <span class="tool-result-label"><span class="lang-de">Monatlicher Wert deiner Zeit</span><span class="lang-en">Monthly value of your time</span></span>
+              <span class="tool-result-value" id="roiMonthly">–</span>
+            </div>
+            <div class="tool-result-row">
+              <span class="tool-result-label"><span class="lang-de">Beispiel-Automatisierung</span><span class="lang-en">Example automation</span></span>
+              <span class="tool-result-value" id="roiCost">–</span>
+            </div>
+            <div class="tool-result-row">
+              <span class="tool-result-label"><span class="lang-de">Mögliche Netto-Ersparnis/Monat</span><span class="lang-en">Possible net savings/month</span></span>
+              <span class="tool-result-value big" id="roiNet">–</span>
+            </div>
+
+            <form class="tool-optin" id="roiOptinForm">
+              <div style="position:absolute; left:-9999px; top:-9999px;" aria-hidden="true">
+                <label for="roiWebsite">Website</label>
+                <input type="text" id="roiWebsite" name="website" tabindex="-1" autocomplete="off" />
+              </div>
+              <p class="tool-intro" style="margin-bottom:14px">
+                <span class="lang-de">Willst du dieses Ergebnis per Mail und eine kurze persönliche Einschätzung dazu? Optional, unverbindlich.</span>
+                <span class="lang-en">Want this result by email plus a short personal assessment? Optional, no obligation.</span>
+              </p>
+              <div class="tool-field">
+                <label for="roiEmail">
+                  <span class="lang-de">E-Mail (optional)</span>
+                  <span class="lang-en">Email (optional)</span>
+                </label>
+                <input type="email" id="roiEmail" name="email" autocomplete="email" />
+              </div>
+              <label class="tool-consent">
+                <input type="checkbox" id="roiConsent" name="consent" />
+                <span>
+                  <span class="lang-de">Ich bin einverstanden, dass LunaVision mich bezüglich dieses Ergebnisses per E-Mail kontaktiert. Details in der <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a>.</span>
+                  <span class="lang-en">I agree that LunaVision may contact me by email regarding this result. Details in the <a href="datenschutz.html" target="_blank" rel="noopener">privacy policy</a>.</span>
+                </span>
+              </label>
+              <button type="submit" class="btn tool-submit">
+                <span class="lang-de">Ergebnis per Mail anfordern</span>
+                <span class="lang-en">Request result by email</span>
+              </button>
+              <div class="tool-status" id="roiStatus"></div>
+            </form>
+          </div>
+        </div>
+
+        <div class="tool-turnstile-wrap">
+          <div class="tool-turnstile-label">
+            <span class="lang-de">Sicherheitsprüfung (Spam-Schutz)</span>
+            <span class="lang-en">Security check (spam protection)</span>
+          </div>
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAAAD6kYU2ea0Q3Atq4" id="lvTurnstile"
+               data-callback="onTurnstileReady" data-error-callback="onTurnstileProblem"
+               data-expired-callback="onTurnstileProblem"></div>
+        </div>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    const I18N = {
-      de: {
-        page_title: "LunaVision – Moderne Landingpages für lokale Businesses",
-        page_desc: "LunaVision erstellt moderne Landingpages für lokale Businesses – mobil optimiert, professionell gestaltet und schnell live. Für Handwerker, Friseure, Studios und lokale Dienstleister.",
-        tagline: "Moderne Landingpages für lokale Businesses",
-        nav_features: "Vorteile",
-        nav_pricing: "Angebot",
-        nav_faq: "FAQ",
-        nav_legal: "AGB & Impressum",
-        cta_demo: "Projekt anfragen",
-        cta_pricing: "Angebot ansehen",
-        pill: "🌙 Für Handwerker, Friseure, Studios und lokale Dienstleister • Modern • Mobil optimiert • Schnell live",
-        hero_title: "Moderne Landingpages<br>für lokale Businesses.",
-        hero_lead: "LunaVision erstellt moderne, mobil optimierte Landingpages für lokale Unternehmen, die online professioneller auftreten und einfacher erreichbar sein wollen.",
-        hero_seo: "Ideal für Betriebe mit veralteter Website oder gar keinem klaren Online-Auftritt: Friseure, Barbershops, Handwerker, Studios, Reinigungsfirmen und andere lokale Dienstleister. Du bekommst eine saubere Onepage-Lösung mit Kontaktmöglichkeit, professioneller Darstellung und SEO-Basics – schnell und unkompliziert umgesetzt.",
+  <div class="elegant-divider" aria-hidden="true"><div class="line"></div><div class="diamond"></div><div class="line"></div></div>
 
-        features_title: "Was LunaVision für dein Business besser macht",
-        features_lead: "Ein moderner Online-Auftritt schafft mehr Vertrauen, bessere Erreichbarkeit und einen professionelleren ersten Eindruck.",
-        f1t: "Professioneller erster Eindruck",
-        f1a: "Moderne Darstellung statt veralteter Website oder unklarem Auftritt",
-        f1b: "Kundinnen und Kunden sehen sofort, wer ihr seid und was ihr anbietet",
-        f1c: "Mehr Vertrauen durch klares Design, mobile Optimierung und saubere Struktur",
-        f2t: "Einfacher erreichbar",
-        f2a: "Kontaktbutton für WhatsApp, Telefon oder Anfrage direkt eingebunden",
-        f2b: "Wichtige Infos wie Leistungen, Öffnungszeiten, Adresse und Kontakt auf einen Blick",
-        f2c: "Sauber nutzbar auf Smartphone, wo die meisten Kunden zuerst schauen",
-        f3t: "Schnell und unkompliziert live",
-        f3a: "Klare Onepage-Lösung statt unnötig komplizierter Website-Projekte",
-        f3b: "SEO-Basics für bessere Sichtbarkeit und einen soliden Start",
-        f3c: "Optional später erweiterbar – z. B. mit Booking, Extras oder Pflege",
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <h2 class="h2">
+        <span class="lang-de">Häufige Fragen</span>
+        <span class="lang-en">Frequently Asked Questions</span>
+      </h2>
+      <div class="faq-list">
+        <details>
+          <summary>
+            <span class="lang-de">Was ist im Landingpage-Paket enthalten?</span>
+            <span class="lang-en">What's included in the landing page package?</span>
+          </summary>
+          <p>
+            <span class="lang-de">Eine moderne Onepage-Landingpage, mobile Optimierung, Kontaktbutton, SEO-Basics, Liveschaltung auf deine Domain sowie eine Korrekturrunde — alles inklusive.</span>
+            <span class="lang-en">A modern one-page landing page, mobile optimization, contact button, SEO basics, launch on your domain, and one round of revisions — all included.</span>
+          </p>
+        </details>
+        <details>
+          <summary>
+            <span class="lang-de">Muss ich technisches Know-how haben?</span>
+            <span class="lang-en">Do I need technical know-how?</span>
+          </summary>
+          <p>
+            <span class="lang-de">Nein. Wir richten alles für dich ein. Du brauchst nur ein Google-Konto für die Automatisierungen und eine Domain für die Landingpage.</span>
+            <span class="lang-en">No. We set everything up for you. You only need a Google account for the automations and a domain for the landing page.</span>
+          </p>
+        </details>
+        <details>
+          <summary>
+            <span class="lang-de">Was ist GEO und warum brauche ich das?</span>
+            <span class="lang-en">What is GEO and why do I need it?</span>
+          </summary>
+          <p>
+            <span class="lang-de">Generative Engine Optimization sorgt dafür dass dein Business in KI-Antworten von ChatGPT, Claude und Perplexity auftaucht. Immer mehr Menschen suchen direkt über KI-Assistenten statt über Google — GEO ist die Investition in die Sichtbarkeit von morgen.</span>
+            <span class="lang-en">Generative Engine Optimization makes sure your business appears in AI answers from ChatGPT, Claude and Perplexity. More and more people search directly through AI assistants instead of Google — GEO is the investment in tomorrow's visibility.</span>
+          </p>
+        </details>
+        <details>
+          <summary>
+            <span class="lang-de">Kann ich mehrere Services kombinieren?</span>
+            <span class="lang-en">Can I combine multiple services?</span>
+          </summary>
+          <p>
+            <span class="lang-de">Ja. Viele unserer Kunden starten mit einer Landingpage und fügen danach Automatisierungen oder GEO dazu. Sprich uns einfach an — wir schnüren gerne ein individuelles Paket.</span>
+            <span class="lang-en">Yes. Many of our customers start with a landing page and add automations or GEO afterward. Just reach out — we're happy to put together a custom package.</span>
+          </p>
+        </details>
+        <details>
+          <summary>
+            <span class="lang-de">Was passiert wenn ich einen Monatsdienst kündigen will?</span>
+            <span class="lang-en">What happens if I want to cancel a monthly service?</span>
+          </summary>
+          <p>
+            <span class="lang-de">Alle monatlichen Services sind monatlich kündbar. Keine Mindestlaufzeit, kein Kleingedrucktes. Deine Daten bleiben in deinen Accounts.</span>
+            <span class="lang-en">All monthly services can be canceled monthly. No minimum term, no fine print. Your data stays in your own accounts.</span>
+          </p>
+        </details>
+        <details>
+          <summary>
+            <span class="lang-de">Für wen sind die Services geeignet?</span>
+            <span class="lang-en">Who are the services suitable for?</span>
+          </summary>
+          <p>
+            <span class="lang-de">Für Selbstständige, Handwerker, Friseure, Barbershops, Agenturen, Restaurants und alle kleinen Unternehmen im DACH-Raum die digital professioneller auftreten und Prozesse automatisieren wollen.</span>
+            <span class="lang-en">For freelancers, tradespeople, hairdressers, barbershops, agencies, restaurants and any small business in the DACH region that wants a more professional digital presence and automated processes.</span>
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
 
-        pricing_title: "Angebot",
-        pricing_lead: "Ein klares Einstiegspaket für lokale Businesses, die schnell modern und professionell online sichtbar sein wollen.",
+  <!-- LEGAL -->
+  <section class="section" id="legal">
+    <div class="wrap">
+      <h2 class="h2">
+        <span class="lang-de">AGB & Impressum</span>
+        <span class="lang-en">Terms & Imprint</span>
+      </h2>
+      <div style="margin-top:24px; display:grid; gap:12px">
+        <div class="card legal langBlock" id="agb_de">
+          <h3>Allgemeine Geschäftsbedingungen (AGB)</h3>
+          <h4>1. Geltungsbereich</h4>
+          <p>Diese AGB gelten für Verträge zwischen <strong>LunaVision</strong> und dem Kunden über die angebotenen Leistungen. Sofern nicht anders vereinbart, richten sich die Leistungen primär an Unternehmer (§ 14 BGB).</p>
+          <h4>2. Leistungsbeschreibung</h4>
+          <p>Der Anbieter erbringt je nach Vereinbarung Leistungen in den Bereichen Webdesign, KI-Automatisierung, Generative Engine Optimization, Marketing-Tools und WhatsApp-Automatisierung. Größere Änderungen oder Erweiterungen werden separat vereinbart.</p>
+          <h4>3. Mitwirkungspflichten des Kunden</h4>
+          <p>Der Kunde stellt rechtzeitig alle erforderlichen Inhalte bereit. Verzögerungen durch fehlende Mitwirkung verlängern Lieferfristen entsprechend.</p>
+          <h4>4. Abnahme</h4>
+          <p>Nach Bereitstellung der Leistung hat der Kunde 7 Tage zur Prüfung. Ohne Rüge gilt die Leistung als abgenommen.</p>
+          <h4>5. Preise & Zahlung</h4>
+          <p>Es gelten die vereinbarten Preise. Einmalige Leistungen sind nach Rechnungsstellung fällig. Monatliche Dienste sind monatlich kündbar.</p>
+          <h4>6. Nutzungsrechte</h4>
+          <p>Der Kunde erhält ein einfaches Nutzungsrecht für den eigenen Geschäftsbetrieb. Weiterverkauf ohne schriftliche Zustimmung ist nicht gestattet.</p>
+          <h4>7. Drittanbieter & Plattformen</h4>
+          <p>Soweit Leistungen Drittanbieter wie Google, WhatsApp oder Cloudflare beinhalten, gelten deren Bedingungen zusätzlich.</p>
+          <h4>8. Gewährleistung</h4>
+          <p>Berechtigte Mängel werden innerhalb angemessener Frist behoben. Störungen externer Dienste begründen keinen Mangel.</p>
+          <h4>9. Haftung</h4>
+          <p>Unbeschränkte Haftung bei Vorsatz und grober Fahrlässigkeit. Bei einfacher Fahrlässigkeit nur bei wesentlichen Vertragspflichten, begrenzt auf den vorhersehbaren Schaden.</p>
+          <h4>10. Datenschutz</h4>
+          <p>Beide Parteien beachten die anwendbaren Datenschutzvorschriften. Bei Bedarf kann ein AVV gemäß Art. 28 DSGVO vereinbart werden.</p>
+          <h4>11. Schlussbestimmungen</h4>
+          <p>Es gilt deutsches Recht. Gerichtsstand ist Ludwigshafen am Rhein.</p>
+        </div>
+        <div class="card legal langBlock" id="agb_en">
+          <h3>General Terms and Conditions (GTC)</h3>
+          <h4>1. Scope</h4>
+          <p>These GTC apply to contracts between <strong>LunaVision</strong> and the customer. Unless otherwise agreed, services are primarily intended for entrepreneurs.</p>
+          <h4>2. Description of Services</h4>
+          <p>Services include web design, AI automation, Generative Engine Optimization, marketing tools and WhatsApp automation. Larger changes are agreed separately.</p>
+          <h4>3. Customer Cooperation</h4>
+          <p>The customer provides required content in time. Missing cooperation extends delivery deadlines.</p>
+          <h4>4. Acceptance</h4>
+          <p>Customer has 7 days to review delivered work. No objection means acceptance.</p>
+          <h4>5. Prices & Payment</h4>
+          <p>Agreed prices apply. One-time services due upon invoicing. Monthly services cancelable monthly.</p>
+          <h4>6. Rights of Use</h4>
+          <p>Customer receives non-exclusive right for own business use. Resale requires written consent.</p>
+          <h4>7. Third-Party Providers</h4>
+          <p>Where services involve third parties (Google, WhatsApp, Cloudflare), their terms apply additionally.</p>
+          <h4>8. Warranty</h4>
+          <p>Justified defects remedied within reasonable time. Disruptions of external services are not defects.</p>
+          <h4>9. Liability</h4>
+          <p>Unlimited liability for intent and gross negligence. Simple negligence limited to foreseeable damage on essential obligations.</p>
+          <h4>10. Data Protection</h4>
+          <p>Both parties comply with applicable data protection laws. A DPA per Art. 28 GDPR can be concluded if needed.</p>
+          <h4>11. Final Provisions</h4>
+          <p>German law applies. Jurisdiction: Ludwigshafen am Rhein.</p>
+        </div>
+        <div class="card legal langBlock" id="impressum_de">
+          <h3>Impressum</h3>
+          <p><strong>Verantwortlicher i.S.d. § 5 TMG / § 18 MStV:</strong><br>M. Giglio<br>Kranichstr. 11<br>67069 Ludwigshafen am Rhein<br>E-Mail: <a href="mailto:info@lunavision.org">info@lunavision.org</a></p>
+          <p><strong>EU-Streitschlichtung:</strong><br>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a></p>
+          <p class="tiny">Als Kleingewerbe wird keine USt-IdNr. angegeben.</p>
+        </div>
+        <div class="card legal langBlock" id="impressum_en">
+          <h3>Imprint</h3>
+          <p><strong>Responsible per Section 5 TMG / Section 18 MStV:</strong><br>M. Giglio<br>Kranichstr. 11<br>67069 Ludwigshafen am Rhein, Germany<br>Email: <a href="mailto:info@lunavision.org">info@lunavision.org</a></p>
+          <p><strong>EU Dispute Resolution:</strong><br><a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a></p>
+          <p class="tiny">As a small business, no VAT ID is provided.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        p1name: "Basic Landingpage",
-        p1sub: "einmalig",
-        p1launch: "Klarer Einstieg ohne Abo",
-        p1a: "1 moderne Landingpage für dein Business",
-        p1b: "Mobile Optimierung für Smartphone und Tablet",
-        p1c: "Kontaktbutton für WhatsApp, Telefon oder Anfrage",
-        p1d: "SEO-Basics für einen sauberen Start",
-        p1e: "Liveschaltung auf deine Domain",
-        p1f: "1 Korrekturrunde inklusive",
-        p1note: "Ideal für lokale Betriebe mit veralteter Website oder ohne professionellen Online-Auftritt. Schnell, klar und bezahlbar umgesetzt.",
+</main>
 
-        p2name: "Optional: Extras & Booking",
-        p2price: "auf Anfrage",
-        p2sub: "nur wenn wirklich benötigt",
-        p2a: "Online-Terminbuchung für Friseure, Barbershops und Studios",
-        p2b: "Zusätzliche Abschnitte oder Unterseiten",
-        p2c: "Erweiterte Texte oder Anpassungen",
-        p2d: "Spätere Pflege und kleine Änderungen",
-        p2e: "Individuelle Lösungen für besondere Anforderungen",
-        p2note: "Wenn mehr als eine einfache Landingpage gebraucht wird, kann das Projekt jederzeit individuell erweitert werden. Du startest aber erstmal mit einem klaren, einfachen Paket.",
+<footer>
+  <div class="wrap footer-row">
+    <div class="tiny">
+      © <span id="year"></span> LunaVision ·
+      <span class="lang-de">KI-Automatisierung & digitales Marketing</span>
+      <span class="lang-en">AI Automation & Digital Marketing</span>
+      ·
+      <a href="datenschutz.html" style="color:inherit;text-decoration:none">
+        <span class="lang-de">Datenschutz</span>
+        <span class="lang-en">Privacy Policy</span>
+      </a>
+      ·
+      <a href="#" data-cc="show-preferencesModal" style="color:inherit;text-decoration:none">
+        <span class="lang-de">Cookie-Einstellungen</span>
+        <span class="lang-en">Cookie Settings</span>
+      </a>
+    </div>
+    <div class="footer-social">
+      <a href="https://instagram.com/lunavision.ai" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.6" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://facebook.com/lunavision.org" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 8.5h-2a2 2 0 0 0-2 2V13H9v3h2v5h3v-5h2.2l.5-3H14v-2a.7.7 0 0 1 .7-.7H15z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
 
-        faq_title: "FAQ",
-        q1: "Was ist im Basic Paket enthalten?",
-        a1: "Das Basic Paket umfasst eine moderne Landingpage, mobile Optimierung, einen Kontaktbutton, SEO-Basics, die Liveschaltung auf deine Domain sowie eine Korrekturrunde.",
-        q2: "Für wen ist das Angebot gedacht?",
-        a2: "Das Angebot richtet sich an lokale Businesses wie Handwerker, Friseure, Barbershops, Studios, Reinigungsfirmen und andere Dienstleister, die einen professionelleren Online-Auftritt brauchen.",
-        q3: "Brauche ich dafür schon eine Domain?",
-        a3: "Nein, aber wenn bereits eine Domain vorhanden ist, kann die Landingpage darauf live geschaltet werden. Falls noch keine Domain besteht, kann auch dazu eine einfache Lösung gefunden werden.",
-        q4: "Sind später Erweiterungen möglich?",
-        a4: "Ja. Zusätzliche Inhalte, weitere Abschnitte, Online-Terminbuchung oder spätere Pflege können jederzeit separat ergänzt werden.",
-        q5: "Wie läuft die Umsetzung ab?",
-        a5: "Nach Abstimmung der Inhalte werden Texte, Bilder, Kontaktinfos und Struktur umgesetzt. Danach gibt es eine Vorschau und nach Freigabe die Liveschaltung auf deine Domain.",
-        q6: "Ist die Seite für Smartphone und Google geeignet?",
-        a6: "Ja. Die Landingpage wird mobil optimiert umgesetzt und mit SEO-Basics vorbereitet, damit sie professionell aussieht und sauber genutzt werden kann.",
+<script>
+  const langBtn = document.getElementById("langBtn");
+  let lang = localStorage.getItem("lv_lang") === "en" ? "en" : "de";
 
-        legal_title: "AGB & Impressum",
-        imp_title: "Impressum"
-      },
-      en: {
-        page_title: "LunaVision – Modern Landing Pages for Local Businesses",
-        page_desc: "LunaVision creates modern landing pages for local businesses – mobile-optimized, professionally designed and quickly launched. For trades, salons, studios and local service businesses.",
-        tagline: "Modern landing pages for local businesses",
-        nav_features: "Benefits",
-        nav_pricing: "Offer",
-        nav_faq: "FAQ",
-        nav_legal: "Terms & Imprint",
-        cta_demo: "Request project",
-        cta_pricing: "View offer",
-        pill: "🌙 For trades, salons, studios and local service businesses • Modern • Mobile optimized • Fast launch",
-        hero_title: "Modern landing pages<br>for local businesses.",
-        hero_lead: "LunaVision creates modern, mobile-optimized landing pages for local businesses that want to appear more professional online and be easier to reach.",
-        hero_seo: "Ideal for businesses with an outdated website or no clear online presence at all: salons, barbershops, trades, studios, cleaning companies and other local service providers. You get a clean one-page solution with contact options, professional presentation and SEO basics – fast and uncomplicated.",
+  function toggleLegalBlocks(){
+    ["agb_de","impressum_de","agb_en","impressum_en"].forEach(id => {
+      const el = document.getElementById(id);
+      if(el) el.classList.remove("active");
+    });
+    const active = lang === "de" ? ["agb_de","impressum_de"] : ["agb_en","impressum_en"];
+    active.forEach(id => {
+      const el = document.getElementById(id);
+      if(el) el.classList.add("active");
+    });
+  }
 
-        features_title: "What LunaVision improves for your business",
-        features_lead: "A modern online presence creates more trust, better accessibility and a stronger first impression.",
-        f1t: "Professional first impression",
-        f1a: "Modern presentation instead of an outdated website or unclear appearance",
-        f1b: "Customers immediately see who you are and what you offer",
-        f1c: "More trust through clear design, mobile optimization and clean structure",
-        f2t: "Easier to reach",
-        f2a: "Contact button for WhatsApp, phone or inquiries directly integrated",
-        f2b: "Important info like services, opening hours, address and contact at a glance",
-        f2c: "Cleanly usable on smartphone, where most customers look first",
-        f3t: "Fast and uncomplicated launch",
-        f3a: "Clear one-page solution instead of unnecessarily complicated website projects",
-        f3b: "SEO basics for better visibility and a solid start",
-        f3c: "Can later be expanded, for example with booking, extras or maintenance",
+  // CTA links whose WhatsApp prefilled text differs per language carry
+  // data-href-de / data-href-en instead of a static href.
+  function applyHrefLang(){
+    document.querySelectorAll("[data-href-de]").forEach(el => {
+      const href = lang === "de" ? el.dataset.hrefDe : el.dataset.hrefEn;
+      if(href) el.setAttribute("href", href);
+    });
+  }
 
-        pricing_title: "Offer",
-        pricing_lead: "A clear starter package for local businesses that want to become modern and professionally visible online quickly.",
+  function applyLangState(){
+    document.documentElement.lang = lang;
+    if(langBtn) langBtn.textContent = lang === "de" ? "EN" : "DE";
+    toggleLegalBlocks();
+    applyHrefLang();
+  }
 
-        p1name: "Basic Landing Page",
-        p1sub: "one-time",
-        p1launch: "Clear start without subscription",
-        p1a: "1 modern landing page for your business",
-        p1b: "Mobile optimization for smartphone and tablet",
-        p1c: "Contact button for WhatsApp, phone or inquiry",
-        p1d: "SEO basics for a clean start",
-        p1e: "Go-live on your domain",
-        p1f: "1 revision included",
-        p1note: "Ideal for local businesses with an outdated website or no professional online presence. Fast, clear and affordable.",
-        
-        p2name: "Optional: Extras & Booking",
-        p2price: "on request",
-        p2sub: "only if really needed",
-        p2a: "Online appointment booking for salons, barbershops and studios",
-        p2b: "Additional sections or subpages",
-        p2c: "Extended texts or adjustments",
-        p2d: "Later maintenance and small changes",
-        p2e: "Individual solutions for special requirements",
-        p2note: "If more than a simple landing page is needed, the project can be expanded individually at any time. But you start with one clear and simple package.",
+  if(langBtn){
+    langBtn.addEventListener("click", () => {
+      lang = lang === "de" ? "en" : "de";
+      localStorage.setItem("lv_lang", lang);
+      applyLangState();
+    });
+  }
 
-        faq_title: "FAQ",
-        q1: "What is included in the Basic package?",
-        a1: "The Basic package includes a modern landing page, mobile optimization, a contact button, SEO basics, launch on your domain and one revision.",
-        q2: "Who is this offer for?",
-        a2: "This offer is for local businesses such as trades, salons, barbershops, studios, cleaning companies and other service providers that need a more professional online presence.",
-        q3: "Do I already need a domain?",
-        a3: "No, but if you already have a domain, the landing page can be launched on it. If no domain exists yet, a simple solution can also be arranged.",
-        q4: "Can it be expanded later?",
-        a4: "Yes. Additional content, more sections, online booking or later maintenance can be added separately at any time.",
-        q5: "How does the process work?",
-        a5: "After the content is agreed, texts, images, contact details and structure are implemented. Then you get a preview and after approval the page goes live on your domain.",
-        q6: "Is the page suitable for smartphone and Google?",
-        a6: "Yes. The landing page is built mobile-optimized and prepared with SEO basics so it looks professional and can be used cleanly.",
+  document.addEventListener("click", e => {
+    const a = e.target.closest("a[href^='#']");
+    if(!a) return;
+    const el = document.querySelector(a.getAttribute("href"));
+    if(!el) return;
+    e.preventDefault();
+    el.scrollIntoView({behavior:"smooth", block:"start"});
+    history.replaceState(null, "", a.getAttribute("href"));
+  });
 
-        legal_title: "Terms & Imprint",
-        imp_title: "Imprint"
-      }
+  document.getElementById("year").textContent = new Date().getFullYear();
+  applyLangState();
+
+  // Services nav dropdown: click to toggle (works on touch), hover still works via CSS.
+  document.querySelectorAll(".dropdown-toggle").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.stopPropagation();
+      const wrap = btn.closest(".nav-dropdown");
+      const isOpen = wrap.classList.toggle("open");
+      btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  });
+  document.addEventListener("click", () => {
+    document.querySelectorAll(".nav-dropdown.open").forEach(el => {
+      el.classList.remove("open");
+      const btn = el.querySelector(".dropdown-toggle");
+      if(btn) btn.setAttribute("aria-expanded", "false");
+    });
+  });
+</script>
+
+<!-- TOOLS: GEO-Check + ROI-Rechner -->
+<!-- Turnstile-Skript temporär deaktiviert: solange Error 400020 besteht
+     (siehe Dokumentation/Cloudflare-Support-Turnstile-400020.md), kann
+     Cloudflare bei "Managed"-Challenges ein eigenes Popup/Fehlerelement
+     direkt in <body> einfügen, außerhalb von .tool-turnstile-wrap - das
+     lässt sich per CSS nicht zuverlässig verstecken (z.B. auf iOS Safari
+     weiterhin sichtbar). Da Turnstile aktuell nicht Pflicht ist (Honeypot
+     übernimmt den Spam-Schutz, siehe submitTool()), wird das Skript gar
+     nicht erst geladen - window.turnstile bleibt undefined, getTurnstileToken()
+     und resetTurnstile() fangen das bereits ab. Sobald Cloudflare das Problem
+     behoben hat: Zeile wieder einkommentieren.
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+-->
+<script>
+  (function(){
+    function currentLang(){
+      return document.documentElement.lang === "en" ? "en" : "de";
+    }
+
+    const MSG = {
+      sending: { de: "Wird gesendet …", en: "Sending …" },
+      geoSuccess: { de: "Danke! Wir melden uns innerhalb von 1–2 Werktagen mit deiner Ersteinschätzung.", en: "Thanks! We'll get back to you within 1–2 business days with your assessment." },
+      roiSuccess: { de: "Danke! Wir schicken dir das Ergebnis per Mail.", en: "Thanks! We'll send you the result by email." },
+      error: { de: "Etwas ist schiefgelaufen. Bitte versuch es später nochmal oder schreib uns direkt.", en: "Something went wrong. Please try again later or contact us directly." },
+      turnstileMissing: { de: "Bitte warte kurz, bis die Sicherheitsprüfung geladen ist, und versuch es dann nochmal.", en: "Please wait a moment for the security check to load, then try again." }
     };
 
-    let lang = "de";
-    const langBtn = document.getElementById("langBtn");
-
-    function toggleLegalBlocks(){
-      const deBlocks = ["agb_de","impressum_de","datenschutz_de"];
-      const enBlocks = ["agb_en","impressum_en","datenschutz_en"];
-      [...deBlocks, ...enBlocks].forEach(id => {
-        const el = document.getElementById(id);
-        if(!el) return;
-        el.classList.remove("active");
-      });
-      const active = (lang === "de") ? deBlocks : enBlocks;
-      active.forEach(id => {
-        const el = document.getElementById(id);
-        if(el) el.classList.add("active");
-      });
-    }
-
-    function applyI18n(){
-      document.querySelectorAll("[data-i18n]").forEach(node => {
-        const key = node.getAttribute("data-i18n");
-        const val = (I18N[lang] && I18N[lang][key]) ? I18N[lang][key] : null;
-        if(val === null) return;
-        if(key === "hero_title") node.innerHTML = val;
-        else node.textContent = val;
-      });
-
-      document.title = I18N[lang].page_title;
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if(metaDesc) metaDesc.setAttribute("content", I18N[lang].page_desc);
-
-      if(langBtn) langBtn.textContent = (lang === "de") ? "EN" : "DE";
-      document.documentElement.lang = lang;
-      toggleLegalBlocks();
-    }
-
-    if(langBtn){
-      langBtn.addEventListener("click", () => {
-        lang = (lang === "de") ? "en" : "de";
-        applyI18n();
-      });
-    }
-
-    document.addEventListener("click", (e) => {
-      const a = e.target.closest("a[href^='#']");
-      if(!a) return;
-      const id = a.getAttribute("href");
-      const el = document.querySelector(id);
+    function showStatus(el, msg, type){
       if(!el) return;
-      e.preventDefault();
-      el.scrollIntoView({behavior:"smooth", block:"start"});
-      history.replaceState(null, "", id);
+      el.textContent = msg;
+      el.className = "tool-status show " + type;
+    }
+
+    function getTurnstileToken(){
+      // Nur ein Turnstile-Widget auf der Seite (implizites Auto-Render via
+      // class="cf-turnstile") - ohne Argument aufrufen. Die HTML-Element-ID
+      // ("lvTurnstile") ist NICHT dasselbe wie die von Turnstile intern
+      // vergebene Widget-ID, die man nur bei explizitem turnstile.render()
+      // zurückbekommt.
+      try{ return window.turnstile ? window.turnstile.getResponse() : null; }
+      catch(e){ return null; }
+    }
+
+    function resetTurnstile(){
+      try{ if(window.turnstile) window.turnstile.reset(); }
+      catch(e){ /* noop */ }
+    }
+
+    // Turnstile-Block bleibt per CSS (.tool-turnstile-wrap) unsichtbar, bis das
+    // Widget nachweislich erfolgreich lädt - siehe Cloudflare-Support-Turnstile-
+    // 400020.md. So sehen Besucher nie den blauen "Troubleshooting"-Fehlerlink
+    // aus Cloudflares iFrame, den wir per CSS ohnehin nicht stylen könnten.
+    function onTurnstileReady(){
+      document.querySelectorAll(".tool-turnstile-wrap").forEach(w => w.classList.add("tool-turnstile-ready"));
+    }
+    function onTurnstileProblem(){
+      document.querySelectorAll(".tool-turnstile-wrap").forEach(w => w.classList.remove("tool-turnstile-ready"));
+    }
+
+    function getUtm(){
+      const params = new URLSearchParams(window.location.search);
+      return {
+        utm_source: params.get("utm_source") || "",
+        utm_medium: params.get("utm_medium") || "",
+        utm_campaign: params.get("utm_campaign") || ""
+      };
+    }
+
+    // Tab-Umschaltung
+    document.querySelectorAll("[data-tool-tab]").forEach(tab => {
+      tab.addEventListener("click", () => {
+        const target = tab.dataset.toolTab;
+        document.querySelectorAll("[data-tool-tab]").forEach(t => t.classList.toggle("active", t === tab));
+        document.querySelectorAll("[data-tool-panel]").forEach(p => p.classList.toggle("active", p.dataset.toolPanel === target));
+      });
     });
 
-    const yearEl = document.getElementById("year");
-    if(yearEl) yearEl.textContent = new Date().getFullYear();
+    async function submitTool(payload, formEl, statusEl, successMsgKey){
+      // Turnstile ist temporär NICHT Pflicht (Cloudflare-seitiges Problem wird
+      // untersucht, Fehler 400020 beim Widget-Laden). Falls doch ein Token da
+      // ist, wird es trotzdem mitgeschickt und serverseitig geprüft - der
+      // Honeypot ("website"-Feld) ist aktuell die primäre Spam-Bremse.
+      const token = getTurnstileToken();
+      if(token) payload.turnstileToken = token;
 
-    applyI18n();
-  </script>
+      const submitBtn = formEl.querySelector('button[type="submit"]');
+      if(submitBtn) submitBtn.disabled = true;
+      showStatus(statusEl, MSG.sending[currentLang()], "success");
 
-  <!-- Cookie Consent Configuration -->
-  <script src="assets/cookie-consent-config.js"></script>
+      try{
+        const res = await fetch("/api/submit", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify(payload)
+        });
+        const result = await res.json();
+        if(result.success){
+          showStatus(statusEl, MSG[successMsgKey][currentLang()], "success");
+          formEl.reset();
+        } else {
+          showStatus(statusEl, result.error || MSG.error[currentLang()], "error");
+        }
+      } catch(err){
+        showStatus(statusEl, MSG.error[currentLang()], "error");
+      } finally {
+        if(submitBtn) submitBtn.disabled = false;
+        resetTurnstile();
+      }
+    }
+
+    // GEO-CHECK
+    const geoForm = document.getElementById("geoCheckForm");
+    if(geoForm){
+      geoForm.addEventListener("submit", e => {
+        e.preventDefault();
+        const payload = {
+          tool: "geo-check",
+          firmenname: document.getElementById("geoFirmenname").value.trim(),
+          branche: document.getElementById("geoBranche").value.trim(),
+          email: document.getElementById("geoEmail").value.trim(),
+          consent: document.getElementById("geoConsent").checked,
+          website: document.getElementById("geoWebsite").value,
+          ...getUtm()
+        };
+        const statusEl = document.getElementById("geoStatus");
+        if(!payload.firmenname || !payload.email || !payload.consent){
+          showStatus(statusEl, MSG.error[currentLang()], "error");
+          return;
+        }
+        submitTool(payload, geoForm, statusEl, "geoSuccess");
+      });
+    }
+
+    // ROI-RECHNER: Berechnung ist rein clientseitig (echte Mathematik, kein
+    // Fake), die Nutzung wird zusätzlich anonym geloggt (nur wenn ein
+    // Turnstile-Token schon verfügbar ist - das Widget lädt asynchron und
+    // löst im Managed-Modus meist automatisch im Hintergrund).
+    const roiForm = document.getElementById("roiForm");
+    const roiResult = document.getElementById("roiResult");
+    let lastRoiCalc = null;
+
+    if(roiForm){
+      roiForm.addEventListener("submit", e => {
+        e.preventDefault();
+        const hours = parseFloat(document.getElementById("roiHours").value);
+        const rate = parseFloat(document.getElementById("roiRate").value);
+        if(!hours || !rate || hours <= 0 || rate <= 0) return;
+
+        const monthlyValue = hours * rate * 4;
+        const automationCost = 199; // Beispielwert: KI-Content-Agent Monatspreis
+        const netSaving = Math.max(monthlyValue - automationCost, 0);
+        const roi = automationCost > 0 ? Math.round((netSaving / automationCost) * 100) : 0;
+
+        document.getElementById("roiMonthly").textContent = monthlyValue.toFixed(0) + " €";
+        document.getElementById("roiCost").textContent = automationCost + " €/Monat";
+        document.getElementById("roiNet").textContent = netSaving.toFixed(0) + " €/Monat";
+        roiResult.classList.add("show");
+
+        lastRoiCalc = { hours, rate, netSaving: Math.round(netSaving), roi };
+
+        const anonToken = getTurnstileToken();
+        if(anonToken){
+          fetch("/api/submit", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({ tool: "roi-rechner", ...lastRoiCalc, turnstileToken: anonToken, ...getUtm() })
+          }).catch(() => {});
+        }
+      });
+    }
+
+    const roiOptinForm = document.getElementById("roiOptinForm");
+    if(roiOptinForm){
+      roiOptinForm.addEventListener("submit", e => {
+        e.preventDefault();
+        if(!lastRoiCalc) return;
+        const email = document.getElementById("roiEmail").value.trim();
+        const consent = document.getElementById("roiConsent").checked;
+        const statusEl = document.getElementById("roiStatus");
+        if(email && !consent){
+          showStatus(statusEl, MSG.error[currentLang()], "error");
+          return;
+        }
+        const website = document.getElementById("roiWebsite").value;
+        const payload = { tool: "roi-rechner", ...lastRoiCalc, email, consent, website, ...getUtm() };
+        submitTool(payload, roiOptinForm, statusEl, "roiSuccess");
+      });
+    }
+  })();
+</script>
+
+<!-- MOTION/TEXTUR: Scroll-Reveal + Nav-Kompaktierung beim Scrollen -->
+<script>
+  (function(){
+    // Cards und Section-Headlines automatisch fürs Scroll-Reveal markieren,
+    // statt jede Stelle im HTML einzeln anzufassen.
+    document.querySelectorAll(
+      ".services-hero-card, .service-small-card, .tools-card, " +
+      ".services-section .h2, .services-section .section-eyebrow, .services-section .lead, " +
+      "#tools .h2, #tools .section-eyebrow, #tools .lead, " +
+      "#faq .h2"
+    ).forEach(el => el.classList.add("reveal"));
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -60px 0px" });
+
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+    // Nav wird beim Scrollen dezent kompakter/opaker
+    const topbar = document.getElementById("topbar");
+    if(topbar){
+      window.addEventListener("scroll", () => {
+        topbar.classList.toggle("scrolled", window.scrollY > 40);
+      }, { passive: true });
+    }
+  })();
+</script>
+
+<!-- Cookie Consent (selbst gehostet, MIT-Lizenz) -->
+<script src="assets/cookieconsent.umd.js"></script>
+<script src="assets/cookie-consent-config.js"></script>
+
 </body>
 </html>

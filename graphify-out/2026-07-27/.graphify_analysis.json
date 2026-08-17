@@ -1,0 +1,173 @@
+{
+  "communities": {
+    "0": [
+      "02_projekte_lunavision_instagram_content_preview_2026_09_september_einzelbilder_01_einzelpost_rechnungsautomatisierung_chaos_ordner_caption",
+      "02_projekte_lunavision_instagram_content_preview_2026_09_september_einzelbilder_01_einzelpost_rechnungsautomatisierung_chaos_ordner_konzept_vergleich_concept_a_split_panel",
+      "02_projekte_lunavision_instagram_content_preview_2026_09_september_einzelbilder_01_einzelpost_rechnungsautomatisierung_chaos_ordner_konzept_vergleich_concept_b_diagramm",
+      "02_projekte_lunavision_instagram_content_preview_2026_09_september_einzelbilder_01_einzelpost_rechnungsautomatisierung_chaos_ordner_slide_1_post",
+      "02_projekte_lunavision_instagram_content_preview_2026_09_september_einzelbilder_01_einzelpost_rechnungsautomatisierung_chaos_ordner_slide_1_post_img",
+      "rechnungsautomatisierung_service"
+    ],
+    "1": [
+      "assets_hero_mockup_final",
+      "assets_logo",
+      "googleterminpage",
+      "index",
+      "lunavision_brand"
+    ],
+    "2": [
+      "02_projekte_lunavision_instagram_content_preview_2026_08_august_karussells_02_karussell_ki_content_agent_deep_dive_caption",
+      "02_projekte_lunavision_instagram_content_preview_2026_08_august_karussells_02_karussell_ki_content_agent_deep_dive_slide_1_cover",
+      "02_projekte_lunavision_instagram_content_preview_2026_08_august_karussells_02_karussell_ki_content_agent_deep_dive_slide_1_cover_img",
+      "ki_content_agent_service"
+    ],
+    "3": [
+      "assets_final_posts_ki_bild_kontrolle_caption",
+      "assets_final_posts_ki_bild_kontrolle_ki_bild_kontrolle",
+      "assets_final_posts_linkedin_post_ki_agent",
+      "lunavision_concept"
+    ],
+    "4": [
+      "assets_final_posts_linkedin_post_geo",
+      "assets_final_posts_linkedin_post_geo_v2",
+      "assets_final_posts_linkedin_post_geo_v3",
+      "geo_concept"
+    ],
+    "5": [
+      "shops_1template_index",
+      "shops_kunden_barbershop_aso3_ludwigshafen_assets_logo"
+    ],
+    "6": [
+      "assets_final_posts_linkedin_post_haltung_vs_corporate"
+    ],
+    "7": [
+      "assets_final_posts_linkedin_post_ki_erkennung"
+    ]
+  },
+  "cohesion": {
+    "0": 0.3333333333333333,
+    "1": 0.4,
+    "2": 0.5,
+    "3": 0.5,
+    "4": 0.5,
+    "5": 1.0,
+    "6": 1.0,
+    "7": 1.0
+  },
+  "gods": [
+    {
+      "id": "rechnungsautomatisierung_service",
+      "label": "Rechnungsautomatisierung Service",
+      "degree": 4
+    },
+    {
+      "id": "index",
+      "label": "LunaVision Landingpage",
+      "degree": 3
+    },
+    {
+      "id": "geo_concept",
+      "label": "Generative Engine Optimization (GEO)",
+      "degree": 3
+    },
+    {
+      "id": "02_projekte_lunavision_instagram_content_preview_2026_08_august_karussells_02_karussell_ki_content_agent_deep_dive_slide_1_cover",
+      "label": "KI-Content-Agent Slide 1",
+      "degree": 2
+    },
+    {
+      "id": "02_projekte_lunavision_instagram_content_preview_2026_09_september_einzelbilder_01_einzelpost_rechnungsautomatisierung_chaos_ordner_slide_1_post",
+      "label": "Rechnungsautomatisierung Slide 1",
+      "degree": 2
+    },
+    {
+      "id": "lunavision_brand",
+      "label": "LunaVision Brand",
+      "degree": 2
+    },
+    {
+      "id": "ki_content_agent_service",
+      "label": "KI-Content-Agent Service",
+      "degree": 2
+    },
+    {
+      "id": "assets_final_posts_ki_bild_kontrolle_caption",
+      "label": "LinkedIn Post Caption: KI Bild Kontrolle",
+      "degree": 2
+    },
+    {
+      "id": "lunavision_concept",
+      "label": "LunaVision",
+      "degree": 2
+    },
+    {
+      "id": "googleterminpage",
+      "label": "Google Termin Anfrage Seite",
+      "degree": 1
+    }
+  ],
+  "surprises": [
+    {
+      "source": "LunaVision Landingpage",
+      "target": "Landingpage Mockup",
+      "source_files": [
+        "index.html",
+        "assets/hero-mockup-final.png"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories"
+    },
+    {
+      "source": "LunaVision Landingpage",
+      "target": "LunaVision Logo",
+      "source_files": [
+        "index.html",
+        "assets/logo.png"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories"
+    },
+    {
+      "source": "Termin-Chat Template",
+      "target": "Barbershop Aso 3 Logo",
+      "source_files": [
+        "shops/1TEMPLATE/index.html",
+        "shops/kunden/barbershop-aso3-ludwigshafen/assets/logo.png"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (doc ↔ image)"
+    },
+    {
+      "source": "Google Termin Anfrage Seite",
+      "target": "LunaVision Brand",
+      "source_files": [
+        "GoogleTerminPage.html",
+        "index.html"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "conceptually_related_to",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "KI-Content-Agent Slide 1",
+      "target": "Chicago Skyline Night Photo",
+      "source_files": [
+        "02 Projekte/LunaVision-Instagram-Content-Preview/2026-08 August/Karussells/02-karussell-ki-content-agent-deep-dive/slide-1-cover.html",
+        "02 Projekte/LunaVision-Instagram-Content-Preview/2026-08 August/Karussells/02-karussell-ki-content-agent-deep-dive/slide-1-cover.png"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image)"
+    }
+  ],
+  "questions": [
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `Google Termin Anfrage Seite`, `KI-Content-Agent Caption`, `Rechnungsautomatisierung Caption` to the rest of the system?",
+      "why": "18 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}

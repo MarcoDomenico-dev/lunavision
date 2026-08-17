@@ -602,6 +602,61 @@
       .ai-act-box { padding: 18px; }
       .ai-act-title { font-size: 18px; }
     }
+
+    /* SERVICE PRICING GRID */
+    .service-pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 28px 0 24px 0;
+    }
+    .pricing-tier {
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border: 1px solid rgba(199,167,90,.2);
+      border-radius: 14px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .tier-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .tier-price {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .tier-asterisk {
+      font-size: 12px;
+      vertical-align: super;
+    }
+    .tier-description {
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .pricing-footnote {
+      font-size: 12px;
+      color: #999;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .service-pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin: 20px 0 18px 0;
+      }
+      .pricing-tier {
+        padding: 16px 14px;
+      }
+      .tier-price {
+        font-size: 20px;
+      }
+    }
   </style>
 
     <!-- Start of HubSpot Embed Code -->
@@ -819,24 +874,24 @@
               <span class="lang-en">Social calendar for consistent content</span>
             </li>
           </ul>
-          <div class="service-price-row" style="display:flex; gap:12px; flex-wrap:wrap; align-items:flex-start">
-            <div style="flex:1; min-width:120px">
-              <div class="service-amount" style="font-size:0.9rem">Starter</div>
-              <div style="font-size:0.85rem; color:#C7A75A">199 €*</div>
-              <div style="font-size:0.75rem; color:#aaa">10 Posts/Mo.</div>
+          <div class="service-pricing-grid">
+            <div class="pricing-tier">
+              <div class="tier-name"><span class="lang-de">Starter</span><span class="lang-en">Starter</span></div>
+              <div class="tier-price">199 €<span class="tier-asterisk">*</span></div>
+              <div class="tier-description"><span class="lang-de">10 Posts/Mo.</span><span class="lang-en">10 Posts/mo.</span></div>
             </div>
-            <div style="flex:1; min-width:120px">
-              <div class="service-amount" style="font-size:0.9rem">Wachstum</div>
-              <div style="font-size:0.85rem; color:#C7A75A">349 €*</div>
-              <div style="font-size:0.75rem; color:#aaa">20 Posts/Mo.</div>
+            <div class="pricing-tier">
+              <div class="tier-name"><span class="lang-de">Wachstum</span><span class="lang-en">Growth</span></div>
+              <div class="tier-price">349 €<span class="tier-asterisk">*</span></div>
+              <div class="tier-description"><span class="lang-de">20 Posts/Mo.</span><span class="lang-en">20 Posts/mo.</span></div>
             </div>
-            <div style="flex:1; min-width:120px">
-              <div class="service-amount" style="font-size:0.9rem">Max</div>
-              <div style="font-size:0.85rem; color:#C7A75A">469 €*</div>
-              <div style="font-size:0.75rem; color:#aaa">30 Posts/Mo.</div>
+            <div class="pricing-tier">
+              <div class="tier-name"><span class="lang-de">Max</span><span class="lang-en">Max</span></div>
+              <div class="tier-price">469 €<span class="tier-asterisk">*</span></div>
+              <div class="tier-description"><span class="lang-de">30 Posts/Mo.</span><span class="lang-en">30 Posts/mo.</span></div>
             </div>
           </div>
-          <div style="font-size:0.75rem; color:#888; margin-top:8px">
+          <div class="pricing-footnote">
             <span class="lang-de">*+ 399 € einmalig · Posts = Instagram + Facebook</span>
             <span class="lang-en">*+ €399 one-time · Posts = Instagram + Facebook</span>
           </div>

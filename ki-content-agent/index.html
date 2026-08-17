@@ -327,6 +327,62 @@
     .footer-social a{color:rgba(245,247,250,.45); transition:color .15s; line-height:0}
     .footer-social a:hover{color:var(--accent)}
     .footer-social svg{width:18px; height:18px; display:block}
+
+    /* SERVICE PRICING GRID */
+    .service-pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 28px 0 24px 0;
+    }
+    .pricing-tier {
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border: 1px solid rgba(199,167,90,.2);
+      border-radius: 14px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .tier-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .tier-price {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .tier-asterisk {
+      font-size: 14px;
+      vertical-align: super;
+      color: var(--accent);
+    }
+    .tier-description {
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .pricing-footnote {
+      font-size: 12px;
+      color: #999;
+      margin-top: -2px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .service-pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin: 20px 0 18px 0;
+      }
+      .pricing-tier {
+        padding: 16px 14px;
+      }
+      .tier-price {
+        font-size: 20px;
+      }
+    }
   </style>
   <!-- Cookie Consent (selbst gehostet, orestbida/cookieconsent v3.1.0, MIT-Lizenz) -->
   <link rel="stylesheet" href="/assets/cookieconsent.css" />
@@ -392,9 +448,26 @@
               <span class="lang-de">Wir übernehmen Ad-Copy, Personas und Social-Kalender für Sie – laufend, nicht nur einmalig. Sie bekommen fertigen Content zum Hochladen.</span>
               <span class="lang-en">We take care of ad copy, personas and social calendar for you – continuously, not just once. You receive ready-made content to upload.</span>
             </p>
-            <div class="price-inline">
-              <span class="price-amount"><span class="lang-de">399 €</span><span class="lang-en">€399</span></span>
-              <span class="price-period"><span class="lang-de">einmalig · danach 199 €/Monat</span><span class="lang-en">one-time · then €199/month</span></span>
+            <div class="service-pricing-grid">
+              <div class="pricing-tier">
+                <div class="tier-name"><span class="lang-de">Starter</span><span class="lang-en">Starter</span></div>
+                <div class="tier-price">199 €<span class="tier-asterisk">*</span></div>
+                <div class="tier-description"><span class="lang-de">10 Posts/Mo.</span><span class="lang-en">10 Posts/mo.</span></div>
+              </div>
+              <div class="pricing-tier">
+                <div class="tier-name"><span class="lang-de">Wachstum</span><span class="lang-en">Growth</span></div>
+                <div class="tier-price">349 €<span class="tier-asterisk">*</span></div>
+                <div class="tier-description"><span class="lang-de">20 Posts/Mo.</span><span class="lang-en">20 Posts/mo.</span></div>
+              </div>
+              <div class="pricing-tier">
+                <div class="tier-name"><span class="lang-de">Max</span><span class="lang-en">Max</span></div>
+                <div class="tier-price">469 €<span class="tier-asterisk">*</span></div>
+                <div class="tier-description"><span class="lang-de">30 Posts/Mo.</span><span class="lang-en">30 Posts/mo.</span></div>
+              </div>
+            </div>
+            <div class="pricing-footnote">
+              <span class="lang-de">10 Instagram + 10 Facebook Beiträge. Stories erstellen Sie manuell (wie besprochen). Zuzüglich 399 € einmalige Einrichtung.</span>
+              <span class="lang-en">10 Instagram + 10 Facebook posts. Stories created manually (as discussed). Plus €399 one-time setup fee.</span>
             </div>
             <a class="btn" target="_blank" rel="noopener"
                href="https://wa.me/491742555178?text=Ich%20interessiere%20mich%20f%C3%BCr%20den%20KI-Content-Agent."

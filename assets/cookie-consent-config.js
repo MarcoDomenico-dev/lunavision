@@ -55,7 +55,7 @@
             acceptAllBtn: 'Alle akzeptieren',
             acceptNecessaryBtn: 'Nur notwendige',
             showPreferencesBtn: 'Einstellungen',
-            footer: '<a href="/datenschutz.html">Datenschutzerklärung</a>'
+            footer: '<a href="#datenschutz_de">Datenschutzerklärung</a>'
           },
           preferencesModal: {
             title: 'Cookie-Einstellungen',
@@ -103,7 +103,7 @@
             acceptAllBtn: 'Accept all',
             acceptNecessaryBtn: 'Necessary only',
             showPreferencesBtn: 'Preferences',
-            footer: '<a href="/privacy-policy.html">Privacy Policy</a>'
+            footer: '<a href="#datenschutz_en">Privacy Policy</a>'
           },
           preferencesModal: {
             title: 'Cookie Preferences',

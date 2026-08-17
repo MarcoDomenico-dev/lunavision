@@ -607,6 +607,33 @@
     <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/149027122.js"></script>
     <!-- End of HubSpot Embed Code -->
+
+  <!-- Meta Pixel Code -->
+  <script>
+    function loadMetaPixel() {
+      !function(f,b,e,v,n,t,s) {
+        if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+        t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
+      }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1064676212710682');
+      fbq('track', 'PageView');
+    }
+
+    // Laden nur wenn Marketing Cookies akzeptiert sind
+    if(localStorage.getItem('cookie_marketing') === 'true') {
+      loadMetaPixel();
+    }
+
+    // Listener für Cookie-Änderungen
+    document.addEventListener('cookie-consent-updated', function(e) {
+      if(e.detail && e.detail.marketing && !window.fbq) {
+        loadMetaPixel();
+      }
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1064676212710682&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
   </head>
 <body>
 
@@ -1321,6 +1348,54 @@
           <p class="tiny">As a small business, no VAT ID is provided.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Datenschutzerklärung (German) -->
+  <section class="section" id="datenschutz_de" style="display:none">
+    <div class="wrap">
+      <h2>Datenschutzerklärung</h2>
+      <h3>1. Verantwortliche Stelle</h3>
+      <p>Marco Giglio, info@lunavision.org</p>
+
+      <h3>2. Rechtsgrundlage</h3>
+      <p>Art. 6 DSGVO – Legitimes Interesse an Webanalytik und Conversion-Tracking.</p>
+
+      <h3>3. Google Analytics</h3>
+      <p>Wir nutzen Google Analytics (Universal Analytics) zur Analyse von Besucherverhalten. Daten werden an Google LLC (USA) übermittelt. Speicherdauer: ca. 14 Monate. Mit Ihrer Einwilligung aktiv.</p>
+
+      <h3>4. Meta Pixel</h3>
+      <p>Meta Pixel verfolgt Conversions und Besucher für Facebook/Instagram-Kampagnen. Daten werden an Meta Platforms Inc. (USA) übermittelt. Speicherdauer: ca. 3 Monate (Cookies _fbp, _fbc). Nur mit Ihrer Einwilligung aktiv.</p>
+
+      <h3>5. Ihre Rechte (Art. 15-20 DSGVO)</h3>
+      <p>Sie haben Recht auf Auskunft, Berichtigung, Löschung, Einschränkung und Datenportabilität. Kontaktieren Sie: info@lunavision.org</p>
+
+      <h3>6. Externe Links</h3>
+      <p>Externe Websites unterliegen nicht unserer Verantwortung.</p>
+    </div>
+  </section>
+
+  <!-- Privacy Policy (English) -->
+  <section class="section" id="datenschutz_en" style="display:none">
+    <div class="wrap">
+      <h2>Privacy Policy</h2>
+      <h3>1. Responsible Party</h3>
+      <p>Marco Giglio, info@lunavision.org</p>
+
+      <h3>2. Legal Basis</h3>
+      <p>Art. 6 GDPR – Legitimate interest in web analytics and conversion tracking.</p>
+
+      <h3>3. Google Analytics</h3>
+      <p>We use Google Analytics (Universal Analytics) to analyze visitor behavior. Data is transmitted to Google LLC (USA). Retention: approx. 14 months. Only active with your consent.</p>
+
+      <h3>4. Meta Pixel</h3>
+      <p>Meta Pixel tracks conversions and visitors for Facebook/Instagram campaigns. Data is transmitted to Meta Platforms Inc. (USA). Retention: approx. 3 months (cookies _fbp, _fbc). Only active with your consent.</p>
+
+      <h3>5. Your Rights (Art. 15-20 GDPR)</h3>
+      <p>You have the right to access, rectification, erasure, restriction, and data portability. Contact: info@lunavision.org</p>
+
+      <h3>6. External Links</h3>
+      <p>External websites are not subject to our responsibility.</p>
     </div>
   </section>
 

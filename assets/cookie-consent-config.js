@@ -34,6 +34,14 @@
             { name: /^_gid/ }
           ]
         }
+      },
+      marketing: {
+        autoClear: {
+          cookies: [
+            { name: /^_fbp/ },
+            { name: /^_fbc/ }
+          ]
+        }
       }
     },
     language: {
@@ -43,12 +51,12 @@
           consentModal: {
             title: 'Wir verwenden Cookies',
             description:
-              'Notwendige Cookies sorgen für den technischen Betrieb dieser Website. Mit deiner Einwilligung nutzen wir zusätzlich Google Analytics, um zu verstehen wie die Seite genutzt wird.',
+              'Notwendige Cookies sorgen für den technischen Betrieb dieser Website. Mit deiner Einwilligung nutzen wir zusätzlich Google Analytics und Meta Pixel, um zu verstehen wie die Seite genutzt wird.',
             acceptAllBtn: 'Alle akzeptieren',
             acceptNecessaryBtn: 'Nur notwendige',
             showPreferencesBtn: 'Einstellungen',
             footer:
-              '<a href="/datenschutz.html">Datenschutzerklärung</a>'
+              '<a href="#datenschutz_de">Datenschutzerklärung</a>'
           },
           preferencesModal: {
             title: 'Cookie-Einstellungen',
@@ -75,6 +83,18 @@
                     { name: '_ga_*', domain: 'Google LLC', desc: 'Speichert Sitzungsstatus für Google Analytics 4, Speicherdauer ca. 2 Jahre.' }
                   ]
                 }
+              },
+              {
+                title: 'Marketing (Meta Pixel)',
+                description: 'Verfolgt Besucher und Conversions für Meta Kampagnen (Facebook/Instagram). Daten werden an Meta Platforms Inc. (USA) übermittelt. Nur mit deiner Einwilligung aktiv.',
+                linkedCategory: 'marketing',
+                cookieTable: {
+                  headers: { name: 'Cookie', domain: 'Anbieter', desc: 'Zweck' },
+                  body: [
+                    { name: '_fbp', domain: 'Meta Platforms Inc.', desc: 'Speichert eindeutige Browser-ID für Pixel-Tracking, Speicherdauer ca. 3 Monate.' },
+                    { name: '_fbc', domain: 'Meta Platforms Inc.', desc: 'Speichert Click-ID für Conversion-Tracking, Speicherdauer ca. 3 Monate.' }
+                  ]
+                }
               }
             ]
           }
@@ -83,12 +103,12 @@
           consentModal: {
             title: 'We use cookies',
             description:
-              'Necessary cookies keep this website running. With your consent, we also use Google Analytics to understand how the site is used.',
+              'Necessary cookies keep this website running. With your consent, we also use Google Analytics and Meta Pixel to understand how visitors use the site.',
             acceptAllBtn: 'Accept all',
             acceptNecessaryBtn: 'Necessary only',
             showPreferencesBtn: 'Preferences',
             footer:
-              '<a href="/datenschutz.html">Privacy Policy</a>'
+              '<a href="#datenschutz_en">Privacy Policy</a>'
           },
           preferencesModal: {
             title: 'Cookie Preferences',
@@ -115,6 +135,18 @@
                     { name: '_ga_*', domain: 'Google LLC', desc: 'Persists session state for Google Analytics 4, retention approx. 2 years.' }
                   ]
                 }
+              },
+              {
+                title: 'Marketing (Meta Pixel)',
+                description: 'Tracks visitors and conversions for Meta campaigns (Facebook/Instagram). Data is transmitted to Meta Platforms Inc. (USA). Only active with your consent.',
+                linkedCategory: 'marketing',
+                cookieTable: {
+                  headers: { name: 'Cookie', domain: 'Provider', desc: 'Purpose' },
+                  body: [
+                    { name: '_fbp', domain: 'Meta Platforms Inc.', desc: 'Stores unique browser ID for pixel tracking, retention approx. 3 months.' },
+                    { name: '_fbc', domain: 'Meta Platforms Inc.', desc: 'Stores click ID for conversion tracking, retention approx. 3 months.' }
+                  ]
+                }
               }
             ]
           }
@@ -124,10 +156,6 @@
   });
 
   // Hält die Cookie-Banner-Sprache synchron mit dem DE/EN-Umschalter der Seite.
-  // Die Bibliothek liest die Sprache nur einmal beim Start (siehe "lang" oben) –
-  // ohne diesen Beobachter bleibt das Banner auf Deutsch, auch wenn der Besucher
-  // später auf Englisch umschaltet. CookieConsent.setLanguage() aktualisiert die
-  // bereits sichtbaren/gespeicherten Texte nachträglich.
   var currentCcLang = lang;
   new MutationObserver(function () {
     var newLang = document.documentElement.lang === 'en' ? 'en' : 'de';

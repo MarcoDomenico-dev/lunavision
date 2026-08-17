@@ -6,7 +6,34 @@
   <title>LunaVision – Moderne Landingpages für lokale Businesses</title>
   <meta name="description" content="LunaVision erstellt moderne Landingpages für lokale Businesses – mobil optimiert, professionell gestaltet und schnell live. Für Handwerker, Friseure, Studios und lokale Dienstleister." />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  
+
+  <!-- Meta Pixel Code -->
+  <script>
+    function loadMetaPixel() {
+      !function(f,b,e,v,n,t,s) {
+        if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+        t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
+      }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1064676212710682');
+      fbq('track', 'PageView');
+    }
+
+    // Laden nur wenn Marketing Cookies akzeptiert sind
+    if(localStorage.getItem('cookie_marketing') === 'true') {
+      loadMetaPixel();
+    }
+
+    // Listener für Cookie-Änderungen
+    document.addEventListener('cookie-consent-updated', function(e) {
+      if(e.detail && e.detail.marketing && !window.fbq) {
+        loadMetaPixel();
+      }
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1064676212710682&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <style>
     :root{
       --bg:#0B0F1C;
@@ -725,6 +752,122 @@
             </p>
             <p class="tiny">As a small business, no VAT ID is provided if not available or required.</p>
           </div>
+
+          <!-- Datenschutzerklärung DE -->
+          <div class="card legal langBlock" id="datenschutz_de">
+            <h3>Datenschutzerklärung</h3>
+
+            <h4>1. Verantwortlicher und Kontakt</h4>
+            <p>Verantwortlich für die Datenverarbeitung ist:<br>
+            M. Giglio, Kranichstr. 11, 67069 Ludwigshafen am Rhein<br>
+            E-Mail: <a href="mailto:info@lunavision.org">info@lunavision.org</a></p>
+
+            <h4>2. Rechtsgrundlagen und Zwecke der Verarbeitung</h4>
+            <p>Wir verarbeiten personenbezogene Daten auf Grundlage von Art. 6 DSGVO mit folgenden Rechtsgrundlagen:</p>
+            <ul>
+              <li><strong>Berechtigte Interessen (Art. 6 Abs. 1 f DSGVO)</strong>: Websiteoptimierung, Sicherheit, Missbrauchsprävention</li>
+              <li><strong>Ihre Einwilligung (Art. 6 Abs. 1 a DSGVO)</strong>: Tracking (Google Analytics, Meta Pixel) – nur mit Cookie-Zustimmung</li>
+              <li><strong>Kontaktaufnahme</strong>: Bearbeitung Ihrer Anfrage auf Grundlage Ihrer Einwilligung</li>
+            </ul>
+
+            <h4>3. Google Analytics</h4>
+            <p>Diese Website nutzt Google Analytics (Universal Analytics) zur Analyse der Websitenutzung. Google Analytics setzt Cookies, um Ihre Nutzung nachzuverfolgenn (z.B. Seitenabrufe, Verweildauer, Klicks). Die gesammelten Daten werden auf Google-Servern gespeichert und nach 14 Monaten automatisch gelöscht. Google Analytics wird nur aktiviert, wenn Sie der Kategorie "Analyse" zugestimmt haben.</p>
+            <p><strong>Datenschutzhinweis:</strong> Google ist unter der US Privacy Shield zertifiziert, die ein angemessenes Datenschutzniveau garantiert.</p>
+
+            <h4>4. Meta Pixel (Facebook Tracking)</h4>
+            <p>Diese Website nutzt das Meta Pixel zur Verfolgung von Conversions und Besucherverhalten. Das Meta Pixel wird nur aktiviert, wenn Sie der Kategorie "Marketing" zugestimmt haben. Das Meta Pixel speichert Cookies und sendet Informationen an Meta Platforms Inc., um:</p>
+            <ul>
+              <li>Kampagnenleistung zu messen</li>
+              <li>Zielgruppen für Retargeting zu erstellen</li>
+              <li>Ihre Interessen zu verstehen</li>
+            </ul>
+            <p><strong>Datenschutzhinweis:</strong> Ihre Daten können in die USA übermittelt werden. Meta hat sich zur Einhaltung der DSGVO verpflichtet.</p>
+
+            <h4>5. Cookies</h4>
+            <p>Diese Website nutzt Cookies, um Ihre Einwilligungen zu speichern und zu respektieren. Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden:</p>
+            <ul>
+              <li><strong>Notwendig:</strong> Für den Betrieb der Website (z.B. Cookie-Einwilligung)</li>
+              <li><strong>Analyse:</strong> Google Analytics – nur mit Ihrer Zustimmung</li>
+              <li><strong>Marketing:</strong> Meta Pixel – nur mit Ihrer Zustimmung</li>
+            </ul>
+            <p>Sie können Cookies in Ihrem Browser ablehnen. Dies kann jedoch die Funktionalität einschränken.</p>
+
+            <h4>6. Ihre Rechte</h4>
+            <p>Unter der DSGVO haben Sie folgende Rechte:</p>
+            <ul>
+              <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
+              <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+              <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+              <li>Recht auf Einschränkung (Art. 18 DSGVO)</li>
+              <li>Recht auf Widerspruch (Art. 21 DSGVO)</li>
+              <li>Recht auf Datenportabilität (Art. 20 DSGVO)</li>
+            </ul>
+            <p>Um diese Rechte auszuüben, kontaktieren Sie uns unter: <a href="mailto:info@lunavision.org">info@lunavision.org</a></p>
+
+            <h4>7. Beschwerderecht</h4>
+            <p>Sie haben das Recht, eine Beschwerde bei einer Aufsichtsbehörde einzureichen, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen die DSGVO verstößt.</p>
+
+            <h4>8. Externe Links</h4>
+            <p>Diese Website enthält Links zu externen Websites. Wir sind nicht verantwortlich für deren Datenschutzpraktiken. Bitte lesen Sie deren Datenschutzerklärungen.</p>
+          </div>
+
+          <!-- Privacy Policy EN -->
+          <div class="card legal langBlock" id="datenschutz_en">
+            <h3>Privacy Policy</h3>
+
+            <h4>1. Responsible Party and Contact</h4>
+            <p>Responsible for data processing is:<br>
+            M. Giglio, Kranichstr. 11, 67069 Ludwigshafen am Rhein<br>
+            Email: <a href="mailto:info@lunavision.org">info@lunavision.org</a></p>
+
+            <h4>2. Legal Basis and Processing Purposes</h4>
+            <p>We process personal data based on Art. 6 GDPR with the following legal bases:</p>
+            <ul>
+              <li><strong>Legitimate Interests (Art. 6 Para. 1 f GDPR)</strong>: Website optimization, security, abuse prevention</li>
+              <li><strong>Your Consent (Art. 6 Para. 1 a GDPR)</strong>: Tracking (Google Analytics, Meta Pixel) – only with cookie consent</li>
+              <li><strong>Contact Request</strong>: Processing your inquiry based on your consent</li>
+            </ul>
+
+            <h4>3. Google Analytics</h4>
+            <p>This website uses Google Analytics (Universal Analytics) to analyze website usage. Google Analytics sets cookies to track your usage (e.g. page views, time on site, clicks). The collected data is stored on Google servers and automatically deleted after 14 months. Google Analytics is only activated when you have consented to the "Analytics" category.</p>
+            <p><strong>Privacy Notice:</strong> Google is certified under the US Privacy Shield, which guarantees an adequate level of data protection.</p>
+
+            <h4>4. Meta Pixel (Facebook Tracking)</h4>
+            <p>This website uses Meta Pixel to track conversions and visitor behavior. Meta Pixel is only activated when you have consented to the "Marketing" category. Meta Pixel stores cookies and sends information to Meta Platforms Inc. to:</p>
+            <ul>
+              <li>Measure campaign performance</li>
+              <li>Create audiences for retargeting</li>
+              <li>Understand your interests</li>
+            </ul>
+            <p><strong>Privacy Notice:</strong> Your data may be transferred to the USA. Meta has committed to comply with the GDPR.</p>
+
+            <h4>5. Cookies</h4>
+            <p>This website uses cookies to store and respect your consents. Cookies are small text files stored on your device:</p>
+            <ul>
+              <li><strong>Necessary:</strong> For website operation (e.g. cookie consent)</li>
+              <li><strong>Analytics:</strong> Google Analytics – only with your consent</li>
+              <li><strong>Marketing:</strong> Meta Pixel – only with your consent</li>
+            </ul>
+            <p>You can reject cookies in your browser. However, this may restrict functionality.</p>
+
+            <h4>6. Your Rights</h4>
+            <p>Under the GDPR, you have the following rights:</p>
+            <ul>
+              <li>Right of access (Art. 15 GDPR)</li>
+              <li>Right to rectification (Art. 16 GDPR)</li>
+              <li>Right to erasure (Art. 17 GDPR)</li>
+              <li>Right to restrict processing (Art. 18 GDPR)</li>
+              <li>Right to object (Art. 21 GDPR)</li>
+              <li>Right to data portability (Art. 20 GDPR)</li>
+            </ul>
+            <p>To exercise these rights, please contact us at: <a href="mailto:info@lunavision.org">info@lunavision.org</a></p>
+
+            <h4>7. Right to Lodge a Complaint</h4>
+            <p>You have the right to lodge a complaint with a supervisory authority if you believe that the processing of your data violates the GDPR.</p>
+
+            <h4>8. External Links</h4>
+            <p>This website contains links to external websites. We are not responsible for their privacy practices. Please read their privacy policies.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -888,8 +1031,8 @@
     const langBtn = document.getElementById("langBtn");
 
     function toggleLegalBlocks(){
-      const deBlocks = ["agb_de","impressum_de"];
-      const enBlocks = ["agb_en","impressum_en"];
+      const deBlocks = ["agb_de","impressum_de","datenschutz_de"];
+      const enBlocks = ["agb_en","impressum_en","datenschutz_en"];
       [...deBlocks, ...enBlocks].forEach(id => {
         const el = document.getElementById(id);
         if(!el) return;

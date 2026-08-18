@@ -1730,7 +1730,7 @@
       showStatus(statusEl, MSG.sending[currentLang()], "success");
 
       try{
-        const res = await fetch("https://script.google.com/macros/s/AKfycbwQeK6JeLARoRFDNFR0sGMPjycR83GvDSJpz_n__AugMuEAyu_rnXZDl3dy69FkQ240/exec", {
+        const res = await fetch("https://script.google.com/macros/s/AKfycbxBw6aV91Pb4g1YgaBv4_p1jtQ8_Ddk-ps1MN8s35zv4bRrQTgUR6hnfGaKukq6V53M/exec", {
           method: "POST",
           headers: {"Content-Type": "application/json"},
           body: JSON.stringify(payload)
@@ -1802,7 +1802,7 @@
 
         const anonToken = getTurnstileToken();
         if(anonToken){
-          fetch("https://script.google.com/macros/s/AKfycbwQeK6JeLARoRFDNFR0sGMPjycR83GvDSJpz_n__AugMuEAyu_rnXZDl3dy69FkQ240/exec", {
+          fetch("https://script.google.com/macros/s/AKfycbxBw6aV91Pb4g1YgaBv4_p1jtQ8_Ddk-ps1MN8s35zv4bRrQTgUR6hnfGaKukq6V53M/exec", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({ tool: "roi-rechner", ...lastRoiCalc, turnstileToken: anonToken, ...getUtm() })

@@ -383,6 +383,34 @@
         font-size: 20px;
       }
     }
+
+    /* AI ACT NOTICE STYLES */
+    .ai-act-notice {
+      padding: 40px 0;
+      background: linear-gradient(180deg, rgba(199,167,90,.08), rgba(199,167,90,.04));
+      border-top: 1px solid rgba(199,167,90,.2);
+      border-bottom: 1px solid rgba(199,167,90,.2);
+    }
+    .ai-act-box {
+      background: rgba(199,167,90,.05);
+      border: 1px solid rgba(199,167,90,.25);
+      border-radius: 14px;
+      padding: 24px;
+    }
+    .ai-act-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .ai-act-icon { font-size: 24px; flex: 0 0 auto; }
+    .ai-act-title { font-family: var(--font-display); font-size: 20px; margin: 0; color: var(--text); font-weight: 600; }
+    .ai-act-text { font-size: 15px; line-height: 1.6; color: var(--muted); margin: 0 0 16px; }
+    .ai-act-details { margin-bottom: 16px; }
+    .ai-act-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .ai-act-list li { font-size: 14px; line-height: 1.5; color: var(--muted); }
+    .ai-act-list strong { color: var(--accent); }
+    .ai-act-link { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: rgba(199, 167, 90, 0.12); border: 1px solid rgba(199, 167, 90, 0.3); border-radius: 10px; color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 600; transition: background 0.2s, border-color 0.2s; }
+    .ai-act-link:hover { background: rgba(199, 167, 90, 0.18); border-color: rgba(199, 167, 90, 0.5); }
+    @media (max-width: 768px) {
+      .ai-act-box { padding: 18px; }
+      .ai-act-title { font-size: 18px; }
+    }
   </style>
   <!-- Cookie Consent (selbst gehostet, orestbida/cookieconsent v3.1.0, MIT-Lizenz) -->
   <link rel="stylesheet" href="/assets/cookieconsent.css" />

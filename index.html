@@ -1718,30 +1718,36 @@
     });
 
     async function submitTool(payload, formEl, statusEl, successMsgKey){
-      // Turnstile ist temporär NICHT Pflicht (Cloudflare-seitiges Problem wird
-      // untersucht, Fehler 400020 beim Widget-Laden). Falls doch ein Token da
-      // ist, wird es trotzdem mitgeschickt und serverseitig geprüft - der
-      // Honeypot ("website"-Feld) ist aktuell die primäre Spam-Bremse.
-      const token = getTurnstileToken();
-      if(token) payload.turnstileToken = token;
-
       const submitBtn = formEl.querySelector('button[type="submit"]');
       if(submitBtn) submitBtn.disabled = true;
       showStatus(statusEl, MSG.sending[currentLang()], "success");
 
       try{
-        const res = await fetch("https://script.google.com/macros/s/AKfycbxBw6aV91Pb4g1YgaBv4_p1jtQ8_Ddk-ps1MN8s35zv4bRrQTgUR6hnfGaKukq6V53M/exec", {
-          method: "POST",
-          headers: {"Content-Type": "application/json"},
-          body: JSON.stringify(payload)
+        // Determine which form to use based on payload
+        const formId = payload.tool === "geo-check"
+          ? "1FAIpQLSdP5QPMnuRKJfn9gVS11k083ds5PSqbNagELJM9sy-4RRjFqA"
+          : "1FAIpQLSey9Fa6W0jbMeopzcsKnoPcOHyoFfhThBs6H2FnQd2Gqjb7aw";
+
+        const formResponse = `https://docs.google.com/forms/d/e/${formId}/formResponse`;
+        const formData = new FormData();
+
+        // Map our payload to Google Form fields
+        Object.keys(payload).forEach(key => {
+          if(payload[key] !== null && payload[key] !== undefined && payload[key] !== '') {
+            formData.append(key, payload[key]);
+          }
         });
-        const result = await res.json();
-        if(result.success){
-          showStatus(statusEl, MSG[successMsgKey][currentLang()], "success");
-          formEl.reset();
-        } else {
-          showStatus(statusEl, result.error || MSG.error[currentLang()], "error");
-        }
+
+        // Submit to Google Form (no-cors mode to avoid CORS issues)
+        await fetch(formResponse, {
+          method: 'POST',
+          body: formData,
+          mode: 'no-cors'
+        });
+
+        // Show success message
+        showStatus(statusEl, MSG[successMsgKey][currentLang()], "success");
+        formEl.reset();
       } catch(err){
         showStatus(statusEl, MSG.error[currentLang()], "error");
       } finally {
@@ -1802,10 +1808,20 @@
 
         const anonToken = getTurnstileToken();
         if(anonToken){
-          fetch("https://script.google.com/macros/s/AKfycbxBw6aV91Pb4g1YgaBv4_p1jtQ8_Ddk-ps1MN8s35zv4bRrQTgUR6hnfGaKukq6V53M/exec", {
-            method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({ tool: "roi-rechner", ...lastRoiCalc, turnstileToken: anonToken, ...getUtm() })
+          // Log ROI calculation to Google Forms
+          const formId = "1FAIpQLSey9Fa6W0jbMeopzcsKnoPcOHyoFfhThBs6H2FnQd2Gqjb7aw";
+          const formResponse = `https://docs.google.com/forms/d/e/${formId}/formResponse`;
+          const formData = new FormData();
+          const payload = { tool: "roi-rechner", ...lastRoiCalc, turnstileToken: anonToken, ...getUtm() };
+          Object.keys(payload).forEach(key => {
+            if(payload[key] !== null && payload[key] !== undefined && payload[key] !== '') {
+              formData.append(key, payload[key]);
+            }
+          });
+          fetch(formResponse, {
+            method: 'POST',
+            body: formData,
+            mode: 'no-cors'
           }).catch(() => {});
         }
       });

@@ -1718,6 +1718,7 @@
     });
 
     async function submitTool(payload, formEl, statusEl, successMsgKey){
+      console.log("✓ submitTool called!", payload);
       const submitBtn = formEl.querySelector('button[type="submit"]');
       if(submitBtn) submitBtn.disabled = true;
       showStatus(statusEl, MSG.sending[currentLang()], "success");
@@ -1752,6 +1753,7 @@
     const geoForm = document.getElementById("geoCheckForm");
     if(geoForm){
       geoForm.addEventListener("submit", e => {
+        console.log("✓ GEO-Check form submitted!");
         e.preventDefault();
         const payload = {
           tool: "geo-check",

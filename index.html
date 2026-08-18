@@ -1731,6 +1731,17 @@
         const formResponse = `https://docs.google.com/forms/d/e/${formId}/formResponse`;
         const formData = new FormData();
 
+        // Entry ID mapping (populated after user provides Entry IDs from Google Form inspect)
+        const entryMapping = {
+          "geo-check": {
+            // TODO: User needs to provide these Entry IDs from Google Form
+            // Map field names to entry.XXXXX IDs
+          },
+          "roi-rechner": {
+            // TODO: User needs to provide these Entry IDs from Google Form
+          }
+        };
+
         // Map our payload to Google Form fields
         Object.keys(payload).forEach(key => {
           if(payload[key] !== null && payload[key] !== undefined && payload[key] !== '') {

@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lunavision – KI-Content-Agent für Handwerker</title>
+  <meta name="description" content="Lunavision schreibt deinen Social-Media-Content – fertig, geprüft, postbereit. Jeden Monat. Für Handwerker & kleine Betriebe im DACH-Raum." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='10' fill='%2312162A'/><circle cx='17' cy='20' r='8' fill='%23C9A84C'/><circle cx='20' cy='17' r='6.2' fill='%2312162A'/><circle cx='23' cy='13' r='2.2' fill='%23C9A84C'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:    #0B0F1C;
+      --navy2:   #141929;
+      --gold:    #C9A84C;
+      --gold2:   #C7A75A;
+      --gold-hover: #d4b560;
+      --light:   #F5F7FA;
+      --light80: rgba(245,247,250,0.8);
+      --light55: rgba(245,247,250,0.55);
+      --muted:   #8892A4;
+      --border:  rgba(201,168,76,0.2);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--navy);
+      color: var(--light80);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    /* ── TYPOGRAPHY ── */
+    h1 {
+      font-family: 'Source Serif 4', serif;
+      font-weight: 600;
+      font-size: clamp(2rem, 5vw, 54px);
+      color: var(--light);
+      line-height: 1.12;
+    }
+    h2 {
+      font-family: 'Source Serif 4', serif;
+      font-weight: 600;
+      font-size: clamp(1.6rem, 3.5vw, 38px);
+      color: var(--light);
+      line-height: 1.2;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--light);
+      margin-bottom: 8px;
+    }
+    .eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: var(--gold2);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    p { color: var(--light80); }
+
+    /* ── NAVBAR ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,15,28,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .btn-nav {
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-nav:hover { background: var(--gold-hover); }
+
+    /* ── SECTIONS ── */
+    section { padding: 90px 5%; }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    /* ── BUTTONS ── */
+    .btn-primary {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--gold-hover); }
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--light);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 10px;
+      border: 1.5px solid var(--border);
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 100px 5% 80px;
+    }
+    #hero .container { width: 100%; }
+    #hero h1 { margin-bottom: 20px; }
+    #hero .lead {
+      font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+      color: var(--light80);
+      max-width: 640px;
+      margin: 0 auto 36px;
+      line-height: 1.5;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .trust-line {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    /* ── CARDS ── */
+    .cards-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .cards-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+    @media (max-width: 640px) {
+      .cards-2 { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: var(--navy2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      transition: border-color 0.2s;
+    }
+    .card:hover { border-color: rgba(201,168,76,0.5); }
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 16px;
+      color: var(--gold);
+    }
+    .card p { color: var(--muted); font-size: 1rem; line-height: 1.65; }
+
+    /* SVG ICONS */
+    .icon { width: 36px; height: 36px; stroke: var(--gold); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 16px; display: block; }
+
+    /* ── PROBLEM ── */
+    #problem .subtitle { text-align: center; color: var(--light80); font-size: clamp(1.2rem, 2vw, 1.5rem); margin-top: 12px; line-height: 1.5; }
+
+    /* ── SOLUTION ── */
+    #solution { background: #0d1122; }
+    .step-card {
+      background: var(--navy2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .step-num {
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .step-card p { color: var(--muted); font-size: 0.95rem; margin-top: 4px; }
+
+    /* ── FÜR WEN ── */
+    #fuerwen .subtitle { text-align: center; color: var(--muted); margin-top: 8px; font-size: 0.95rem; }
+
+    /* ── PRICING ── */
+    #pricing { background: #0d1122; }
+    .pricing-sub { text-align: center; color: var(--muted); font-size: 0.95rem; margin-top: 10px; margin-bottom: 48px; }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .pricing-card {
+      background: var(--navy2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+    }
+    .pricing-card.featured { border-color: var(--gold); }
+    .featured-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      padding: 4px 16px;
+      border-radius: 20px;
+    }
+    .pricing-name { font-family: 'Source Serif 4', serif; font-size: 1.2rem; font-weight: 600; color: var(--light); }
+    .pricing-price { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 2.2rem; color: var(--gold); }
+    .pricing-price span { font-size: 0.95rem; font-weight: 500; color: var(--muted); }
+    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+    .pricing-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; color: var(--light80); }
+    .pricing-features li::before { content: "✓"; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+    .btn-pricing {
+      display: block;
+      text-align: center;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.2s;
+      margin-top: auto;
+    }
+    .btn-pricing:hover { background: var(--gold-hover); }
+    .pricing-note { text-align: center; color: var(--muted); font-size: 0.82rem; margin-top: 24px; }
+    .vollservice-box {
+      background: var(--navy2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 16px;
+    }
+
+    /* ── FAQ ── */
+    .faq-list { margin-top: 48px; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      background: var(--navy2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--light);
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 20px 24px;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .faq-question:hover { color: var(--gold); }
+    .faq-icon { color: var(--gold); font-size: 1.4rem; flex-shrink: 0; transition: transform 0.2s; }
+    .faq-answer { display: none; padding: 0 24px 20px; color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    /* ── CTA ── */
+    #cta {
+      background: linear-gradient(135deg, #141929 0%, #0f1520 100%);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    #cta h2 { color: var(--gold); }
+    #cta .lead { color: var(--light80); font-size: 1.05rem; margin: 16px auto 32px; max-width: 500px; }
+    .cta-contact { color: var(--muted); font-size: 0.88rem; margin-top: 20px; }
+
+    /* ── LEGAL ── */
+    #impressum, #datenschutz { background: #0a0d18; border-top: 1px solid var(--border); }
+    .legal-card {
+      background: var(--navy2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 36px;
+      margin-top: 32px;
+    }
+    .legal-card h2 { font-family: 'Source Serif 4', serif; text-align: left; font-size: 1.4rem; color: var(--gold); margin-bottom: 20px; }
+    .legal-card h3 { color: var(--gold2); font-size: 0.95rem; font-weight: 700; margin-top: 20px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .legal-card p { color: var(--muted); font-size: 0.88rem; line-height: 1.8; margin-bottom: 8px; }
+    .legal-card a { color: var(--gold); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy2);
+      border-top: 1px solid var(--border);
+      padding: 40px 5%;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-logo { font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 800; letter-spacing: 0.12em; color: var(--gold); }
+    .footer-tagline { font-family: 'Inter', sans-serif; font-size: 0.8rem; color: var(--light55); margin-top: 4px; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-family: 'Inter', sans-serif; color: var(--muted); font-size: 0.88rem; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { width: 100%; text-align: center; color: var(--light55); font-size: 0.78rem; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); }
+
+    /* ── COOKIE BANNER ── */
+    #cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #1a2035;
+      border-top: 1px solid var(--border);
+      padding: 14px 5%;
+      z-index: 999;
+      display: none;
+    }
+    .cookie-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .cookie-text { color: var(--muted); font-size: 0.78rem; flex: 1; min-width: 200px; }
+    .cookie-buttons { display: flex; gap: 10px; }
+    .btn-cookie-accept {
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 8px 16px;
+      border-radius: 7px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-cookie-accept:hover { background: var(--gold-hover); }
+    .btn-cookie-decline {
+      background: transparent;
+      color: var(--muted);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      padding: 8px 16px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-cookie-decline:hover { border-color: var(--muted); color: var(--light); }
+
+    /* ── SPOTLIGHTS ── */
+    .spotlight {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.35;
+      pointer-events: none;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+    .spotlight-1 {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, #C9A84C, transparent 70%);
+      top: -100px; left: -100px;
+      animation: drift1 12s ease-in-out infinite alternate;
+    }
+    .spotlight-2 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, #4a5fa0, transparent 70%);
+      top: 50px; right: -80px;
+      animation: drift2 15s ease-in-out infinite alternate;
+    }
+    .spotlight-3 {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, #C9A84C, transparent 70%);
+      bottom: -50px; left: 40%;
+      animation: drift3 18s ease-in-out infinite alternate;
+    }
+    @keyframes drift1 {
+      0%   { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(80px, 60px) scale(1.15); }
+    }
+    @keyframes drift2 {
+      0%   { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(-60px, 80px) scale(1.1); }
+    }
+    @keyframes drift3 {
+      0%   { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(-40px, -50px) scale(1.2); }
+    }
+    #hero { position: relative; overflow: hidden; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      section { padding: 60px 5%; }
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .cookie-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#hero" class="nav-logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="10" fill="#12162A"/>
+        <!-- Mondsichel: großer Kreis minus versetzter Kreis -->
+        <circle cx="17" cy="20" r="8" fill="#C9A84C"/>
+        <circle cx="20" cy="17" r="6.2" fill="#12162A"/>
+        <!-- kleiner Punkt oben rechts -->
+        <circle cx="23" cy="13" r="2.2" fill="#C9A84C"/>
+      </svg>
+      <span style="font-family:'Inter',sans-serif;font-weight:800;font-size:1.05rem;letter-spacing:0.05em;color:#F5F7FA;">LunaVision</span>
+    </a>
+    <a href="https://wa.me/4917425551780" class="btn-nav" onclick="trackWA()">Jetzt anfragen</a>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="spotlight spotlight-1"></div>
+    <div class="spotlight spotlight-2"></div>
+    <div class="spotlight spotlight-3"></div>
+    <div class="container">
+      <p class="eyebrow">KI-Content-Agent für Handwerker</p>
+      <h1>Dein Betrieb. Täglich sichtbar.<br>Ohne Aufwand.</h1>
+      <p class="lead">Lunavision schreibt deinen Social-Media-Content — fertig, geprüft, postbereit. Jeden Monat.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/4917425551780" class="btn-primary" onclick="trackWA()">Jetzt auf WhatsApp anfragen</a>
+        <a href="#pricing" class="btn-secondary">Pakete ansehen</a>
+      </div>
+      <p class="trust-line">Monatlich kündbar · Keine Mindestlaufzeit · Einmalige Einrichtung 399 €</p>
+    </div>
+  </section>
+
+  <!-- VIDEO-SEKTION: Wenn Reel fertig ist, diesen Block aktivieren.
+       1. Vimeo-Video hochladen, Video-ID kopieren
+       2. DEINE_VIMEO_ID ersetzen
+       3. display:none entfernen -->
+  <section id="reel" style="display:none;padding:60px 5%;background:#0d1122;text-align:center;">
+    <div class="container" style="max-width:480px;">
+      <p class="eyebrow">So funktioniert Lunavision</p>
+      <h2 style="margin-bottom:28px;">Sieh es selbst.</h2>
+      <div style="position:relative;padding-bottom:177.78%;height:0;overflow:hidden;border-radius:16px;border:1px solid var(--border);">
+        <iframe
+          src="https://player.vimeo.com/video/DEINE_VIMEO_ID?autoplay=0&loop=1&muted=1&color=c9a84c&title=0&byline=0&portrait=0"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+          title="Lunavision – KI-Content-Agent für Handwerker">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section id="problem">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center">Das Problem</p>
+      <h2>Du machst top Arbeit — aber niemand sieht's.</h2>
+      <p class="subtitle">Das ist kein Qualitätsproblem. Es ist ein <span style="color:var(--gold);font-weight:600;">Sichtbarkeitsproblem.</span></p>
+      <div class="cards-3">
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <h3>Keine Zeit für Social Media</h3>
+          <p>Nach einem langen Arbeitstag noch Posts schreiben? Vergiss es.</p>
+        </div>
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>
+          <h3>Dein Mitbewerber ist sichtbar, du nicht</h3>
+          <p>Wer online nicht auftaucht, existiert für neue Kunden schlicht nicht.</p>
+        </div>
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <h3>Agenturen sind zu teuer</h3>
+          <p>500–2.000 € im Monat für eine Agentur? Für einen Handwerksbetrieb unrealistisch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section id="solution">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center">Die Lösung</p>
+      <h2>Lunavision übernimmt das für dich.</h2>
+      <div class="cards-3">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div>
+            <h3>Einmaliges Onboarding</h3>
+            <p>Wir lernen deinen Betrieb, deine Zielgruppe und deinen Ton kennen. Einmalig, 399 €.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div>
+            <h3>Fertiger Content jeden Monat</h3>
+            <p>Du bekommst fertige Posts für Instagram und Facebook — Captions, Hashtags, Redaktionskalender.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div>
+            <h3>Du postest, wir schreiben</h3>
+            <p>Kein Tool lernen, keine Schulung, kein Overhead. Einfach kopieren und posten.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FÜR WEN -->
+  <section id="fuerwen">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center">Zielgruppe</p>
+      <h2>Für wen ist Lunavision gemacht?</h2>
+      <p class="subtitle" style="text-align:center;color:var(--muted);margin-top:8px;font-size:.95rem">Für alle, die top Arbeit leisten — aber keine Zeit für Social Media haben.</p>
+      <div class="cards-2">
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <h3>Dachdecker & Zimmerer</h3>
+          <p>Du bist auf dem Dach, nicht am Schreibtisch. Wir schreiben, du baust.</p>
+        </div>
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <h3>Elektriker & SHK-Betriebe</h3>
+          <p>Voller Auftragsbuch, aber online unsichtbar? Genau dafür sind wir da.</p>
+        </div>
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+          <h3>Maler & Lackierer</h3>
+          <p>Deine Arbeit sieht gut aus — sie soll auch online gut aussehen.</p>
+        </div>
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <h3>Soloselbstständige & kleine Betriebe</h3>
+          <p>Kein Marketing-Budget, keine Zeit — aber trotzdem online präsent sein.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center">Pakete & Preise</p>
+      <h2>Transparente Preise. Keine Überraschungen.</h2>
+      <p class="pricing-sub">Einmalige Einrichtung: 399 € — danach monatlich kündbar, keine Mindestlaufzeit.</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-name">Starter</div>
+          <div class="pricing-price">199 € <span>/ Monat</span></div>
+          <ul class="pricing-features">
+            <li>10 Posts / Monat</li>
+            <li>Instagram + Facebook</li>
+            <li>Captions + Hashtags</li>
+            <li>Redaktionskalender</li>
+          </ul>
+          <a href="https://wa.me/4917425551780" class="btn-pricing" onclick="trackWA()">Jetzt anfragen</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="featured-badge">BELIEBT</div>
+          <div class="pricing-name">Wachstum</div>
+          <div class="pricing-price">349 € <span>/ Monat</span></div>
+          <ul class="pricing-features">
+            <li>20 Posts / Monat</li>
+            <li>Alles aus Starter</li>
+            <li>Mehr Reichweite durch höhere Posting-Frequenz</li>
+          </ul>
+          <a href="https://wa.me/4917425551780" class="btn-pricing" onclick="trackWA()">Jetzt anfragen</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-name">Max</div>
+          <div class="pricing-price">469 € <span>/ Monat</span></div>
+          <ul class="pricing-features">
+            <li>30 Posts / Monat</li>
+            <li>Alles aus Wachstum</li>
+            <li>Maximale Sichtbarkeit</li>
+          </ul>
+          <a href="https://wa.me/4917425551780" class="btn-pricing" onclick="trackWA()">Jetzt anfragen</a>
+        </div>
+      </div>
+      <p class="pricing-note">Gemäß § 19 UStG wird keine Umsatzsteuer ausgewiesen.</p>
+      <div class="vollservice-box">Vollservice (Posting + Interaktion + Meta Manager): auf Anfrage, ab ~599 €/Monat</div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center">FAQ</p>
+      <h2>Häufige Fragen</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Muss ich selbst irgendwas schreiben oder einrichten?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Nein. Nach dem Onboarding liefern wir alles fertig. Du kopierst und postest — das war's.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Wie lange bin ich gebunden?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Gar nicht. Das Abo ist monatlich kündbar, ohne Mindestlaufzeit. Die einmalige Einrichtungsgebühr von 399 € fällt nur einmal an.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Was genau bekomme ich pro Monat?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Fertige Post-Texte (Captions), Hashtag-Sets und einen Redaktionskalender — alles auf dein Handwerk und deine Region zugeschnitten.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Ist das auch für mich, wenn ich kein Instagram habe?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Ja. Wir richten auch deinen Account ein und erklären dir in 15 Minuten wie das Posten funktioniert.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Was ist der Unterschied zum Vollservice?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Beim Standard-Abo schreibt Lunavision — du postest. Beim Vollservice übernehmen wir auch das Posten, die Interaktion und die Kanal-Pflege. Preis auf Anfrage, ab ~599 €/Monat.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="cta">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center">Loslegen</p>
+      <h2>Bereit, online sichtbar zu werden?</h2>
+      <p class="lead">Schreib uns auf WhatsApp — wir melden uns innerhalb von 24 Stunden.</p>
+      <a href="https://wa.me/4917425551780" class="btn-primary" onclick="trackWA()">Jetzt auf WhatsApp schreiben</a>
+    </div>
+  </section>
+
+  <!-- IMPRESSUM -->
+  <section id="impressum">
+    <div class="container">
+      <div class="legal-card">
+        <h2>Impressum</h2>
+        <p><strong style="color:var(--light)">Angaben gemäß § 5 TMG / § 18 MStV:</strong></p>
+        <p>Marco Giglio<br>Kranichstr. 11<br>67069 Ludwigshafen am Rhein</p>
+        <p>E-Mail: <a href="mailto:info@lunavision.org">info@lunavision.org</a><br>Telefon: +49 174 2555 178</p>
+        <h3>Umsatzsteuer</h3>
+        <p>Gemäß § 19 UStG wird keine Umsatzsteuer ausgewiesen.</p>
+        <h3>Streitschlichtung</h3>
+        <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank">https://ec.europa.eu/consumers/odr</a></p>
+        <p>Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DATENSCHUTZ -->
+  <section id="datenschutz">
+    <div class="container">
+      <div class="legal-card">
+        <h2>Datenschutzerklärung</h2>
+        <p><strong style="color:var(--light)">Verantwortlicher:</strong> Marco Giglio, Kranichstr. 11, 67069 Ludwigshafen am Rhein, <a href="mailto:info@lunavision.org">info@lunavision.org</a></p>
+        <h3>Hosting</h3>
+        <p>Diese Website wird über GitHub Pages und Cloudflare gehostet. Beim Aufruf der Seite werden technische Daten (IP-Adresse, Zeitstempel, Browser) in Server-Logs gespeichert. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.</p>
+        <h3>Kontakt via WhatsApp</h3>
+        <p>Wenn Sie über den WhatsApp-Button Kontakt aufnehmen, werden Sie zu WhatsApp (Meta Platforms Ireland Ltd.) weitergeleitet. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO. Datenschutzrichtlinie WhatsApp: <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank">whatsapp.com/legal/privacy-policy</a></p>
+        <h3>Meta Pixel (Facebook Pixel)</h3>
+        <p>Diese Website verwendet den Meta Pixel der Meta Platforms Ireland Ltd., 4 Grand Canal Square, Dublin 2, Irland. Der Pixel erfasst Seitenaufrufe und Klicks auf den WhatsApp-Button zur Erfolgsmessung unserer Werbeanzeigen. Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Widerspruch: <a href="https://www.facebook.com/settings?tab=ads" target="_blank">facebook.com/settings?tab=ads</a></p>
+        <h3>Google Analytics 4</h3>
+        <p>Diese Website verwendet Google Analytics 4 der Google Ireland Ltd., Gordon House, Barrow Street, Dublin 4, Irland. Google Analytics erfasst Seitenaufrufe und Nutzerverhalten. Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Opt-out: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">tools.google.com/dlpage/gaoptout</a></p>
+        <h3>Cookies & Tracking</h3>
+        <p>Meta Pixel und Google Analytics werden ausschließlich nach Ihrer ausdrücklichen Einwilligung geladen.</p>
+        <h3>Ihre Rechte</h3>
+        <p>Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit: <a href="mailto:info@lunavision.org">info@lunavision.org</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">LUNAVISION</div>
+        <div class="footer-tagline">KI-Content-Agent für Handwerker</div>
+      </div>
+      <div class="footer-links">
+        <a href="#impressum">Impressum</a>
+        <a href="#datenschutz">Datenschutz</a>
+      </div>
+    </div>
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Lunavision · Gemäß § 19 UStG wird keine Umsatzsteuer ausgewiesen.</p>
+    </div>
+  </footer>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner">
+    <div class="cookie-inner">
+      <p class="cookie-text">Diese Website verwendet Meta Pixel und Google Analytics zur Erfolgsmessung und Analyse. Mit <strong>Akzeptieren</strong> stimmst du der Nutzung zu. Mehr dazu in unserer <a href="#datenschutz" style="color:var(--gold);text-decoration:underline;" onclick="declineCookies()">Datenschutzerklärung</a>.</p>
+      <div class="cookie-buttons">
+        <button class="btn-cookie-accept" onclick="acceptCookies()">Akzeptieren</button>
+        <button class="btn-cookie-decline" onclick="declineCookies()">Ablehnen</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleFaq(btn) {
+      btn.closest('.faq-item').classList.toggle('open');
+    }
+
+    function loadMetaPixel() {
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+      (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init','1064676212710682');
+      fbq('track','PageView');
+    }
+
+    function loadGA() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-T3NM7MWJJB';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-T3NM7MWJJB');
+    }
+
+    function trackWA() {
+      if (typeof fbq !== 'undefined') fbq('track', 'Contact');
+      if (typeof gtag !== 'undefined') gtag('event', 'contact_whatsapp');
+    }
+
+    function acceptCookies() {
+      localStorage.setItem('cookieConsent', 'accepted');
+      document.getElementById('cookie-banner').style.display = 'none';
+      loadMetaPixel();
+      loadGA();
+    }
+
+    function declineCookies() {
+      localStorage.setItem('cookieConsent', 'declined');
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+
+    (function() {
+      var consent = localStorage.getItem('cookieConsent');
+      if (consent === 'accepted') { loadMetaPixel(); loadGA(); }
+      else if (!consent) { document.getElementById('cookie-banner').style.display = 'block'; }
+    })();
+  </script>
+
+</body>
+</html>

@@ -190,15 +190,67 @@
 
   /* Platz für optionale Reichweitenmessung.
      Wird ausschließlich nach ausdrücklicher Einwilligung aufgerufen. */
+  var MESS_ID = 'G-T3NM7MWJJB';
+
+  /* Google Analytics 4 – wird erst nach ausdrücklicher Einwilligung geladen */
   var ladeMessung = function () {
     if (window.lvMessungGeladen) { return; }
     window.lvMessungGeladen = true;
-    /* Hier später das Analyse-Skript einhängen, z. B.:
-       var s = document.createElement('script');
-       s.src = 'https://...';
-       s.defer = true;
-       document.head.appendChild(s);
-    */
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', MESS_ID, { anonymize_ip: true });
+
+    var skript = document.createElement('script');
+    skript.async = true;
+    skript.src = 'https://www.googletagmanager.com/gtag/js?id=' + MESS_ID;
+    document.head.appendChild(skript);
+
+    messeKlicks();
+    messeScrolltiefe();
+  };
+
+  var ereignis = function (name, params) {
+    if (typeof window.gtag === 'function') { window.gtag('event', name, params || {}); }
+  };
+
+  /* Kontakt- und Paket-Klicks als Conversions */
+  var messeKlicks = function () {
+    document.addEventListener('click', function (event) {
+      var link = event.target.closest('a');
+      if (!link) { return; }
+      var href = link.getAttribute('href') || '';
+      if (href.indexOf('wa.me/') > -1) {
+        ereignis('whatsapp_klick', { bereich: link.closest('section') ? link.closest('section').id : 'header' });
+      } else if (href.indexOf('tel:') === 0) {
+        ereignis('telefon_klick');
+      } else if (href.indexOf('mailto:') === 0) {
+        ereignis('mail_klick');
+      } else if (href.indexOf('instagram.com') > -1) {
+        ereignis('instagram_klick');
+      }
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.paket-cta'), function (btn) {
+      btn.addEventListener('click', function () {
+        ereignis('paket_anfrage', { paket: btn.closest('.price-card') ? btn.closest('.price-card').querySelector('h3').textContent.trim() : '' });
+      });
+    });
+  };
+
+  /* Scrolltiefe: 50 % und 90 % */
+  var messeScrolltiefe = function () {
+    var gemeldet = {};
+    window.addEventListener('scroll', function () {
+      var hoehe = document.documentElement.scrollHeight - window.innerHeight;
+      if (hoehe <= 0) { return; }
+      var anteil = window.scrollY / hoehe;
+      [50, 90].forEach(function (stufe) {
+        if (!gemeldet[stufe] && anteil * 100 >= stufe) {
+          gemeldet[stufe] = true;
+          ereignis('scrolltiefe', { prozent: stufe });
+        }
+      });
+    }, { passive: true });
   };
 
   var zeigeBanner = function () {

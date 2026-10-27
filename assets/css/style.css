@@ -381,6 +381,18 @@ button:focus-visible {
 }
 @media (min-width: 1000px) { .hero-title { font-size: clamp(4rem, 7vw, 6.4rem); } }
 .hero-title span { display: block; }
+.hero-title .h1-kicker {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+  font-family: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  line-height: 1.5;
+  color: var(--bone);
+}
+.hero-title .h1-kicker .dash { display: block; }
 
 .hero-cta {
   display: flex;
@@ -630,7 +642,7 @@ button:focus-visible {
   .extras-grid > div { border-bottom: 0; border-right: 1px solid var(--line); }
   .extras-grid > div:last-child { border-right: 0; }
 }
-.extras-grid h4 { font-size: 1rem; font-weight: 500; }
+.extras-grid h3 { font-size: 1rem; font-weight: 500; }
 .extras-grid p {
   margin-top: 0.5rem;
   font-size: 0.875rem;
@@ -755,7 +767,7 @@ button:focus-visible {
   .steps-grid > div:last-child { border-right: 0; }
 }
 .step-num { font-size: 2.25rem; color: var(--copper); }
-.steps-grid h4 { margin-top: 1rem; font-size: 1rem; font-weight: 500; }
+.steps-grid h3 { margin-top: 1rem; font-size: 1rem; font-weight: 500; }
 .steps-grid p {
   margin-top: 0.5rem;
   font-size: 0.875rem;
@@ -915,4 +927,45 @@ button:focus-visible {
   .grain, .ticker-track { animation: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .btn-primary::after { transition: none; }
+}
+
+
+/* ---------- Anschrift ---------- */
+address { font-style: normal; }
+
+/* ---------- FAQ ---------- */
+.faq-list { border-top: 1px solid var(--line); }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.4rem 0;
+  cursor: pointer;
+  list-style: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary h3 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.faq-item summary::after {
+  content: "+";
+  flex: none;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 1.25rem;
+  color: var(--copper);
+  transition: transform 0.25s ease;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item summary:hover h3 { color: var(--copper); }
+.faq-item summary:focus-visible { outline: 1px solid var(--copper); outline-offset: 4px; }
+.faq-item p {
+  max-width: 70ch;
+  padding: 0 0 1.6rem;
+  color: var(--steel);
+  font-weight: 300;
+  line-height: 1.75;
 }

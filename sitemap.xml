@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://lunavision.org/</loc>
     <lastmod>2026-10-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://lunavision.org/assets/img/og-image.jpg</image:loc>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://lunavision.org/assets/poster/reel-asia-demo.jpg</video:thumbnail_loc>
+      <video:title>Asia Demo – Food-Video im Hochformat</video:title>
+      <video:description>Arbeitsprobe von LunaVision: Hochkant-Clip (9:16) aus einer Asia-Küche, gedreht im laufenden Betrieb.</video:description>
+      <video:content_loc>https://lunavision.org/assets/video/reel-asia-demo.mp4</video:content_loc>
+      <video:duration>19</video:duration>
+      <video:publication_date>2026-10-27T12:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://lunavision.org/impressum.html</loc>
     <lastmod>2026-10-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://lunavision.org/datenschutz.html</loc>
     <lastmod>2026-10-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
   </url>
 </urlset>

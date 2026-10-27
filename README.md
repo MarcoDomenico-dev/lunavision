@@ -141,3 +141,11 @@ GitHub legt beim Eintragen der Domain automatisch eine Datei `CNAME` im Reposito
 Anton, Inter und IBM Plex Mono stehen unter der
 [SIL Open Font License 1.1](https://openfontlicense.org) und dürfen frei
 ausgeliefert werden.
+
+## SEO & KI-Suche
+
+- `llms.txt` – Kurzfassung für KI-Suchdienste (ChatGPT, Perplexity, Claude, Gemini). Bei Preis- oder Leistungsänderungen mitpflegen, ebenso das FAQ und das JSON-LD in `index.html`.
+- `robots.txt` – erlaubt Suchmaschinen und KI-Crawler ausdrücklich.
+- `sitemap.xml` – inkl. Video- und Bild-Eintrag; bei neuem Clip ergänzen.
+- `assets/img/og-image.jpg` – Vorschaubild (1200×630) für Links in WhatsApp, Facebook, LinkedIn.
+- Zweiter Clip: wenn `reel-02.mp4` fertig ist, den `<video>`-Block aus dem ersten Telefon kopieren, Pfade anpassen und einen zweiten `VideoObject`-Eintrag ergänzen.

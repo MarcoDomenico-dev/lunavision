@@ -190,28 +190,31 @@
 
   /* Platz für optionale Reichweitenmessung.
      Wird ausschließlich nach ausdrücklicher Einwilligung aufgerufen. */
-  var MESS_ID = 'G-T3NM7MWJJB';
+  var GTM_ID = 'GTM-KZLCPBR3';
 
-  /* Google Analytics 4 – wird erst nach ausdrücklicher Einwilligung geladen */
+  /* Google Tag Manager – wird erst nach ausdrücklicher Einwilligung geladen.
+     Im Container laufen die GA4-Konfiguration (G-T3NM7MWJJB) und die Ereignis-Tags. */
   var ladeMessung = function () {
     if (window.lvMessungGeladen) { return; }
     window.lvMessungGeladen = true;
     window.dataLayer = window.dataLayer || [];
-    window.gtag = function () { window.dataLayer.push(arguments); };
-    window.gtag('js', new Date());
-    window.gtag('config', MESS_ID, { anonymize_ip: true });
+    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
 
     var skript = document.createElement('script');
     skript.async = true;
-    skript.src = 'https://www.googletagmanager.com/gtag/js?id=' + MESS_ID;
+    skript.src = 'https://www.googletagmanager.com/gtm.js?id=' + GTM_ID;
     document.head.appendChild(skript);
 
     messeKlicks();
     messeScrolltiefe();
   };
 
+  /* Ereignisse gehen ins dataLayer; der Container entscheidet, welche Tags feuern */
   var ereignis = function (name, params) {
-    if (typeof window.gtag === 'function') { window.gtag('event', name, params || {}); }
+    if (!window.dataLayer || !window.lvMessungGeladen) { return; }
+    var eintrag = { event: name };
+    Object.keys(params || {}).forEach(function (k) { eintrag[k] = params[k]; });
+    window.dataLayer.push(eintrag);
   };
 
   /* Kontakt- und Paket-Klicks als Conversions */
@@ -221,18 +224,18 @@
       if (!link) { return; }
       var href = link.getAttribute('href') || '';
       if (href.indexOf('wa.me/') > -1) {
-        ereignis('whatsapp_klick', { bereich: link.closest('section') ? link.closest('section').id : 'header' });
+        ereignis('whatsapp_click', { bereich: link.closest('section') ? link.closest('section').id : 'header' });
       } else if (href.indexOf('tel:') === 0) {
-        ereignis('telefon_klick');
+        ereignis('phone_click');
       } else if (href.indexOf('mailto:') === 0) {
-        ereignis('mail_klick');
+        ereignis('email_click');
       } else if (href.indexOf('instagram.com') > -1) {
-        ereignis('instagram_klick');
+        ereignis('instagram_click');
       }
     });
     Array.prototype.forEach.call(document.querySelectorAll('.paket-cta'), function (btn) {
       btn.addEventListener('click', function () {
-        ereignis('paket_anfrage', { paket: btn.closest('.price-card') ? btn.closest('.price-card').querySelector('h3').textContent.trim() : '' });
+        ereignis('package_request', { paket: btn.closest('.price-card') ? btn.closest('.price-card').querySelector('h3').textContent.trim() : '' });
       });
     });
   };
@@ -247,7 +250,7 @@
       [50, 90].forEach(function (stufe) {
         if (!gemeldet[stufe] && anteil * 100 >= stufe) {
           gemeldet[stufe] = true;
-          ereignis('scrolltiefe', { prozent: stufe });
+          ereignis('scroll_depth', { prozent: stufe });
         }
       });
     }, { passive: true });

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="LunaVision">
+  <defs>
+    <linearGradient id="lvGold" x1="18%" y1="8%" x2="84%" y2="96%">
+      <stop offset="0" stop-color="#F3D27A"/>
+      <stop offset="0.45" stop-color="#D9A441"/>
+      <stop offset="1" stop-color="#A9742A"/>
+    </linearGradient>
+    <mask id="lvCrescent">
+      <rect width="64" height="64" fill="#000"/>
+      <circle cx="30" cy="32" r="19" fill="#fff"/>
+      <circle cx="42" cy="26" r="17" fill="#000"/>
+    </mask>
+  </defs>
+  <circle cx="30" cy="32" r="19" fill="url(#lvGold)" mask="url(#lvCrescent)"/>
+  <circle cx="43" cy="22" r="4.4" fill="url(#lvGold)"/>
+</svg>

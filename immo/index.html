@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LunaVision Immo — Digitale Immobilienmedien aus Ihren Basisfotos</title>
+<meta name="description" content="Digital Artist für Immobilienmedien: aus Ihren Basisfotos entstehen finale Objektbilder und digitale Walkthrough-Videos. Für Makler, Bauträger und Architekten im Rhein-Neckar-Raum.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://lunavision.org/immo">
+<meta property="og:title" content="LunaVision Immo — Immobilienmedien, die Räume verkaufen">
+<meta property="og:description" content="Digitale Bildproduktion und Walkthrough-Videos aus Ihren Basisfotos. Ab 150 €.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lunavision.org/immo">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: {
+      bg:'#0D0D0D', surface:'#141414', raise:'#1B1B1B', line:'#282828',
+      accent:'#5EA9E6', accent2:'#3F8BC9', bone:'#F5F2EF', mute:'#8F8B87'
+    },
+    fontFamily: {
+      head:['"Barlow Condensed"','Impact','sans-serif'],
+      sans:['Barlow','system-ui','sans-serif']
+    }
+  }}
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  body { background:#0D0D0D; }
+  ::selection { background:#5EA9E6; color:#0D0D0D; }
+  [x-cloak]{ display:none !important; }
+
+  h1,h2,h3,.head { font-family:'Barlow Condensed',Impact,sans-serif; font-weight:800; text-transform:uppercase; line-height:.94; letter-spacing:-0.005em; }
+  .kicker { font-size:.7rem; letter-spacing:.26em; text-transform:uppercase; font-weight:600; }
+  .rule { height:1px; background:#282828; }
+  .accent-rule { height:3px; width:4rem; background:#5EA9E6; }
+
+  .reveal { opacity:0; transform:translateY(20px); transition:opacity .8s cubic-bezier(.22,1,.36,1), transform .8s cubic-bezier(.22,1,.36,1); }
+  .reveal.in { opacity:1; transform:none; }
+
+  .tile img { transition:transform 1s cubic-bezier(.22,1,.36,1), opacity .4s ease; }
+  .tile:hover img { transform:scale(1.045); opacity:1; }
+  .ph { background:linear-gradient(140deg,#1B1B1B,#0D0D0D 70%); }
+
+  @media (prefers-reduced-motion:reduce){ .reveal{opacity:1;transform:none;transition:none} .tile img{transition:none} }
+</style>
+</head>
+
+<body class="bg-bg text-bone font-sans antialiased">
+
+<!-- ══ HEADER ══ -->
+<header x-data="{open:false, s:false}" @scroll.window="s = window.scrollY > 30"
+        class="fixed top-0 inset-x-0 z-50 transition-colors duration-300"
+        :class="s ? 'bg-bg/95 backdrop-blur border-b border-line' : 'bg-transparent border-b border-transparent'">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex items-center justify-between h-[4.5rem]">
+
+      <a href="/" class="flex items-baseline gap-2" title="Zurück zu lunavision.org">
+        <span class="head text-[1.65rem] tracking-tight">Luna<span class="text-accent">Vision</span></span>
+        <span class="kicker text-mute border-l border-line pl-2">Immo</span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 text-[0.78rem] tracking-[0.14em] uppercase font-semibold text-mute">
+        <a href="/" class="text-accent/70 hover:text-accent transition-colors">&larr; Hauptseite</a>
+        <a href="#leistungen" class="hover:text-bone transition-colors">Leistungen</a>
+        <a href="#ablauf"     class="hover:text-bone transition-colors">Ablauf</a>
+        <a href="#referenzen" class="hover:text-bone transition-colors">Referenzen</a>
+        <a href="#preise"     class="hover:text-bone transition-colors">Preise</a>
+        <a href="#kontakt"    class="hover:text-bone transition-colors">Kontakt</a>
+      </nav>
+
+      <a href="https://wa.me/4915722555178?text=Hallo%20LunaVision%2C%20ich%20habe%20Interesse%20an%20Immobilienmedien.%20Mein%20Objekt%3A%20"
+         target="_blank" rel="noopener"
+         class="hidden lg:inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-bg px-5 py-3 text-[0.76rem] tracking-[0.14em] uppercase font-bold transition-colors">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.6 0a6.7 6.7 0 0 1-3.3-2.9c-.2-.4 0-.6.2-.8l.4-.5a2 2 0 0 0 .2-.4.5.5 0 0 0 0-.4L9.4 7c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4 7.6 7.6 0 0 0 3.1.8 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3z"/></svg>
+        Objekt anfragen
+      </a>
+
+      <button @click="open=!open" class="lg:hidden p-2 -mr-2" aria-label="Menü öffnen">
+        <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg x-show="open" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div x-show="open" x-cloak x-transition.opacity class="lg:hidden bg-bg/98 backdrop-blur border-t border-line">
+    <nav class="px-5 py-6 flex flex-col gap-5 text-sm tracking-[0.14em] uppercase font-semibold">
+      <a href="/" class="text-accent/70">&larr; Hauptseite</a>
+      <a @click="open=false" href="#leistungen" class="text-mute">Leistungen</a>
+      <a @click="open=false" href="#ablauf"     class="text-mute">Ablauf</a>
+      <a @click="open=false" href="#referenzen" class="text-mute">Referenzen</a>
+      <a @click="open=false" href="#preise"     class="text-mute">Preise</a>
+      <a @click="open=false" href="#kontakt"    class="text-accent">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ══ HERO ══ -->
+<section id="top" class="relative min-h-[94vh] flex items-end overflow-hidden ph">
+  <img src="assets/img/atrium.jpg" alt="Atrium eines sanierten Loftgebäudes mit beleuchteter Lichtdecke"
+       class="absolute inset-0 w-full h-full object-cover object-center opacity-40">
+  <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/85 to-bg/30"></div>
+  <div class="absolute inset-y-0 left-0 w-2/3 bg-gradient-to-r from-bg via-bg/60 to-transparent"></div>
+
+  <div class="relative w-full max-w-7xl mx-auto px-5 lg:px-8 pt-32 pb-16 lg:pb-24">
+    <p class="kicker text-accent reveal">Digital Artist · Immobilienmedien · Rhein-Neckar</p>
+
+    <h1 class="mt-6 text-[3.1rem] sm:text-7xl lg:text-[6.5rem] max-w-5xl reveal">
+      Immobilienmedien,<br>die Räume <span class="text-accent">verkaufen.</span>
+    </h1>
+
+    <p class="mt-8 text-mute text-base lg:text-xl leading-relaxed max-w-2xl reveal">
+      Aus Ihren Basisfotos entstehen finale Objektbilder und digitale Walkthrough-Videos.
+      Digital produziert — ohne langen Fototermin, ohne Kamerateam im Objekt.
+    </p>
+
+    <div class="mt-10 flex flex-col sm:flex-row gap-3 reveal">
+      <a href="https://wa.me/4915722555178?text=Hallo%20LunaVision%2C%20ich%20habe%20Interesse%20an%20Immobilienmedien.%20Mein%20Objekt%3A%20"
+         target="_blank" rel="noopener"
+         class="inline-flex items-center justify-center gap-2.5 bg-accent hover:bg-accent2 text-bg px-9 py-4 text-[0.8rem] tracking-[0.16em] uppercase font-bold transition-colors">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.6 0a6.7 6.7 0 0 1-3.3-2.9c-.2-.4 0-.6.2-.8l.4-.5a2 2 0 0 0 .2-.4.5.5 0 0 0 0-.4L9.4 7c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4 7.6 7.6 0 0 0 3.1.8 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3z"/></svg>
+        Objekt anfragen
+      </a>
+      <a href="#referenzen" class="inline-flex items-center justify-center border border-line hover:border-accent hover:text-accent px-9 py-4 text-[0.8rem] tracking-[0.16em] uppercase font-bold transition-colors">
+        Portfolio ansehen
+      </a>
+    </div>
+
+    <ul class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-y-6 gap-x-4 border-t border-line pt-8 reveal">
+      <li><p class="head text-3xl text-accent">ab 150 €</p><p class="mt-1 text-xs tracking-[0.14em] uppercase text-mute">Basis-Paket</p></li>
+      <li><p class="head text-3xl text-accent">Remote</p><p class="mt-1 text-xs tracking-[0.14em] uppercase text-mute">Umsetzung rein digital</p></li>
+      <li><p class="head text-3xl text-accent">Print</p><p class="mt-1 text-xs tracking-[0.14em] uppercase text-mute">Magazin-Veröffentlichungen</p></li>
+      <li><p class="head text-3xl text-accent">B2B</p><p class="mt-1 text-xs tracking-[0.14em] uppercase text-mute">Makler · Bauträger · Architekten</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══ PRINT-BAND (kompakt) ══ -->
+<section class="border-y border-line bg-surface/60">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-7 flex flex-col md:flex-row md:items-center gap-x-8 gap-y-3">
+    <p class="kicker text-accent shrink-0">Print Proof</p>
+    <p class="text-sm text-mute leading-relaxed">
+      Objekte aus dem Architektur-Archiv <span class="text-bone font-semibold">@immomedia_design</span>
+      wurden redaktionell in Immobilien-Magazinen veröffentlicht.
+    </p>
+  </div>
+</section>
+
+<!-- ══ LEISTUNGEN ══ -->
+<section id="leistungen" class="py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+    <div class="max-w-3xl">
+      <p class="kicker text-accent reveal">Leistungen</p>
+      <h2 class="mt-5 text-4xl lg:text-6xl reveal">Digitale Produktion<br>statt <span class="text-accent">Fototermin.</span></h2>
+      <p class="mt-7 text-mute leading-relaxed reveal">
+        Ich bin Digital Artist und arbeite mit KI-gestützten Werkzeugen. Grundlage sind
+        Basisfotos — Ihre eigenen Aufnahmen oder bestehendes Material zum Objekt. Daraus
+        entstehen die finalen Bilder und Videos. Ein Vor-Ort-Termin ist nur dann nötig,
+        wenn kein brauchbares Ausgangsmaterial existiert, und bleibt dann so kurz wie möglich.
+      </p>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-3 gap-px bg-line border border-line">
+
+      <article class="bg-bg p-8 lg:p-10 hover:bg-raise transition-colors duration-300 reveal">
+        <div class="flex items-start justify-between">
+          <span class="head text-5xl text-accent leading-none">01</span>
+          <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 16l5-5 4 4 3-3 6 6"/><circle cx="8.5" cy="8.5" r="1.5"/>
+          </svg>
+        </div>
+        <h3 class="mt-7 text-2xl lg:text-3xl">Finale<br>Objektbilder</h3>
+        <p class="mt-4 text-sm text-mute leading-relaxed">
+          Aus Basisfotos werden fertige Vermarktungsbilder: aufgeräumt, lichttechnisch
+          überarbeitet und auf eine einheitliche Bildsprache gebracht.
+        </p>
+        <ul class="mt-6 space-y-2.5 text-[0.82rem] text-mute">
+          <li class="flex gap-2.5 border-t border-line pt-2.5"><span class="text-accent">—</span> Digitale Bearbeitung und Bildaufbau</li>
+          <li class="flex gap-2.5 border-t border-line pt-2.5"><span class="text-accent">—</span> Einheitliche Bildsprache über alle Motive</li>
+          <li class="flex gap-2.5 border-t border-line pt-2.5"><span class="text-accent">—</span> Auflösung für Web und Druck</li>
+        </ul>
+      </article>
+
+      <article class="bg-bg p-8 lg:p-10 hover:bg-raise transition-colors duration-300 reveal">
+        <div class="flex items-start justify-between">
+          <span class="head text-5xl text-accent leading-none">02</span>
+          <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <rect x="2" y="6" width="13" height="12" rx="1.5"/><path d="M15 10l7-3.5v11L15 14z"/>
+          </svg>
+        </div>
+        <h3 class="mt-7 text-2xl lg:text-3xl">Digitale<br>Walkthrough-Videos</h3>
+        <p class="mt-4 text-sm text-mute leading-relaxed">
+          Bewegte Objekt-Clips, vollständig digital erzeugt. Kein Kamerateam, keine
+          Drehgenehmigung, keine Leerstandsabstimmung mit Mietern.
+        </p>
+        <ul class="mt-6 space-y-2.5 text-[0.82rem] text-mute">
+          <li class="flex gap-2.5 border-t border-line pt-2.5"><span class="text-accent">—</span> Clip für Exposé, Portal und Website</li>
+          <li class="flex gap-2.5 border-t border-line pt-2.5"><span class="text-accent">—</span> Hochformat-Fassung für Social auf Wunsch</li>
+          <li class="flex gap-2.5 border-t border-line pt-2.5"><span class="text-accent">—</span> Lizenzfreie Musik und Textinserts</li>
+        </ul>
+      </article>
+
+      <article class="bg-bg p-8 lg:p-10 hover:bg-raise transition-colors duration-300 reveal">
+        <div class="flex items-start justify-between">
+          <span class="head text-5xl text-accent leading-none">03</span>
+          <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>
+          </svg>
+        </div>
+        <h3 class="mt-7 text-2xl lg:text-3xl">Vor-Ort-Einsatz<br>nur wenn nötig</h3>
+        <p class="mt-4 text-sm text-mute leading-relaxed">
+          Fehlt brauchbares Ausgangsmaterial, komme ich ins Objekt und nehme ausschließlich
+          die nötigen Basisfotos auf. Kurzer Termin, keine aufwendige Inszenierung.
+        </p>
+        <ul class="mt-6 space-y-2.5 text-[0.82rem] text-mute">
+          <li class="flex gap-2.5 border-t border-line pt-2.5"><span class="text-accent">—</span> Stundenweise abgerechnet</li>
+          <li class="flex gap-2.5 border-t border-line pt-2.5"><span class="text-accent">—</span> Minimaler Zeitaufwand im Objekt</li>
+          <li class="flex gap-2.5 border-t border-line pt-2.5"><span class="text-accent">—</span> Rhein-Neckar und Vorderpfalz</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABLAUF ══ -->
+<section id="ablauf" class="py-20 lg:py-28 bg-surface/50 border-t border-line">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <p class="kicker text-accent reveal">Ablauf</p>
+    <h2 class="mt-5 text-4xl lg:text-6xl reveal">Vier Schritte<br>zum <span class="text-accent">Exposé.</span></h2>
+
+    <div class="mt-14 grid md:grid-cols-4 gap-8 lg:gap-10">
+      <div class="border-t border-line pt-6 reveal">
+        <p class="head text-5xl text-accent/40">01</p>
+        <h3 class="mt-4 text-xl">Anfrage</h3>
+        <p class="mt-3 text-sm text-mute leading-relaxed">Kurze Nachricht per WhatsApp mit Objektart und Ort.</p>
+      </div>
+      <div class="border-t border-line pt-6 reveal">
+        <p class="head text-5xl text-accent/40">02</p>
+        <h3 class="mt-4 text-xl">Material</h3>
+        <p class="mt-3 text-sm text-mute leading-relaxed">Sie schicken Basisfotos und Objektdaten digital. Falls keine vorhanden sind, Termin vor Ort.</p>
+      </div>
+      <div class="border-t border-line pt-6 reveal">
+        <p class="head text-5xl text-accent/40">03</p>
+        <h3 class="mt-4 text-xl">Produktion</h3>
+        <p class="mt-3 text-sm text-mute leading-relaxed">Digitale Umsetzung von Bildern und Walkthrough-Video.</p>
+      </div>
+      <div class="border-t border-line pt-6 reveal">
+        <p class="head text-5xl text-accent/40">04</p>
+        <h3 class="mt-4 text-xl">Freigabe</h3>
+        <p class="mt-3 text-sm text-mute leading-relaxed">Vorschau, Korrekturschleife, dann Download der finalen Dateien.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ REFERENZEN ══ -->
+<section id="referenzen" class="py-20 lg:py-28 border-t border-line"
+  x-data="{
+    f:'alle',
+    box:null,
+    items:[
+      {src:'assets/img/atrium.jpg',         cat:'lofts',       t:'Loft-Atrium mit Lichtdecke',   m:'Gewerbekonversion · Blaue Stunde', span:'lg:row-span-2'},
+      {src:'assets/img/loft-kueche.jpg',    cat:'interieur',   t:'Offene Loft-Küche',            m:'Sichtbeton &amp; Stahltreppe',     span:''},
+      {src:'assets/img/villa.jpg',          cat:'architektur', t:'Freistehende Stadtvilla',      m:'Fassade · Tageslicht',             span:''},
+      {src:'assets/img/halle.jpg',          cat:'gewerbe',     t:'Industriehalle, Holztragwerk', m:'Gewerbeobjekt · Innenerschließung',span:'lg:row-span-2'},
+      {src:'assets/img/bad.jpg',            cat:'interieur',   t:'Designbad in Sichtbeton',      m:'Lichtkonzept &amp; Detail',        span:''},
+      {src:'assets/img/fassade-giebel.jpg', cat:'architektur', t:'Mehrfamilienhaus, Glasgiebel', m:'Fassade · Symmetrie',              span:''}
+    ],
+    get list(){ return this.f==='alle' ? this.items : this.items.filter(i=>i.cat===this.f) }
+  }">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+      <div>
+        <p class="kicker text-accent reveal">Referenzen</p>
+        <h2 class="mt-5 text-4xl lg:text-6xl reveal">Ausgewählte <span class="text-accent">Objekte.</span></h2>
+      </div>
+      <div class="flex flex-wrap gap-2 reveal">
+        <template x-for="o in [['alle','Alle'],['interieur','Interieur'],['architektur','Architektur &amp; Fassade'],['lofts','Lofts &amp; Atriums'],['gewerbe','Gewerbeobjekte']]" :key="o[0]">
+          <button @click="f=o[0]"
+            class="px-4 py-2.5 text-[0.72rem] tracking-[0.14em] uppercase font-bold border transition-colors duration-200"
+            :class="f===o[0] ? 'bg-accent border-accent text-bg' : 'border-line text-mute hover:border-accent hover:text-accent'"
+            x-html="o[1]"></button>
+        </template>
+      </div>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[15rem] gap-3 lg:gap-4">
+      <template x-for="it in list" :key="it.src">
+        <button @click="box=it" :class="it.span"
+          class="tile relative overflow-hidden border border-line hover:border-accent transition-colors duration-300 ph text-left group">
+          <img :src="it.src" :alt="it.t" class="w-full h-full object-cover opacity-80" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/10 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-5">
+            <p class="head text-xl lg:text-2xl" x-text="it.t"></p>
+            <p class="mt-1 text-[0.68rem] tracking-[0.16em] uppercase text-mute" x-html="it.m"></p>
+          </div>
+          <span class="absolute top-4 right-4 w-8 h-8 border border-accent text-accent grid place-items-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+          </span>
+        </button>
+      </template>
+    </div>
+
+    <p class="mt-7 text-xs text-mute">
+      Aufnahmen aus dem Architektur-Archiv <span class="text-bone">@immomedia_design</span>.
+    </p>
+
+    <!-- Lightbox -->
+    <div x-show="box" x-cloak x-transition.opacity @click.self="box=null" @keydown.escape.window="box=null"
+         class="fixed inset-0 z-[60] bg-bg/96 flex items-center justify-center p-5">
+      <button @click="box=null" class="absolute top-5 right-5 w-11 h-11 border border-line text-mute hover:text-accent hover:border-accent grid place-items-center transition-colors" aria-label="Schließen">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <figure class="max-w-5xl w-full">
+        <img :src="box?.src" :alt="box?.t" class="w-full max-h-[75vh] object-contain border border-line">
+        <figcaption class="mt-4 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+          <span class="head text-2xl" x-text="box?.t"></span>
+          <span class="text-[0.7rem] tracking-[0.16em] uppercase text-mute" x-html="box?.m"></span>
+        </figcaption>
+      </figure>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ PREISE ══ -->
+<section id="preise" class="py-20 lg:py-28 bg-surface/50 border-t border-line">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+    <div class="max-w-3xl">
+      <p class="kicker text-accent reveal">Leistungsumfang &amp; Preise</p>
+      <h2 class="mt-5 text-4xl lg:text-6xl reveal">Ein Paket.<br>Klar <span class="text-accent">erweiterbar.</span></h2>
+    </div>
+
+    <div class="mt-14 grid lg:grid-cols-3 gap-3 lg:gap-4">
+
+      <article class="lg:col-span-2 border border-accent bg-bg p-8 lg:p-10 flex flex-col reveal">
+        <p class="kicker text-mute">Basis-Paket · Digital / Remote</p>
+        <h3 class="mt-4 text-3xl lg:text-4xl">Bilder &amp; Walkthrough</h3>
+        <p class="mt-6 head text-6xl lg:text-7xl text-accent leading-none">ab 150,00 €</p>
+
+        <div class="rule my-8"></div>
+
+        <ul class="space-y-4 text-base text-mute">
+          <li class="flex gap-3"><span class="text-accent">—</span> 2 fertige, hochwertige Bilder</li>
+          <li class="flex gap-3"><span class="text-accent">—</span> 1 digitales Walkthrough-Video</li>
+        </ul>
+
+        <p class="mt-8 text-sm text-mute leading-relaxed border-l-2 border-accent pl-4">
+          Die Umsetzung erfolgt auf Basis der digital bereitgestellten Unterlagen und Daten.
+        </p>
+
+        <a href="https://wa.me/4915722555178?text=Hallo%20LunaVision%2C%20ich%20habe%20Interesse%20an%20Immobilienmedien.%20Mein%20Objekt%3A%20"
+           target="_blank" rel="noopener"
+           class="mt-9 inline-flex items-center justify-center gap-2.5 bg-accent hover:bg-accent2 text-bg px-8 py-4 text-[0.78rem] tracking-[0.16em] uppercase font-bold transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.6 0a6.7 6.7 0 0 1-3.3-2.9c-.2-.4 0-.6.2-.8l.4-.5a2 2 0 0 0 .2-.4.5.5 0 0 0 0-.4L9.4 7c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4 7.6 7.6 0 0 0 3.1.8 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3z"/></svg>
+          Paket anfragen
+        </a>
+      </article>
+
+      <article class="border border-line bg-bg p-8 lg:p-10 flex flex-col reveal">
+        <p class="kicker text-mute">Zusatzleistungen</p>
+        <h3 class="mt-4 text-3xl">Erweiterung<br>&amp; Vor-Ort</h3>
+
+        <div class="rule my-8"></div>
+
+        <div class="space-y-8 flex-1">
+          <div>
+            <p class="head text-4xl text-accent leading-none">30,00 €</p>
+            <p class="mt-2 text-sm text-mute">je weiterem Bild</p>
+          </div>
+          <div class="border-t border-line pt-8">
+            <p class="head text-4xl text-accent leading-none">100,00 €</p>
+            <p class="mt-2 text-sm text-mute">pro Stunde Vor-Ort-Einsatz</p>
+            <p class="mt-3 text-xs text-mute leading-relaxed">
+              Mindestabnahme 1 Stunde. Nur falls ein Termin vor Ort erforderlich ist.
+              Anfahrt im Rhein-Neckar-Kreis inklusive.
+            </p>
+          </div>
+        </div>
+
+        <a href="#kontakt" class="mt-9 inline-flex items-center justify-center border border-line hover:border-accent hover:text-accent px-8 py-4 text-[0.78rem] tracking-[0.16em] uppercase font-bold transition-colors">
+          Kontakt
+        </a>
+      </article>
+
+    </div>
+
+    <p class="mt-6 text-xs text-mute leading-relaxed max-w-2xl">
+      Kleinunternehmer gemäß § 19 UStG — es wird keine Umsatzsteuer ausgewiesen.
+      Nutzungsrechte zur Objektvermarktung zeitlich unbefristet.
+    </p>
+  </div>
+</section>
+
+<!-- ══ KONTAKT ══ -->
+<section id="kontakt" class="py-20 lg:py-28 border-t border-line">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+
+    <div class="lg:col-span-5">
+      <p class="kicker text-accent reveal">Kontakt</p>
+      <h2 class="mt-5 text-4xl lg:text-6xl reveal">Erzählen Sie mir<br>von Ihrem <span class="text-accent">Objekt.</span></h2>
+      <div class="accent-rule mt-6 reveal"></div>
+      <p class="mt-7 text-mute leading-relaxed reveal">
+        Am schnellsten per WhatsApp: Objektart, Ort und was Sie brauchen.
+      </p>
+    </div>
+
+    <div class="lg:col-span-7 space-y-3 reveal">
+
+      <a href="https://wa.me/4915722555178?text=Hallo%20LunaVision%2C%20ich%20habe%20Interesse%20an%20Immobilienmedien.%20Mein%20Objekt%3A%20"
+         target="_blank" rel="noopener"
+         class="group flex items-center gap-5 border border-accent bg-bg hover:bg-raise px-6 py-7 transition-colors">
+        <span class="w-12 h-12 shrink-0 grid place-items-center bg-accent text-bg">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.6 0a6.7 6.7 0 0 1-3.3-2.9c-.2-.4 0-.6.2-.8l.4-.5a2 2 0 0 0 .2-.4.5.5 0 0 0 0-.4L9.4 7c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4 7.6 7.6 0 0 0 3.1.8 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3z"/></svg>
+        </span>
+        <span class="flex-1">
+          <span class="block head text-2xl">Interesse an Immobilienmedien</span>
+          <span class="block mt-1 text-sm text-mute">Direkt per WhatsApp schreiben</span>
+        </span>
+        <svg class="w-5 h-5 text-accent shrink-0 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+
+      <div class="grid sm:grid-cols-2 gap-3 pt-1">
+        <a href="mailto:info@lunavision.org" class="flex items-center gap-4 border border-line bg-bg hover:bg-raise px-5 py-5 transition-colors">
+          <svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          <span><span class="block text-[0.66rem] tracking-[0.18em] uppercase text-mute">E-Mail</span><span class="text-sm">info@lunavision.org</span></span>
+        </a>
+        <div class="flex items-center gap-4 border border-line bg-bg px-5 py-5">
+          <svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span><span class="block text-[0.66rem] tracking-[0.18em] uppercase text-mute">Einsatzgebiet</span><span class="text-sm">Rhein-Neckar &amp; Vorderpfalz<span class="block text-xs text-mute/70">nach Absprache auch weiter</span></span></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ KI-TRANSPARENZ / EU AI ACT ══ -->
+<section id="ki-transparenz" class="py-16 lg:py-20 border-t border-line bg-surface/50">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-12 gap-10 lg:gap-16">
+
+    <div class="lg:col-span-4">
+      <div class="inline-flex items-center gap-2.5 border border-accent/50 text-accent px-4 py-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9"/><path d="M12 16v-5M12 8h.01"/>
+        </svg>
+        <span class="text-[0.68rem] tracking-[0.18em] uppercase font-bold">KI-gekennzeichnet</span>
+      </div>
+      <h2 class="mt-6 text-3xl lg:text-4xl">Transparenz<br>nach <span class="text-accent">EU AI Act.</span></h2>
+    </div>
+
+    <div class="lg:col-span-8 grid sm:grid-cols-2 gap-x-10 gap-y-7 text-sm text-mute leading-relaxed">
+      <div>
+        <p class="text-bone font-semibold">Was gekennzeichnet wird</p>
+        <p class="mt-2">
+          Alle von LunaVision gelieferten Bilder und Videos entstehen mit KI-gestützten
+          Werkzeugen. Jede Auslieferung wird als KI-generiert beziehungsweise KI-bearbeitet
+          gekennzeichnet — sichtbar im Dateinamen und maschinenlesbar in den Metadaten
+          (C2PA / IPTC).
+        </p>
+      </div>
+      <div>
+        <p class="text-bone font-semibold">Was echte Fotografie ist</p>
+        <p class="mt-2">
+          Die Aufnahmen im Referenzbereich stammen aus dem fotografischen Archiv
+          @immomedia_design und sind unbearbeitete Originalfotografien. Sie sind nicht
+          KI-generiert.
+        </p>
+      </div>
+      <div>
+        <p class="text-bone font-semibold">Keine Täuschung über den Zustand</p>
+        <p class="mt-2">
+          Objekte werden nicht in Zustände versetzt, die es nicht gibt. Keine erfundenen
+          Räume, keine wegretuschierten Mängel, kein virtuelles Home-Staging ohne
+          Kennzeichnung im Exposé.
+        </p>
+      </div>
+      <div>
+        <p class="text-bone font-semibold">Ihre Pflicht als Auftraggeber</p>
+        <p class="mt-2">
+          Sie erhalten zu jedem Auftrag einen fertigen Kennzeichnungstext für Exposé und
+          Portal. Setzen Sie ihn ein, erfüllen Sie Ihre Transparenzpflicht gegenüber
+          Interessenten.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ FOOTER / IMPRESSUM ══ -->
+<footer class="border-t border-line bg-surface/40">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-14">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+      <div class="lg:col-span-2">
+        <span class="head text-2xl">Luna<span class="text-accent">Vision</span></span>
+        <p class="mt-5 text-sm text-mute leading-relaxed max-w-xs">
+          Digitale Immobilienmedien für Makler, Architekten, Bauträger und
+          Projektentwickler im Rhein-Neckar-Raum.
+        </p>
+      </div>
+
+      <div>
+        <p class="kicker text-mute">Navigation</p>
+        <ul class="mt-5 space-y-2.5 text-sm text-mute">
+          <li><a href="#leistungen" class="hover:text-accent transition-colors">Leistungen</a></li>
+          <li><a href="#ablauf" class="hover:text-accent transition-colors">Ablauf</a></li>
+          <li><a href="#referenzen" class="hover:text-accent transition-colors">Referenzen</a></li>
+          <li><a href="#preise" class="hover:text-accent transition-colors">Preise</a></li>
+          <li><a href="#kontakt" class="hover:text-accent transition-colors">Kontakt</a></li>
+          <li><a href="#ki-transparenz" class="hover:text-accent transition-colors">KI-Transparenz</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="kicker text-mute">LunaVision</p>
+        <ul class="mt-5 space-y-2.5 text-sm text-mute">
+          <li><a href="/" class="hover:text-accent transition-colors">Zur Hauptseite</a></li>
+          <li><a href="mailto:info@lunavision.org" class="hover:text-accent transition-colors">info@lunavision.org</a></li>
+          <li><a href="https://wa.me/4915722555178" target="_blank" rel="noopener" class="hover:text-accent transition-colors">WhatsApp</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="rule my-10"></div>
+    <div class="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between text-[0.7rem] tracking-[0.14em] uppercase text-mute/70">
+      <p>© 2026 LunaVision · Marco Giglio · <a href="#ki-transparenz" class="hover:text-accent transition-colors">KI-gekennzeichnet nach EU AI Act</a></p>
+      <p class="flex gap-5">
+        <a href="/impressum.html" class="hover:text-accent transition-colors">Impressum</a>
+        <a href="/datenschutz.html" class="hover:text-accent transition-colors">Datenschutz</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.14.1/cdn.min.js" defer></script>
+<script>
+  const io = new IntersectionObserver((es) => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    el.style.transitionDelay = (i % 4) * 80 + 'ms';
+    io.observe(el);
+  });
+</script>
+</body>
+</html>

@@ -107,11 +107,9 @@ tailwind.config = {
   <img src="assets/img/atrium.jpg" alt="Atrium eines sanierten Loftgebäudes mit beleuchteter Lichtdecke"
        style="object-position:50% 28%; opacity:.70"
        class="absolute inset-0 w-full h-full object-cover">
-  <!-- leichte Grundabdunklung, damit Text lesbar bleibt -->
-  <div class="absolute inset-0 bg-bg/20"></div>
-  <!-- langer weicher Auslauf nach unten, damit keine harte Kante entsteht -->
-  <div class="absolute inset-x-0 bottom-0 h-3/5"
-       style="background:linear-gradient(to top,#0D0D0D 0%,#0D0D0D 14%,rgba(13,13,13,.80) 40%,rgba(13,13,13,.35) 70%,rgba(13,13,13,0) 100%)"></div>
+  <!-- kurzer, sanfter Auslauf: Foto bleibt bis kurz vor die Kante sichtbar -->
+  <div class="absolute inset-x-0 bottom-0 h-1/4"
+       style="background:linear-gradient(to top,rgba(13,13,13,.92) 0%,rgba(13,13,13,.45) 50%,rgba(13,13,13,0) 100%)"></div>
   <!-- Textseite links etwas anlegen -->
   <div class="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-bg/85 to-transparent"></div>
 

@@ -109,8 +109,9 @@ tailwind.config = {
        class="absolute inset-0 w-full h-full object-cover">
   <!-- leichte Grundabdunklung, damit Text lesbar bleibt -->
   <div class="absolute inset-0 bg-bg/20"></div>
-  <!-- weicher Auslauf nur im unteren Drittel, kein harter Schnitt -->
-  <div class="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-bg via-bg/60 to-transparent"></div>
+  <!-- langer weicher Auslauf nach unten, damit keine harte Kante entsteht -->
+  <div class="absolute inset-x-0 bottom-0 h-3/5"
+       style="background:linear-gradient(to top,#0D0D0D 0%,#0D0D0D 14%,rgba(13,13,13,.80) 40%,rgba(13,13,13,.35) 70%,rgba(13,13,13,0) 100%)"></div>
   <!-- Textseite links etwas anlegen -->
   <div class="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-bg/85 to-transparent"></div>
 

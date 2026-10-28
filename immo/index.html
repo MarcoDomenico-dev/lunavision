@@ -105,11 +105,10 @@ tailwind.config = {
 <!-- ══ HERO ══ -->
 <section id="top" class="relative min-h-[94vh] flex items-end overflow-hidden ph">
   <img src="assets/img/atrium.jpg" alt="Atrium eines sanierten Loftgebäudes mit beleuchteter Lichtdecke"
-       style="object-position:50% 28%; opacity:.70"
+       style="object-position:50% 28%; opacity:.70;
+              -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 45%,rgba(0,0,0,.6) 72%,rgba(0,0,0,0) 100%);
+              mask-image:linear-gradient(to bottom,#000 0%,#000 45%,rgba(0,0,0,.6) 72%,rgba(0,0,0,0) 100%)"
        class="absolute inset-0 w-full h-full object-cover">
-  <!-- kurzer, sanfter Auslauf: Foto bleibt bis kurz vor die Kante sichtbar -->
-  <div class="absolute inset-x-0 bottom-0 h-1/4"
-       style="background:linear-gradient(to top,rgba(13,13,13,.92) 0%,rgba(13,13,13,.45) 50%,rgba(13,13,13,0) 100%)"></div>
   <!-- Textseite links etwas anlegen -->
   <div class="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-bg/85 to-transparent"></div>
 

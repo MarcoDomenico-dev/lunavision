@@ -259,6 +259,7 @@ button:focus-visible {
   font-size: 1.4rem;
   letter-spacing: -0.01em;
 }
+.brand-accent { color: var(--copper); }
 .brand-claim { color: var(--dim); transition: color 0.3s ease; }
 .brand:hover .brand-claim { color: var(--gold); }
 @media (max-width: 640px) { .brand-claim { display: none; } }
@@ -277,13 +278,14 @@ button:focus-visible {
 .btn-wa-sm:hover { background: var(--copper); color: var(--ink) !important; }
 
 /* Verweis auf die Immobilien-Unterseite /immo */
-.btn-immo {
+.nav-links a.btn-immo, a.btn-immo {
   border: 1px solid rgba(94, 169, 230, 0.55);
   color: #5EA9E6 !important;
   padding: 0.7rem 1.25rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-.btn-immo:hover { background: #5EA9E6; color: var(--ink) !important; }
+.nav-links a.btn-immo:hover, a.btn-immo:hover { background: #5EA9E6; color: var(--ink) !important; }
+.mobile-menu a.menu-link-immo { color: #5EA9E6; }
 
 .menu-btn {
   display: flex;

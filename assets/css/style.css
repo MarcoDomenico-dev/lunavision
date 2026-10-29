@@ -279,13 +279,13 @@ button:focus-visible {
 
 /* Verweis auf die Immobilien-Unterseite /immo */
 .nav-links a.btn-immo, a.btn-immo {
-  border: 1px solid rgba(94, 169, 230, 0.55);
-  color: #5EA9E6 !important;
+  border: 1px solid rgba(74, 144, 217, 0.55);
+  color: #4A90D9 !important;
   padding: 0.7rem 1.25rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-.nav-links a.btn-immo:hover, a.btn-immo:hover { background: #5EA9E6; color: var(--ink) !important; }
-.mobile-menu a.menu-link-immo { color: #5EA9E6; }
+.nav-links a.btn-immo:hover, a.btn-immo:hover { background: #4A90D9; color: var(--ink) !important; }
+.mobile-menu a.menu-link-immo { color: #4A90D9; }
 
 .menu-btn {
   display: flex;

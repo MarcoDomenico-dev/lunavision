@@ -21,7 +21,7 @@ tailwind.config = {
   theme: { extend: {
     colors: {
       bg:'#0D0D0D', surface:'#141414', raise:'#1B1B1B', line:'#282828',
-      accent:'#5EA9E6', accent2:'#3F8BC9', bone:'#F5F2EF', mute:'#8F8B87'
+      accent:'#4A90D9', accent2:'#2F72B0', bone:'#F5F2EF', mute:'#8F8B87'
     },
     fontFamily: {
       head:['"Barlow Condensed"','Impact','sans-serif'],
@@ -33,13 +33,13 @@ tailwind.config = {
 <style>
   :root { color-scheme: dark; }
   body { background:#0D0D0D; }
-  ::selection { background:#5EA9E6; color:#0D0D0D; }
+  ::selection { background:#4A90D9; color:#0D0D0D; }
   [x-cloak]{ display:none !important; }
 
   h1,h2,h3,.head { font-family:'Barlow Condensed',Impact,sans-serif; font-weight:800; text-transform:uppercase; line-height:.94; letter-spacing:-0.005em; }
   .kicker { font-size:.7rem; letter-spacing:.26em; text-transform:uppercase; font-weight:600; }
   .rule { height:1px; background:#282828; }
-  .accent-rule { height:3px; width:4rem; background:#5EA9E6; }
+  .accent-rule { height:3px; width:4rem; background:#4A90D9; }
 
   .reveal { opacity:0; transform:translateY(20px); transition:opacity .8s cubic-bezier(.22,1,.36,1), transform .8s cubic-bezier(.22,1,.36,1); }
   .reveal.in { opacity:1; transform:none; }
@@ -137,7 +137,7 @@ tailwind.config = {
     </div>
 
     <ul class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-y-6 gap-x-4 border-t border-line pt-8 reveal">
-      <li><p class="head text-3xl text-accent">ab 150 €</p><p class="mt-1 text-xs tracking-[0.14em] uppercase text-mute">Basis-Paket</p></li>
+      <li><p class="head text-3xl text-accent">ab 130 €</p><p class="mt-1 text-xs tracking-[0.14em] uppercase text-mute">Basis-Paket</p></li>
       <li><p class="head text-3xl text-accent">Remote</p><p class="mt-1 text-xs tracking-[0.14em] uppercase text-mute">Umsetzung rein digital</p></li>
       <li><p class="head text-3xl text-accent">Print</p><p class="mt-1 text-xs tracking-[0.14em] uppercase text-mute">Magazin-Veröffentlichungen</p></li>
       <li><p class="head text-3xl text-accent">B2B</p><p class="mt-1 text-xs tracking-[0.14em] uppercase text-mute">Makler · Bauträger · Architekten</p></li>
@@ -339,7 +339,7 @@ tailwind.config = {
       <article class="lg:col-span-2 border border-accent bg-bg p-8 lg:p-10 flex flex-col reveal">
         <p class="kicker text-mute">Basis-Paket · Digital / Remote</p>
         <h3 class="mt-4 text-3xl lg:text-4xl">Bilder &amp; Walkthrough</h3>
-        <p class="mt-6 head text-6xl lg:text-7xl text-accent leading-none">ab 150,00 €</p>
+        <p class="mt-6 head text-6xl lg:text-7xl text-accent leading-none">ab 130,00 €</p>
 
         <div class="rule my-8"></div>
 
@@ -368,7 +368,7 @@ tailwind.config = {
 
         <div class="space-y-8 flex-1">
           <div>
-            <p class="head text-4xl text-accent leading-none">30,00 €</p>
+            <p class="head text-4xl text-accent leading-none">20,00 €</p>
             <p class="mt-2 text-sm text-mute">je weiterem Bild</p>
           </div>
           <div class="border-t border-line pt-8">
